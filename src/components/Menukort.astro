@@ -1,0 +1,227 @@
+---
+import { ACTION_ERROR_CODES } from "astro:actions";
+---
+
+<div class="container w-3/5">
+    <button type="button" class="collapsible"
+      >Let og lækkert<span class="icon"></span></button
+    >
+    <div class="content">
+        <div class="font-bold text-lg col-span-3 text-center mt-6">Det lette</div>
+
+        <div class="grid grid-cols-2 gap-4">
+
+            <p class="boldcontent">Hjemmebagt bolle</p><p class="boldprice flex justify-end">39 kr.</p><p class="col-span-2">
+                Med smør og ost.</p>
+
+    <p class="boldcontent">Sandwich</p><p class="boldprice flex justify-end">69 kr.</p><p class="col-span-2">
+        Hjemmebagt surdejsbolle, egen mayo, hjemmelavet pickles og hjemmesyltede rødløg. Vælg mellem pølse eller ost.</p>
+
+     <p class="boldcontent col-span1">Dagens suppe</p><p class="boldprice flex justify-end">99 kr.</p><p class="col-span-2">
+         Spørg om dagens udvalgte suppe i caféen. Inkl. hjemmebagt brød.</p>
+
+         <p class="boldcontent">Fisk/muslinger fra Fangst</p><p class="boldprice flex justify-end">89 kr.</p><p class="col-span-2">
+            Vælg mellem kvalitetsfisk eller muslinger på dåse. Serveres med hjemmerørt mayo, hjemmesyltede rødløg og hjemmebagt brød.</p>
+
+            <div class="font-bold text-lg col-span-3 text-center mt-6">Til deling</div>
+
+     <p class="boldcontent">Lille bræt</p><p class="boldprice flex justify-end">159 kr.</p><p class="col-span-2">
+         2 varianter af pølse, 2 slags ost, hjemmesyltede produkter, hjemmebagt brød og kiks.</p>
+
+     <p class="boldcontent">Delebræt</p><p class="boldprice flex justify-end">279 kr.</p><p class="col-span-2">
+         Vælg en dåse kvalitetsfisk eller musling fra Fangst, 2 varianter af pølse, 2 slags ost, hjemmesyltede produkter, hjemmebagt brød og kiks.</p>
+
+         <p class="boldcontent">Tapas "to go" pr. person</p><p class="boldprice flex justify-end">175 kr.</p><p class="col-span-2">
+            Bestilles senest dagen før afhentning og til minimum 2 personer. Indeholder 2 varianter af pølse, vildtrullepølse, paté, 2 varianter af ost, hjemmesyltede rødløg, hjemmerørt mayo, hjemmelavet pickles, rugbrød, kiks og hjemmebagt brød.</p>
+
+            <div class="font-bold text-lg col-span-3 text-center mt-6">Det lækre</div>
+
+            <p class="boldcontent">Dagens kage</p><p class="boldprice flex justify-end">40 kr.</p><p class="col-span-2">
+                Alt efter sæsonens bær og frugter.</p>
+
+     <p class="boldcontent">Årstidens dessert</p><p class="boldprice flex justify-end">45 kr.</p><p class="col-span-2">
+         Årstidens frugt med egen knas og skum.</p>
+
+
+    </div>
+    </div>
+  
+    <button type="button" class="collapsible"
+      >Kolde drikkevarer<span class="icon"></span></button
+    >
+    <div class="content">
+        <div class="font-bold text-lg col-span-3 text-center mt-6">Med procenter</div>
+
+        <div class="grid grid-cols-2 gap-4">
+
+    <p class="boldcontent">Stor fadøl</p><p class="boldprice flex justify-end">60 kr.</p><p class="col-span-2">
+        Økologisk øl fra Herslev Bryghus.</p>
+     <p class="boldcontent col-span1">Lille fadøl</p><p class="boldprice flex justify-end">45 kr.</p><p class="col-span-2">
+        Økologisk øl fra Herslev Bryghus.</p>
+            
+     <p class="boldcontent">33 cl flaskeøl</p><p class="boldprice flex justify-end">48 kr.</p><p class="col-span-2">
+        Flere varianter på køl fra Herslev Bryghus.</p>
+
+     <p class="boldcontent">50 cl flaskeøl</p><p class="boldprice flex justify-end">60 kr.</p><p class="col-span-2">
+        Flere varianter på køl fra Herslev Bryghus.</p>
+
+     <p class="boldcontent">Vin i glas</p><p class="boldprice flex justify-end">60 kr.</p><p class="col-span-2">
+        Vælg mellem hvid, rosé og rød.</p>
+
+     <p class="boldcontent">Brændevin</p><p class="boldprice flex justify-end">50 kr.</p><p class="col-span-2">
+        Glas på 4 cl.</p>
+
+     <p class="boldcontent">Lille drink</p><p class="boldprice flex justify-end">50 kr.</p><p class="col-span-2">
+        Laves på 2 cl alkohol.</p>
+
+     <p class="boldcontent">Stor drink</p><p class="boldprice flex justify-end">75 kr.</p><p class="col-span-2">
+        Laves på 4 cl alkohol.</p></div>
+        <div class="grid grid-cols-2 gap-4">
+            <div class="font-bold text-lg col-span-3 text-center mt-6">Uden procenter</div>
+
+
+     <p class="boldcontent">Mocktails</p><p class="boldprice flex justify-end">50 kr.</p><p class="col-span-2">
+        Drink uden alkohol.</p>
+
+     <p class="boldcontent">Søbogård saft</p><p class="boldprice flex justify-end">34 kr.</p><p class="col-span-2">
+        Flere forskellige varianter af økologisk most.</p>
+
+     <p class="boldcontent">Bies Bryggeri saft</p><p class="boldprice flex justify-end">34 kr.</p><p class="col-span-2">
+        Økologisk saft.</p>
+
+     <p class="boldcontent">Adelhardt saft</p><p class="boldprice flex justify-end">34 kr.</p><p class="col-span-2">
+        Varianter af økologiske safter.</p>
+
+     <p class="boldcontent">Vand med brus</p><p class="boldprice flex justify-end">25 kr.</p><p class="col-span-2">
+         Danskvand fra Bornholm.</p>
+
+     <p class="boldcontent">Vand uden brus</p><p class="boldprice flex justify-end">20 kr.</p><p class="col-span-2">
+        Kildevand fra Bornholm.</p>
+    </div>
+    </div>
+
+    <button type="button" class="collapsible"
+      >Kaffe & the<span class="icon"></span></button
+    >
+    <div class="content border-b border-black">
+        <div class="font-bold text-lg col-span-3 text-center mt-6">Kaffe</div>
+
+        <div class="grid grid-cols-2 gap-4">
+
+        <p class="boldcontent">Kop kaffe</p><p class="boldprice flex justify-end">25 kr.</p><p class="col-span-2">
+            Øko kapselkaffe.</p>
+    
+         <p class="boldcontent">Cafe latte</p><p class="boldprice flex justify-end">40 kr.</p><p class="col-span-2">
+            Øko kapselkaffe med øko sødmælk. Havremælk kan fås på anmodning.</p>
+    
+         <p class="boldcontent">Espresso</p><p class="boldprice flex justify-end">25 kr.</p><p class="col-span-2">
+            Øko kapselkaffe, serveres i en sød lille kop fundet i genbrugen.</p>
+
+         <p class="boldcontent">Cortado</p><p class="boldprice flex justify-end">30 kr.</p><p class="col-span-2">
+                Øko kapselkaffe med øko sødmælk. Havremælk kan fås på anmodning. Serveres i smukke, håndmalede kopper.</p>
+        
+         <p class="boldcontent">Lille stempelkande</p><p class="boldprice flex justify-end">50 kr.</p><p class="col-span-2">
+                Vi bruger Mørk Colombia fra Just Coffee.</p>
+
+         <p class="boldcontent">Stor stempelkande</p><p class="boldprice flex justify-end">85 kr.</p><p class="col-span-2">
+            Vi bruger Mørk Colombia fra Just Coffee.</p></div>
+
+            <div class="grid grid-cols-2 gap-4">
+                <div class="font-bold text-lg col-span-3 text-center mt-6">The</div>
+    
+         <p class="boldcontent">Kop the</p><p class="boldprice flex justify-end">25 kr.</p><p class="col-span-2">
+             Vælg mellem et bredt udvalg.</p>
+    
+         <p class="boldcontent">Chai latte</p><p class="boldprice flex justify-end">40 kr.</p><p class="col-span-2">
+            Fredsted te med steamet økologisk sødmælk.</p>
+        </div>
+    </div></div>
+
+
+  
+  <style>
+    /* Plus */
+    .collapsible .icon::before {
+      content: "";
+      display: inline-block;
+      margin-right: 10px;
+      width: 24px;
+      height: 24px;
+      background: url("/src/assets/images/plus.svg") center/contain no-repeat;
+    }
+  
+    /* Minus */
+    .collapsible.active .icon::before {
+      content: "";
+      margin-right: 10px;
+      width: 24px;
+      height: 24px;
+      background: url("/src/assets/images/minus.svg") center/contain no-repeat;
+    }
+    /* Collapsible */
+    .collapsible {
+      display: flex;
+      background-color: #ffffff;
+      justify-content: space-between;
+      cursor: pointer;
+  padding: 20px 10px;
+      width: 100%;
+      border-top: 1px solid black;
+      text-align: left;
+      outline: none;
+      font-size: 20px;
+      font-weight: 700;
+    }
+    /* Collapsible open */
+    .collapsible.active {
+      background-color: #ffffff;
+    }
+    /* Content open */
+    .content {
+      max-height: 0;
+      overflow: hidden;
+      font-size: 14px;
+      opacity: 0;
+      transition: max-height 0.5s ease-in-out, opacity 0s ease;
+    }
+    /* Bold font */
+    .boldcontent {
+        font-weight: bold;
+        grid-column-start: 1;
+        margin-top: 1cqw;
+    }
+    /* Price */
+    .boldprice {
+        grid-column-end: 4;
+        font-weight: bold;
+        margin-top: 1cqw;
+    }
+    .active + .content {
+      max-height: 1440px;
+      padding: 20px 120px 40px 120px;
+      border-top: 1px solid black;
+      border-left: 1px solid black;
+      border-right: 1px solid black;
+opacity: 1;
+    }
+    .container {
+      margin-bottom: 40px;
+      padding: 0 20px 0 20px;
+    }
+  
+    @media (min-width: 800px) {
+      .container {
+        margin-bottom: 0;
+        padding-left: 0;
+      }
+    }
+  </style>
+  <script>
+    const coll = document.querySelectorAll(".collapsible");
+  
+    coll.forEach((element) => {
+      element.addEventListener("click", function () {
+        element.classList.toggle("active");
+      });
+    });
+  </script>

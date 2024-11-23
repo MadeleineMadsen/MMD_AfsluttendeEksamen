@@ -1,0 +1,33 @@
+---
+import { Image } from "astro:assets";
+import TestH from "../assets/images/test-horisontal.png"
+import Menukort from "../components/Menukort.astro"
+---
+
+<section class="relative">
+    <Image
+      src={TestH}
+      alt="Baggrundsbillede til produkter"
+      class="h-96 md:h-full"
+    />
+  
+    <div
+      class="absolute top-12 md:top-1/2 md:left-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2 text-center"
+    >
+      <h1
+        class="text-mserifh1 md:text-serifh1 text-white mb-m md:mb-2 underline decoration-solid decoration-2 underline-offset-off md:underline-offset-big decoration-gul500 font-serif"
+      >
+        Caféen
+      </h1>
+      <h4
+        class="text-mnormalh4 md:text-normalh4 text-white font-normal mx-mxxl md:mx-0"
+      >
+      Med bæredygtige og ofte økologiske produkter fra lokale producenter tilbyder Local By Me en caféoplevelse, der er helt unik. <br/>
+      Menukortet tager udgangspunkt i de varer, der findes i butikken. Det giver dig mulighed for at smage på de lokale råvarer, opleve deres høje kvalitet og høre historien om de mennesker, der står bag produktionen.
+      
+      </h4>
+    </div>
+  </section>
+  <section class="flex justify-center mt-5">
+    <Menukort />
+  </section>
