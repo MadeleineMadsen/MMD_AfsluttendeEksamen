@@ -1,0 +1,32 @@
+---
+import Button from "./Button.astro";
+import { Image } from "astro:assets";
+
+interface CardProps {
+  imageSrc: string;
+  imageAlt: string;
+  title: string;
+  description: string;
+}
+
+const { imageSrc, imageAlt, title, description } = Astro.props;
+---
+
+<div
+  class="my-mxl md:my-0 max-w-xs overflow-hidden shadow-skygge m-auto scale-100"
+>
+  <Image src={imageSrc} alt={imageAlt} class="md:w-full" />
+  <div class="px-6 py-4">
+    <div
+      class="text-serifh3 text-gron500 underline decoration-solid decoration-2 underline-offset-off decoration-gul500 font-serif text-center my-s"
+    >
+      {title}
+    </div>
+    <p class="text-neu500 text-pbodysmall text-center m-s font-normal">
+      {description}
+    </p>
+  </div>
+  <div class="text-center mb-l">
+    <a href="/produktside/"><Button variant="primary">Knap</Button></a>
+  </div>
+</div>
