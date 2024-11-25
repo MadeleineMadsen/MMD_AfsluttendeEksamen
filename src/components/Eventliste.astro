@@ -1,0 +1,51 @@
+---
+import Card from "./Card.astro";
+import Button from "./Button.astro";
+import { Image } from "astro:assets";
+import Test from "../assets/images/Test.jpg";
+import "../styles/global.css";
+---
+
+<section class="relative">
+  <Image src={Test} alt="Baggrundsbillede til produkter" class="h-96 md:h-full"/>
+
+  <div class="absolute top-12 md:top-1/2 md:left-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2 text-center">
+    <h1 class="text-mserifh1 md:text-serifh1">Overskrift</h1>
+</div>
+</section>
+
+<h2 class="text-mserifh1 md:text-serifh2 text-center mb-6">Overskrift</h2>
+
+<h4 class="text-mnormalh4 md:text-normalh4 text-center mb-6">Local By Me byder på hyggelige og nærværende arrangementer, der styrker fællesskabet. Fra fællesspisning og kreative workshops til strikkeaftener og særlige sæsonbegivenheder – her er der plads til samvær, inspiration og lokale smagsoplevelser. Hold øje med kalenderen og vær med til at skabe minder i hjertet af Musicon.</h4>
+
+<div class="mt-mxl md:mt-xxl mx-mxxl md:mx-xxxl md:grid md:grid-cols-3 md:grid-rows-10 md:gap-xl items-center place-items-center md:mb-xxl">
+  <Card imageSrc={Test} imageAlt="" title="Card 1" description="Beskrivelse"/>
+
+  <Card imageSrc={Test} imageAlt="" title="Card 2" description="Beskrivelse"/>
+  
+  <Card imageSrc={Test} imageAlt="" title="Card 3" description="Beskrivelse"/>
+  
+  <Card imageSrc={Test} imageAlt="" title="Card 4" description="Beskrivelse"/>
+
+  <Card imageSrc={Test} imageAlt="" title="Card 5" description="Beskrivelse"/>
+
+  <Card imageSrc={Test} imageAlt="" title="Card 6" description="Beskrivelse"/>
+</div>
+
+<section class="bg-beige w-full py-16">
+  <div class="max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row items-center justify-center">
+    
+    <div class="md:w-1/2 flex justify-center items-center mb-6 md:mb-0 md:order-2">
+      <Image src={Test} alt="Billede af små konditorkager" class="h-80 w-80 object-cover"/>
+    </div>
+
+    <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-1 text-center md:text-left md:ml-xxl ml-0">
+
+      <h2 class="md:text-serifh2 text-mserifh2 mb-6">Henviser til "Om os"</h2>
+      
+      <p class="text-pbody mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      
+      <a href="/liste/"><Button variant="secondary">Knap</Button></a>
+    </div>
+  </div>
+</section>
