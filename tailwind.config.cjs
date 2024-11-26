@@ -123,7 +123,7 @@ module.exports = {
 
       fontFamily: {
         sigurd: ["Sigurd"], //Font til specielle headers
-        poppins: ["Poppins"], //Font til headere brødtekst
+        poppins: ["Poppins"], //Font til headere og brødtekst
       },
 
       fontSize: {
