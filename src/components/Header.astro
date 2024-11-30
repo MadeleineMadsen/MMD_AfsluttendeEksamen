@@ -1,5 +1,66 @@
 ---
+import { Image } from "astro:assets";
 ---
-<div>
-Header
-</div>
+<header class="bg-beige">
+    <div class="relative flex justify-between items-center p-4">
+      <!-- Logo -->
+      <div class="text-xl font-bold text-gray-800">
+        <a href="#">Logo</a>
+      </div>
+
+          <!-- Desktop Navigation -->
+    <nav class="hidden md:flex space-x-12 md:py-6 md:flex-grow md:justify-center">
+        <a href="www.facebook.com" class="hover:underline">Caféen</a>
+        <a href="#" class="hover:underline">Butikken</a>
+        <a href="#" class="hover:underline">Arrangementer</a>
+        <a href="#" class="hover:underline">Om os</a>
+        <a href="#" class="hover:underline">Kontakt</a>
+      </nav>
+  
+      <!-- Hamburger Button -->
+      <button 
+        id="menu-toggle" 
+        class="relative z-50 flex flex-col justify-center items-center h-8 w-8 focus:outline-none md:hidden"
+        aria-label="Toggle Menu">
+        <span class="block w-6 h-0.5 bg-black transition-all duration-300 origin-center"></span>
+        <span class="block w-6 h-0.5 bg-black mt-1.5 transition-all duration-300 origin-center"></span>
+        <span class="block w-6 h-0.5 bg-black mt-1.5 transition-all duration-300 origin-center"></span>
+      </button>
+    </div>
+  
+    <!-- Mobile Menu -->
+    <nav 
+      id="mobile-menu" 
+      class="fixed top-0 left-0 w-full h-auto bg-yellow-100 transform -translate-y-full transition-transform duration-500 ease-in-out z-40 md:hidden"
+    >
+      <ul class="flex flex-col items-center justify-center h-auto py-6 space-y-6 text-lg ">
+        <li><a href="#" class="hover:underline">Caféen</a></li>
+        <li><a href="#" class="hover:underline">Butikken</a></li>
+        <li><a href="#" class="hover:underline">Arrangementer</a></li>
+        <li><a href="#" class="hover:underline">Om os</a></li>
+        <li><a href="#" class="hover:underline">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+<script>
+    const menuToggle = document.getElementById('menu-toggle');
+const mobileMenu = document.getElementById('mobile-menu');
+const spans = menuToggle.querySelectorAll('span');
+
+menuToggle.addEventListener('click', () => {
+  const isOpen = mobileMenu.classList.contains('translate-y-0');
+
+  // Toggle menu visibility
+  mobileMenu.classList.toggle('translate-y-0', !isOpen);
+  mobileMenu.classList.toggle('-translate-y-full', isOpen);
+
+  // Animate icon (Hamburger to Cross)
+  spans[0].classList.toggle('rotate-45', !isOpen);
+  spans[0].classList.toggle('translate-y-2', !isOpen);
+
+  spans[1].classList.toggle('opacity-0', !isOpen);
+
+  spans[2].classList.toggle('-rotate-45', !isOpen);
+  spans[2].classList.toggle('-translate-y-2', !isOpen);
+});
+</script>  
