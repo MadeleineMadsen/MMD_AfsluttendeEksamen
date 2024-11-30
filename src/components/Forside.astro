@@ -1,0 +1,79 @@
+---
+import Sections from "./Sections.astro";
+import Button from "./Button.astro";
+import { Image } from "astro:assets";
+import Test from "../assets/images/Test.jpg";
+import "../styles/global.css";
+---
+
+<!-- Hero unit -->
+<section class="relative">
+    <Image src={Test} alt="Testbillede" class="h-96 md:h-full"/>
+  
+    <div class="absolute top-12 md:top-1/2 md:left-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2 text-center">
+        <h1 class="text-4xl font-bold mb-4">Velkommen til Local By Me</h1>
+
+        <p class="text-lg mb-6">Din lokale gårdbutik og café, hvor <br/> bæredygtighed møder fælleskab</p>
+
+        <a href=""><Button variant="primary">Shop lokalt nu</Button></a>
+    </div>
+</section>
+
+<!-- Sektion 1 - Hos LocalByMe-->
+<section class="text-center py-8">
+    <h2 class="text-2xl font-bold">Hos LocalByMe bygger vi på tre grundsten: <br/> bæredygtighed, lokalt engagement og fællesskab </h2>
+
+    <p class="">Vi tror på at støtte lokale producenter, tilbyde produkter med omtanke og skabe et sted, hvor mennesker kan mødes og inspirere hinanden til en grønnere og mere meningsfuld hverdag.</p>
+
+    <a href=""><Button variant="primary">Læs mere om LocalByMe</Button></a>
+</section>
+
+<!-- Sektion 2 - Hvad tilbyder vi?-->
+<section class="text-center py-8">
+    <h2 class="text-2xl font-bold">Hvad tilbyder vi</h2>
+
+    <p class="">LocalByMe er din lokale destination for bæredygtige løsninger og hyggelige oplevelser. Udforsk vores unikke butik, nyd øjeblikke i vores café, eller deltag i inspirerende events – alt sammen skabt med omtanke og lokalt engagement.</p>
+</section>
+
+<!-- Sektion 3 - Adskillige sektioner-->
+<section class="grid gap-8 py-12 px-6">
+    <Sections
+    title="Lokal kvalitet der gør en forskel"
+    description="Oplev det bedste fra lokale producenter – gavekurve fyldt med kærlighed, grøntsagskasser direkte fra marken og caféens økologiske specialiteter. Alle produkter er nøje udvalgt med omtanke for både dig og miljøet."
+    buttonText="Se gavekurve"
+    image={{src: Test, alt: "Beskrivelse af billede"}}
+    layout="image-right"/>
+
+    <Sections
+    title="Et hyggeligt åndehul"
+    description="Træk vejret og nyd en pause i vores café. Her serverer vi hjemmelavede lækkerier, økologisk kaffe og sæsonens smage – alt i en afslappet og varm atmosfære."
+    buttonText="Se cafeens menukort"
+    image={{src: Test, alt: "Beskrivelse af billede"}}
+    layout="image-left"/>
+
+    <Sections
+    title="Samlingspunkt for inspiration og fællesskab"
+    description="Bliv en del af vores fællesskab! Deltag i inspirerende arrangementer – fra kreative workshops til hyggelige fællesspisninger. Her hos LocalByMe handler det ikke kun om produkter, men også om at skabe minder og forbindelser."
+    buttonText="Se kommende events"
+    image={{src: Test, alt: "Beskrivelse af billede"}}
+    layout="image-right"/>
+</section>
+
+<!-- Sektion 4 - Nyhed -->
+  <section class="bg-green-100 py-12 text-center">
+    <h2 class="text-2xl font-bold">Få varmen og nyd smagen af jul</h2>
+    <p class="text-lg mt-2">Find de perfekte julegodter og gaver hos Local By Me.</p>
+  </section>
+
+<!-- Sektion 5 - Anmeldelser -->
+  <section class="py-12 bg-gray-50">
+    <h2 class="text-center text-2xl font-bold mb-6">Glade kunder fortæller</h2>
+    <div class="flex justify-center">
+      <div class="bg-white shadow-md rounded-lg p-6 text-center max-w-md">
+        <p class="text-gray-700 italic">
+          "Det er altid hyggeligt at komme på Marianne's lille café Local By Me på Mulsion."
+        </p>
+        <p class="text-gray-500 mt-4">- Jens Mortensen</p>
+      </div>
+    </div>
+  </section>
