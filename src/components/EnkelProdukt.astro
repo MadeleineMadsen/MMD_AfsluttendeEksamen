@@ -1,58 +1,50 @@
 ---
-import Button from "./Button.astro"
 import { Image } from "astro:assets";
-import Smiley from "../assets/images/test-kvadrat.png"
+import TestK from "../assets/images/test-kvadrat.png"
+import Button from "./Button.astro"
+import PopBestilling from "./PopBestilling.astro";
 ---
 
-   <section class="px-10 pt-10">
-<div>
-    <h2 class="text-2xl pb-6 text-center">Kontakt os</h2>
-    <p class="text-center">Har du spørgsmål eller ønsker at høre mere om vores produkter og arrangementer?<br/> Tøv ikke med at kontakte os – vi ser frem til at høre fra dig!</p></div>
-   </section>
-   <section class="px-10 md:grid md:grid-cols-5 md:gap-10 md:justify-center">
-    <div class="md:col-start-2 pt-10">
-        <p class="text-lg pb-6"><strong>Her skal der være et kort</strong></h2>
-            <ul class="text-black">
+<section class="px-6 md:grid md:grid-cols-5 md:my-20 md:mx-20">
+  <div class="md:col-start-4 md:col-span-2 md:pl-8 ">
+  <h2 class="text-2xl text-center pt-6 md:hidden">Julekurven</h2>
+  </div>
 
-                <li><strong>Mandag:</strong> 12.00 - 16.00</li>
-                  <li><strong>Tirsdag:</strong> Lukket</li>
-                  <li><strong>Onsdag:</strong> Lukket</li>
-                  <li><strong>Torsdag:</strong> 12.00 - 18.00</li>
-                  <li><strong>Fredag:</strong> 12.00 - 18.00</li>
-                  <li><strong>Lørdag:</strong> 14.00 - 16.00</li>
-                  <li><strong>Søndag:</strong> 12.00 - 16.00</li>
-                </ul></div>
-        <div class="md:col-start-4 py-10">
-            <p class="text-lg pb-6"><strong>Kontakt</strong></p>
-                <ul class="text-black">
+  <div class="md:col-start-1 md:col-span-2">
+  <Image
+  src={TestK}
+  alt="E-smiley"
+  class="h-full w-full pt-6 md:pt-0"
+/></div>
+<div class="grid grid-cols-2 md:grid-cols-1">
+  <div class="col-start-1 pr-2 py-4 md:pr-0 md:py-0 md:pl-8 md:pb-4 md:col-start-3 md:col-span-1">
+  <Image
+  src={TestK}
+  alt="E-smiley"
+  class="mh-full w-full"
+/></div>
+<div class="col-start-2 pl-2 py-4 md:py-0 md:pl-8 md:pt-4 md:col-start-3 md:col-span-1">
+<Image
+src={TestK}
+alt="E-smiley"
+class="h-full w-full"
+/></div>
+</div>
 
-                    <li><strong>Adresse</strong></li>
-                      <li class="pt-2"><a href="https://www.google.com/maps/place/localbyme/@55.6288125,12.0822781,17z/data=!3m1!4b1!4m6!3m5!1s0x46525fe1b2bbaf91:0xc7c8a86a98a7fe41!8m2!3d55.6288095!4d12.084853!16s%2Fg%2F11rhctbn45?entry=ttu&g_ep=EgoyMDI0MTEyNC4xIKXMDSoASAFQAw%3D%3D" class="hover:underline" target="_blanc"> Rabalderstræde 1, Musicon,
-                        4000 Roskilde</a></li>
-                      <li class="pt-2"><strong>Mobil</strong></li>
-                      <li class="pt-2">+45 40 74 72 78</li>
-                      <li class="pt-2"><strong>Email</strong></li>
-                      <li class="pt-2"><a href="kontakt@localbyme.dk" class="hover:underline text-red-800">kontakt@localbyme.dk</a></li>
-                </ul></div>
-   </section>
 
-   <section class="bg-beige px-10 md:px-20 py-10 md:grid md:grid-cols-2 my-10 md:my-20">
-    <div class="md:col-start-1 flex justify-center">
-     <ul class="text-black">
-        <p class="text-lg pb-6"><strong>Åbningstider</strong></h2>
-            <li><strong>Mandag:</strong> 12.00 - 16.00</li>
-         <li><strong>Tirsdag:</strong> Lukket</li>
-         <li><strong>Onsdag:</strong> Lukket</li>
-         <li><strong>Torsdag:</strong> 12.00 - 18.00</li>
-         <li><strong>Fredag:</strong> 12.00 - 18.00</li>
-         <li><strong>Lørdag:</strong> 14.00 - 16.00</li>
-         <li><strong>Søndag:</strong> 12.00 - 16.00</li>
-       </ul></div>
-     <div class="md:col-start-2 flex justify-center md:mt-0 mt-10 ">
-       <div class="md:flex md:flex-col grid grid-cols-2 items-center ">
-     <Image
-     src={Smiley}
-     alt="E-smiley"
-     class="md:h-56 md:w-56 h-14 w-14"
-   /></div></div>
-   </section>
+<div class="pb-10 md:pb-0 md:col-start-4 md:col-span-2 md:pl-8 md:flex md:flex-col md:justify-center">
+  <h2 class="text-2xl md:pb-5 hidden md:block">Julekurven</h2>
+<p>Her skal der stå lidt om kurven, og hvad der evt. er i den. Listen kan stå nedenunder.</p>
+<ul class="list-decimal pl-6 py-4">
+  <li>Det her er første ting</li>
+  <li>Det her er anden ting</li>
+  <li>Så har vi tredje ting</li>
+  <li>Fjerde ting står her</li>
+  <li>Her er den femte</li>
+</ul>
+<a href="/bestilling" class="w-full md:w-auto">
+  <Button>Bestil</Button>
+</a>
+</div>
+
+</section>

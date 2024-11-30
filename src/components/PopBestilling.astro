@@ -1,0 +1,124 @@
+---
+import { Image } from "astro:assets";
+import Face from "../assets/images/face.png"
+import Button from "./Button.astro";
+---
+
+<section class="bg-stone-200 w-fit absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 flex justify-center items-center px-10 rounded-3xl shadow-lg mt-4">
+
+    <form>
+    <div class="absolute top-0 right-0 p-2">
+    <a href="/produkt"><Image
+        src={Face}
+        alt="test"
+        class="h-10 w-10 hover:scale-110"
+      /></a></div>
+<div class="text-center pt-10">
+    <h2 class="text-xl">Bestilling af lille gavekurv</h2>
+    <p>Udfyld formularen for at bestille din gavekurv, og vi vender tilbage til dig med en bekræftelse på din bestilling.</p>
+</div>
+
+
+        <div class="flex flex-wrap w-full justify-between pt-10">
+            <p>Fulde navn</p>
+            <div class="flex space-x-2 w-2/3 mr-ms">
+            <div class="w-1/2 rounded-md mb-6 md:mb-m border-2 border-stone-400">
+              <input
+                class="appearance-none rounded-md block bg-white border-none w-full py-1 leading-tight focus:outline-none text-pbodysmall placeholder-slate-500"
+                type="text"
+                placeholder="Julie"
+                aria-label="Full name"
+              /></div>
+              <div class="w-1/2 rounded-md  mb-6 md:mb-m border-2 border-stone-400">
+                <input
+                  class="appearance-none rounded-md block bg-white border-none w-full py-1 leading-tight focus:outline-none text-pbodysmall placeholder-slate-500"
+                  type="text"
+                  placeholder="Jensen"
+                  aria-label="Full name"
+                /></div>
+            </div>
+        </div>
+
+
+        <div class="flex flex-wrap justify-between">
+            <p>Mobilnummer</p>
+            <div class="w-2/3 rounded-md mx-ms mb-6 md:mb-m border-2 border-stone-400">
+              <input
+                class="appearance-none rounded-md block bg-white border-none w-full mr-3 py-1 px-2 leading-tight focus:outline-none text-pbodysmall placeholder-slate-500"
+                type="text"
+                placeholder="+45 12 34 56 78"
+                aria-label="Full Name"
+              />
+            </div>
+
+            <div class="flex flex-wrap justify-between">
+                <p>E-mail</p>
+                <div class="w-2/3 rounded-md mx-ms mb-6 md:mb-m border-2 border-stone-400">
+                  <input
+                    class="appearance-none rounded-md block bg-white border-none w-full mr-3 py-1 px-2 leading-tight focus:outline-none text-pbodysmall placeholder-slate-500"
+                    type="text"
+                    placeholder="juliejensen@gmail.com"
+                    aria-label="Full Name"
+                  />
+                </div>
+
+                <div class="flex flex-wrap w-full justify-between">
+                    <p>Post nr. & by</p>
+                    <div class="flex space-x-2 w-2/3 mr-ms">
+                    <div class="w-1/2 rounded-md mb-6 md:mb-m border-2 border-stone-400">
+                      <input
+                        class="appearance-none rounded-md block bg-white border-none w-full py-1 leading-tight focus:outline-none text-pbodysmall placeholder-slate-500"
+                        type="text"
+                        placeholder="Post nr."
+                        aria-label="City"
+                      /></div>
+                      <div class="w-1/2 rounded-md  mb-6 md:mb-m border-2 border-stone-400">
+                        <input
+                          class="appearance-none rounded-md block bg-white border-none w-full py-1 leading-tight focus:outline-none text-pbodysmall placeholder-slate-500"
+                          type="text"
+                          placeholder="By"
+                          aria-label="City"
+                        /></div>
+                    </div>
+                </div>
+                    <div class="flex flex-wrap justify-between">
+                            <p>Afhentningsdato</p></div>
+                          
+                            <div class="w-2/3 rounded-md mx-ms mb-6 md:mb-m border-2 border-stone-400">
+                              <input
+                                type="date"
+                                class="appearance-none rounded-md block bg-white border-none w-full py-1 px-2 leading-tight focus:outline-none text-pbodysmall placeholder-slate-400"
+                                aria-label="Afhentningsdato"
+                                placeholder="dd/mm/åååå"
+                              />
+                            </div>
+                          </div></div>
+
+                            <div class="flex flex-wrap justify-between">
+                                <p>Til/fra kort (+10,- kr)</p>
+                                <div class="w-2/3 rounded-md mx-ms mb-6 md:mb-m border-2 border-stone-400">
+                                  <textarea
+                                    class="appearance-none rounded-md block bg-white border-none w-full mr-3 px-2 leading-tight focus:outline-none text-pbodysmall placeholder-slate-500"
+                                    placeholder="Tekst til kortet (max 200 tegn)"
+                                    aria-label="Full Name"
+                                    rows="4"
+                                  />
+                                </div></div>
+
+                <div class="flex justify-center mb-10 mt-6">
+                  <Button><a href="/tak">Bestil gavekurv</a></Button></div>             
+    </form>
+
+  </section>
+  
+  <style>
+    input[type="date"] {
+      color: slategray;
+    }
+  
+    input[type="date"]::-webkit-calendar-picker-indicator {
+      filter: invert(50%);
+    }
+  </style>
+
+  
