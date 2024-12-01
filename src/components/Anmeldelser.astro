@@ -1,0 +1,49 @@
+---
+const { reviews } = Astro.props;
+
+// State til at holde styr på, hvilken anmeldelse der vises
+let currentReview = 0;
+
+// Funktion til at gå til næste anmeldelse
+function goToNextReview() {
+  currentReview = (currentReview + 1) % reviews.length;
+}
+
+// Funktion til at gå til forrige anmeldelse
+function goToPreviousReview() {
+  currentReview = (currentReview - 1 + reviews.length) % reviews.length;
+}
+---
+<section class="py-12">
+  <h2 class="text-center text-2xl font-bold mb-6">Glade kunder fortæller</h2>
+
+  <div class="flex justify-center">
+
+    <!-- Selve anmeldelsesboksen -->
+    <div class="bg-brun200 shadow-md rounded-xl p-10 text-center max-w-xl relative">
+
+      <!-- Forrige anmeldelse-knap -->
+      <button
+        class="absolute left-4 top-1/2 transform -translate-y-1/2 w-10 h-10 flex items-center justify-center"
+        onClick={goToPreviousReview}
+        aria-label="Forrige anmeldelse">
+
+        <span class="">←</span>
+      </button>
+
+      <!-- Anmeldelsestekst -->
+      <p class="text-lg font-medium">"{reviews[currentReview].text}"</p>
+
+      <p class="mt-4 font-light">{reviews[currentReview].author}</p>
+
+      <!-- Næste anmeldelse-knap -->
+      <button
+        class="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 flex items-center justify-center"
+        onClick={goToNextReview}
+        aria-label="Næste anmeldelse">
+        
+        <span class="">→</span>
+      </button>
+    </div>
+  </div>
+</section>

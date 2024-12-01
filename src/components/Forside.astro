@@ -1,9 +1,18 @@
 ---
 import Sections from "./Sections.astro";
+import Anmeldelser from "./Anmeldelser.astro";
 import Button from "./Button.astro";
 import { Image } from "astro:assets";
 import Test from "../assets/images/Test.jpg";
 import "../styles/global.css";
+
+// Anmeldelser som array af objekter
+const reviews = [
+  { text: "Det er altid så hyggeligt at komme på Marianne's lille cafe Local by me på Musicon", author: "Janni Schneider" },
+  { text: "Fantastisk service og dejlig stemning!", author: "Søren Nielsen" },
+  { text: "Elsker kaffen og kagerne her!", author: "Maria Pedersen" },
+];
+---
 ---
 
 <!-- Hero unit -->
@@ -60,20 +69,24 @@ import "../styles/global.css";
 </section>
 
 <!-- Sektion 4 - Nyhed -->
-  <section class="bg-green-100 py-12 text-center">
-    <h2 class="text-2xl font-bold">Få varmen og nyd smagen af jul</h2>
-    <p class="text-lg mt-2">Find de perfekte julegodter og gaver hos Local By Me.</p>
-  </section>
+<section class="bg-gron500 py-12 text-center">
+    <h2 class="text-2xl font-bold mb-6">Få varmen og nyd smagen af jul</h2>
+
+    <p class="text-lg mt-2">Gløgg-sæsonen er her, og vi har kræset for detaljerne for at tilbyde dig den bedste oplevelse. Kom forbi og smag på vores tre skønne varianter: <br/> Alkoholfri Æblegløgg – En frisk og krydret nydelse, perfekt for alle. Rød Årgangsgløgg – Traditionel gløgg med en rig smag af vinterens krydderier. Gin-Gløgg – En nyfortolkning med et strejf af elegance.<p>
+</section>
 
 <!-- Sektion 5 - Anmeldelser -->
-  <section class="py-12 bg-gray-50">
+<Anmeldelser reviews={reviews} />
+
+
+<!-- <section class="py-12">
     <h2 class="text-center text-2xl font-bold mb-6">Glade kunder fortæller</h2>
+  
     <div class="flex justify-center">
-      <div class="bg-white shadow-md rounded-lg p-6 text-center max-w-md">
-        <p class="text-gray-700 italic">
-          "Det er altid hyggeligt at komme på Marianne's lille café Local By Me på Mulsion."
-        </p>
-        <p class="text-gray-500 mt-4">- Jens Mortensen</p>
+      <div class="bg-brun200 shadow-md rounded-xl p-6 text-center max-w-xl">
+        <p class="text-lg font-medium">"Det er altid så hyggeligt at komme på Marianne's lille cafe Local by me på Musicon"</p>
+  
+        <p class="mt-4">Janni Schneider</p>
       </div>
     </div>
-  </section>
+  </section> -->

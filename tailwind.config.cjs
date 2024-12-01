@@ -11,13 +11,13 @@ module.exports = {
     extend: {
       colors: {
         //Surface farver - Brun & Grøn
-        brun50: "#F7F5F3", //farve til sublte surface
-        brun200: "#DBD1C7", //farve til lighter surface
+        brun50: "#F7F5F3", //farve til lighter surface
+        brun200: "#DBD1C7", //farve til subtle surface
         brun300: "#C9BCAB", //farve til default surface
         brun400: "#B7A48E", //farve til darker surface
 
-        gron200: "#D6D8CA", //farve til sublte surface
-        gron300: "#C0C4B0", //farve til lighter surface
+        gron200: "#D6D8CA", //farve til lighter surface
+        gron300: "#C0C4B0", //farve til subtle surface
         gron500: "#959C79", //farve til default surface
         gron700: "#5C6149", //farve til darker surface
 

@@ -7,7 +7,7 @@ export interface Props {
   description: string;
   buttonText: string;
   image: { src: string; alt: string };
-  layout?: 'image-left' | 'image-right'; // Valgfri layout-styring
+  layout?: 'image-left' | 'image-right'; // Dette gør at man frit kan vælge layout
 }
 
 const { title, description, buttonText, image, layout = 'image-left' } = Astro.props;
@@ -22,6 +22,6 @@ const { title, description, buttonText, image, layout = 'image-left' } = Astro.p
   <div class="w-full md:w-1/2">
     <h3 class="text-xl font-bold mb-2">{title}</h3>
     <p class="text-gray-600 mb-4">{description}</p>
-    <a href=""><Button variant="primary">{buttonText}</Button></a>
+    <a href=""><Button variant="secondary">{buttonText}</Button></a>
   </div>
 </div>

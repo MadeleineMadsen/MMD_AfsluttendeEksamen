@@ -11,15 +11,19 @@ import "../styles/global.css";
   <Image src={Test} alt="Baggrundsbillede til produkter" class="h-96 md:h-full"/>
 
   <div class="absolute top-12 md:top-1/2 md:left-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2 text-center">
-    <h1 class="text-specialh1">Overskrift</h1>
+    <h1 class="text-specialh1">Arrangementer</h1>
+
+    <p class="mb-6">Find dit næste event og vær med til at gøre hverdagen lidt mere speciel</p>
+
+    <a href=""><Button variant="primary">Se arrangementer</Button></a>
 </div>
 </section>
 
 <!-- Sektion 1 -->
 <section class="">
-  <h2 class="text-specialh1 text-center mb-6">Overskrift</h2>
+  <h2 class="text-specialh1 text-center mb-6">Oplev fælleskab og bliv inspireret</h2>
 
-  <h4 class="text-mnormalh4 md:text-normalh4 text-center mb-6">Local By Me byder på hyggelige og nærværende arrangementer, der styrker fællesskabet. Fra fællesspisning og kreative workshops til strikkeaftener og særlige sæsonbegivenheder – her er der plads til samvær, inspiration og lokale smagsoplevelser. Hold øje med kalenderen og vær med til at skabe minder i hjertet af Musicon.</h4>
+  <p class="text-center mb-6">Local By Me byder på hyggelige og nærværende arrangementer, der styrker fællesskabet. Fra fællesspisning og kreative workshops til strikkeaftener og særlige sæsonbegivenheder – her er der plads til samvær, inspiration og lokale smagsoplevelser. Hold øje med kalenderen og vær med til at skabe minder i hjertet af Musicon.</p>
 </section>
 
 <!-- Sektion 2 - Arrangementer -->
@@ -37,8 +41,13 @@ import "../styles/global.css";
   <Card imageSrc={Test} imageAlt="" title="Card 6" description="Beskrivelse"/>
 </section>
 
-<!-- Sektion 3 - Henvisning til anden side-->
-<section class="bg-beige w-full py-16">
+<!-- Sektion 3 - Tidligere arrangementer -->
+ <section>
+  <h2 class="text-specialh1 text-center">Tidligere arrangementer</h2>
+ </section>
+
+<!-- Sektion 4 - Henvisning til anden side-->
+<section class="bg-brun200 w-full py-16">
   <div class="max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row items-center justify-center">
     
     <div class="md:w-1/2 flex justify-center items-center mb-6 md:mb-0 md:order-2">
@@ -46,11 +55,11 @@ import "../styles/global.css";
     </div>
 
     <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-1 text-center md:text-left md:ml-xxl ml-0">
-      <h2 class="text-specialh2 mb-6">Henviser til "Om os"</h2>
+      <h2 class="text-specialh2 mb-6">Glæd en du holder af med vores gavekurve fyldt med lokale lækkerier</h2>
       
-      <p class="text-pnormal mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p class="text-pnormal mb-6">Hos LocalByMe sammensætter vi gavekurve med alt fra hjemmelavet marmelade og økologiske snacks til bæredygtige specialiteter – den perfekte gave til enhver lejlighed.</p>
       
-      <a href=""><Button variant="secondary">Knap</Button></a>
+      <a href=""><Button variant="primary">Se gavekurve</Button></a>
     </div>
   </div>
 </section>
