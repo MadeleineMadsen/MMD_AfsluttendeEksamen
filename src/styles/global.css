@@ -1,0 +1,10 @@
+@font-face {
+    font-family: "Sigurd";
+    src: url("/fonts/Sigurd-Regular.woff2") format("woff2");
+  }
+  
+  @font-face {
+    font-family: "Poppins";
+    src: url("/fonts/Poppins-Regular.woff2") format("woff2");
+  }
+  
