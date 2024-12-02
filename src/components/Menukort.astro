@@ -2,7 +2,7 @@
 import { ACTION_ERROR_CODES } from "astro:actions";
 ---
 
-<div class="container w-3/5">
+<div class="container md:w-3/5">
     <button type="button" class="collapsible"
       >Let og lækkert<span class="icon"></span></button
     >
@@ -20,7 +20,7 @@ import { ACTION_ERROR_CODES } from "astro:actions";
      <p class="boldcontent col-span1">Dagens suppe</p><p class="boldprice flex justify-end">99 kr.</p><p class="col-span-2">
          Spørg om dagens udvalgte suppe i caféen. Inkl. hjemmebagt brød.</p>
 
-         <p class="boldcontent">Fisk/muslinger fra Fangst</p><p class="boldprice flex justify-end">89 kr.</p><p class="col-span-2">
+         <p class="boldcontent">Fisk og muslinger fra Fangst</p><p class="boldprice flex justify-end">89 kr.</p><p class="col-span-2">
             Vælg mellem kvalitetsfisk eller muslinger på dåse. Serveres med hjemmerørt mayo, hjemmesyltede rødløg og hjemmebagt brød.</p>
 
             <div class="font-bold text-lg col-span-3 text-center mt-6">Til deling</div>
@@ -164,7 +164,7 @@ import { ACTION_ERROR_CODES } from "astro:actions";
       background-color: #ffffff;
       justify-content: space-between;
       cursor: pointer;
-  padding: 20px 10px;
+      padding: 20px 10px;
       width: 100%;
       border-top: 1px solid black;
       text-align: left;
@@ -180,25 +180,26 @@ import { ACTION_ERROR_CODES } from "astro:actions";
     .content {
       max-height: 0;
       overflow: hidden;
-      font-size: 14px;
-      opacity: 0;
+      font-size: 12px;
+      opacity: 1;
       transition: max-height 0.5s ease-in-out, opacity 0s ease;
     }
     /* Bold font */
     .boldcontent {
         font-weight: bold;
         grid-column-start: 1;
-        margin-top: 1cqw;
+        margin-top: 5cqw;
+        grid-column-end: 3;
     }
     /* Price */
     .boldprice {
         grid-column-end: 4;
         font-weight: bold;
-        margin-top: 1cqw;
+        margin-top: 5cqw;
     }
     .active + .content {
       max-height: 1440px;
-      padding: 20px 120px 40px 120px;
+      padding: 0 20px 20px 20px;
       border-top: 1px solid black;
       border-left: 1px solid black;
       border-right: 1px solid black;
@@ -214,6 +215,22 @@ opacity: 1;
         margin-bottom: 0;
         padding-left: 0;
       }
+      .content {
+      max-height: 0;
+      overflow: hidden;
+      font-size: 14px;
+      opacity: 1;
+      transition: max-height 0.5s ease-in-out, opacity 0s ease;
+    }
+    .active + .content {
+      padding: 20px 120px 40px 120px;
+    }
+    .boldcontent {
+        margin-top: 1cqw;
+    }
+    .boldprice {
+        margin-top: 1cqw;
+    }
     }
   </style>
   <script>

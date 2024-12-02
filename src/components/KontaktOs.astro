@@ -1,0 +1,50 @@
+---
+import Button from "./Button.astro"
+import { Image } from "astro:assets";
+import Smiley from "../assets/images/test-kvadrat.png"
+import Map from "./Map.astro";
+---
+
+   <section class="px-10 pt-10">
+<div>
+    <h2 class="text-2xl pb-6 text-center">Kontakt os</h2>
+    <p class="text-center">Har du spørgsmål eller ønsker at høre mere om vores produkter og arrangementer?<br/> Tøv ikke med at kontakte os – vi ser frem til at høre fra dig!</p></div>
+   </section>
+   <section class="px-10 md:grid md:grid-cols-5 md:gap-10 md:justify-center">
+    <div class="md:col-start-2 md:py-10 md:transform-none scale-[0.65] flex justify-center items-center">
+ <Map/>
+</div>
+        <div class="md:col-start-4 md:py-10 pt-0">
+            <p class="text-lg pb-6"><strong>Kontakt</strong></p>
+                <ul class="text-black">
+
+                    <li><strong>Adresse</strong></li>
+                      <li class="pt-2"><a href="https://www.google.com/maps/place/localbyme/@55.6288125,12.0822781,17z/data=!3m1!4b1!4m6!3m5!1s0x46525fe1b2bbaf91:0xc7c8a86a98a7fe41!8m2!3d55.6288095!4d12.084853!16s%2Fg%2F11rhctbn45?entry=ttu&g_ep=EgoyMDI0MTEyNC4xIKXMDSoASAFQAw%3D%3D" class="hover:underline" target="_blanc"> Rabalderstræde 1, Musicon,
+                        4000 Roskilde</a></li>
+                      <li class="pt-2"><strong>Mobil</strong></li>
+                      <li class="pt-2">+45 40 74 72 78</li>
+                      <li class="pt-2"><strong>Email</strong></li>
+                      <li class="pt-2"><a href="kontakt@localbyme.dk" class="hover:underline text-red-800">kontakt@localbyme.dk</a></li>
+                </ul></div>
+   </section>
+
+   <section class="bg-beige px-10 md:px-20 py-10 md:grid md:grid-cols-2 my-10 md:my-20">
+    <div class="md:col-start-1 flex justify-center">
+     <ul class="text-black">
+        <p class="text-lg pb-6"><strong>Åbningstider</strong></h2>
+            <li><strong>Mandag:</strong> 12.00 - 16.00</li>
+         <li><strong>Tirsdag:</strong> Lukket</li>
+         <li><strong>Onsdag:</strong> Lukket</li>
+         <li><strong>Torsdag:</strong> 12.00 - 18.00</li>
+         <li><strong>Fredag:</strong> 12.00 - 18.00</li>
+         <li><strong>Lørdag:</strong> 14.00 - 16.00</li>
+         <li><strong>Søndag:</strong> 12.00 - 16.00</li>
+       </ul></div>
+     <div class="md:col-start-2 flex justify-center md:mt-0 mt-10 ">
+       <div class="md:flex md:flex-col grid-cols-2 items-center hidden">
+     <Image
+     src={Smiley}
+     alt="E-smiley"
+     class="md:h-56 md:w-56 h-14 w-14"
+   /></div></div>
+   </section>

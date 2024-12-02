@@ -1,0 +1,14 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import EnkelProdukt from "../components/EnkelProdukt.astro";
+import PopTak from "../components/PopTak.astro";
+---
+
+<MainLayout title="Caféen">
+
+    <div class="bg-black bg-opacity-50 overflow-hidden">
+        <PopTak class="bg-opacity-100 brightness-100 z-50"></PopTak>
+        <div class="brightness-50 blur-sm">
+          <EnkelProdukt/>
+        </div>
+</MainLayout>

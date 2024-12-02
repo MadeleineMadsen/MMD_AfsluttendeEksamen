@@ -1,6 +1,72 @@
 ---
+import { Image } from "astro:assets";
+import TestH from "../assets/images/test-horisontal.png"
+import Facebook from "../assets/images/face.png"
+import Instagram from "../assets/images/insta.png"
 ---
-<div>
-<p>Footer</p>
-</div>
+<section class="bg-beige pt-12 pb-4 grid grid-rows-auto justify-center md:grid-cols-7">
+<div class="flex justify-center mb-10 md:col-start-1 md:col-span-2 md:mb-0 ">
+    <Image
+    src={TestH}
+    alt="test"
+    class="h-32 w-32 md:h-48 md:w-48"
+  /></div>
+
+  <div class="mx-8 mb-10 md:col-start-3 md:m-0 md:mt-6">
+    <ul>
+        <li><strong>Local By Me</strong></li>
+        <li class="pt-2"><a href="#" class="hover:underline">Caféen</a></li>
+        <li class="pt-2"><a href="#" class="hover:underline">Butikken</a></li>
+        <li class="pt-2"><a href="#" class="hover:underline">Arrangementer</a></li>
+    </ul>
+  </div>
+
+  <div class="mx-8 mb-10 md:col-start-4 md:m-0 md:mt-6">
+    <ul>
+        <li><strong>Information</strong></li>
+        <li class="pt-2"><a href="#" class="hover:underline">Om os</a></li>
+        <li class="pt-2"><a href="#" class="hover:underline">Kontakt</a></li>
+        <li class="pt-2"><a href="#" class="hover:underline">Find vej</a></li>
+    </ul>
+  </div>
+
+  <div class="mx-8 mb-10 md:col-start-5 md:m-0 md:mt-6">
+    <ul>
+        <li><strong>Følg os</strong></li>
+        <div class="grid grid-cols-5 md:grid-cols-4"><li class="col-start-1 pt-2"><a href="https://www.facebook.com/localbyme" target="_blank"><Image
+            src={Facebook}
+            alt="test"
+            class="h-10 w-10 hover:scale-110"
+          /></a></li>
+<!-- Facebook icons created by fauzin idea - Flaticon -->
+          <li class="col-start-2 pt-2"><a href="https://www.instagram.com/local_by_me/" target="_blank"><Image
+            src={Instagram}
+            alt="test"
+            class="h-10 w-10 hover:scale-110"
+          /></a></li>
+<!-- Instagram icons created by edt.im - Flaticon -->
+        </div>
+    </ul>
+  </div>
+
+
+  <div class="mx-8 md:col-start-6 md:col-span-2 md:mr-20 md:mt-6">
+    <ul>
+        <li><strong>Nyhedsbrev</strong></li>
+        <li class="pt-2">Bliv en del af et større fællesskab.</li>
+        <li class="pt-2">
+            <form class="flex items-center">
+            <div class="flex items-center border rounded-md border-black py-2">
+              <input class="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" placeholder="E-mail" aria-label="E-mail">
+              <button class="flex-shrink-0 bg-yellow-400 hover:bg-yellow-500 text-sm text-white py-1 px-2 rounded mr-2" type="button">
+                Indsend
+              </button>
+            </div>
+          </form>
+        </li>
+        <li class="text-xs pt-2"><a href="#" class="hover:underline">Privatlivs- & cookiepolitik</a></li>
+    </ul>
+  </div>
+  <p class="text-xs flex justify-center col-span-full pt-10">Copyright © 2024 - localbyme.dk</p>
+</section>
   
