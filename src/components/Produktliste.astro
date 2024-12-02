@@ -1,5 +1,6 @@
 ---
 import Button from "./Button.astro";
+import Card from "./Card.astro";
 import { Image } from "astro:assets";
 import Test from "../assets/images/Test.jpg";
 import "../styles/global.css";
@@ -29,47 +30,17 @@ import "../styles/global.css";
 
 <!-- Sektion 2 - Produkter -->
 <section class="mt-mxl md:mt-xxl mx-mxxl md:mx-xxxl md:grid md:grid-cols-3 md:grid-rows-10 md:gap-xl items-center place-items-center md:mb-xxl">
-  <div class="flex flex-col">
-    <Image src={Test} alt= class="md:w-full"/>
-    <h3 class="mt-4 font-semibold text-lg mb-6">Gavekurv 1</h3>
-    <p class="mt-2 text-gray-500 mb-6">100 kr</p>
-    <a href=""><Button variant="secondary">Tilføj til kurv</Button></a>
-  </div>
+  <Card imageSrc={Test} imageAlt="" title="Gavekurv 1" description="Beskrivelse"/>
 
-  <div class="flex flex-col">
-    <Image src={Test} alt= class="md:w-full"/>
-    <h3 class="mt-4 font-semibold text-lg mb-6">Gavekurv 2</h3>
-    <p class="mt-2 text-gray-500 mb-6">100 kr</p>
-    <a href=""><Button variant="secondary">Tilføj til kurv</Button></a>
-  </div>
+  <Card imageSrc={Test} imageAlt="" title="Gavekurv 1" description="Beskrivelse"/>
+  
+  <Card imageSrc={Test} imageAlt="" title="Gavekurv 3" description="Beskrivelse"/>
+  
+  <Card imageSrc={Test} imageAlt="" title="Gavekurv 4" description="Beskrivelse"/>
 
-  <div class="flex flex-col">
-    <Image src={Test} alt= class="md:w-full"/>
-    <h3 class="mt-4 font-semibold text-lg mb-6">Gavekurv 3</h3>
-    <p class="mt-2 text-gray-500 mb-6">100 kr</p>
-    <a href=""><Button variant="secondary">Tilføj til kurv</Button></a>
-  </div>
+  <Card imageSrc={Test} imageAlt="" title="Gavekurv 5" description="Beskrivelse"/>
 
-  <div class="flex flex-col">
-    <Image src={Test} alt= class="md:w-full"/>
-    <h3 class="mt-4 font-semibold text-lg mb-6">Gavekurv 4</h3>
-    <p class="mt-2 text-gray-500 mb-6">100 kr</p>
-    <a href=""><Button variant="secondary">Tilføj til kurv</Button></a>
-  </div>
-
-  <div class="flex flex-col">
-    <Image src={Test} alt= class="md:w-full"/>
-    <h3 class="mt-4 font-semibold text-lg mb-6">Gavekurv 5</h3>
-    <p class="mt-2 text-gray-500 mb-6">100 kr</p>
-    <a href=""><Button variant="secondary">Tilføj til kurv</Button></a>
-  </div>
-
-  <div class="flex flex-col">
-    <Image src={Test} alt= class="md:w-full"/>
-    <h3 class="mt-4 font-semibold text-lg mb-6">Gavekurv 6</h3>
-    <p class="mt-2 text-gray-500 mb-6">100 kr</p>
-    <a href=""><Button variant="secondary">Tilføj til kurv</Button></a>
-  </div>
+  <Card imageSrc={Test} imageAlt="" title="Gavekurv 6" description="Beskrivelse"/>
 </section>
 
 <!-- Sektion 3 - Henvisning til anden side-->

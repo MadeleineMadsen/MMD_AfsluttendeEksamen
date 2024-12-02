@@ -12,25 +12,25 @@ interface CardProps {
 const { imageSrc, imageAlt, title, description } = Astro.props;
 ---
 
-<div class="my-mxl md:my-0 max-w-xs overflow-hidden shadow-skygge m-auto scale-100 rounded-xl">
+<div class="my-mxl md:my-0 max-w-xs overflow-hidden shadow-skygge m-auto scale-100 rounded-lg">
 
  <!-- Billede -->
   <Image src={imageSrc} alt={imageAlt} class="md:w-full"/>
 
 <!-- Overskrift -->
-  <div class="px-6 py-4">
-    <div class="text-serifh3 font-serif my-s">
+  <div class="px-m py-s">
+    <div class="text-normalh4 md:text-mnormalh4 font-poppins my-s">
       {title}
     </div>
 
 <!-- Beskrivelse -->
-    <p class="">
+    <p class="text-pnormal md:text-mpnormal font-poppins">
       {description}
     </p>
   </div>
 
 <!-- Knap -->
-  <div class="mb-l ml-5">
-    <a href="/produktside/"><Button variant="secondary">Knap</Button></a>
+  <div class="mb-lg ml-5">
+    <a href="/produktside/"><Button variant="secondary">Bestil</Button></a>
   </div>
 </div>
