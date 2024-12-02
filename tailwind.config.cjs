@@ -172,7 +172,7 @@ module.exports = {
         xs: "8px", //X-small padding
         s: "18px", //Small padding
         m: "28px", //Medium padding
-        l: "40px", //Large padding
+        lg: "40px", //Large padding
         xl: "70px", //X-Large padding
 
         //Mobil
@@ -182,7 +182,7 @@ module.exports = {
         //Desktop
         s: "10px", //Small gap
         m: "20px", //Medium gap
-        l: "44px", //Large gap
+        lg: "44px", //Large gap
         xl: "60px", //X-large gap
         xxl: "99px", //XX-large gap
 
@@ -194,7 +194,7 @@ module.exports = {
         xs: "8px", //X-small borderradius
         s: "12px", //Small borderradius
         m: "18px", //Medium borderradius
-        l: "28px", //Large borderradius
+        lg: "28px", //Large borderradius
         xl: "52px", //X-large borderradius
         xxl: "70px", //XX-large borderradius
         full: "99px", //Full borderradius
