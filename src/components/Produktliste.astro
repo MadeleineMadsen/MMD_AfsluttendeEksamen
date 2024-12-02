@@ -1,6 +1,7 @@
 ---
 import Button from "./Button.astro";
 import Card from "./Card.astro";
+import Sections from "./Sections.astro";
 import { Image } from "astro:assets";
 import Test from "../assets/images/Test.jpg";
 import "../styles/global.css";
@@ -45,6 +46,16 @@ import "../styles/global.css";
 
 <!-- Sektion 3 - Henvisning til anden side-->
 <section class="bg-brun500 w-full py-16">
+  <Sections
+    title="Kender du historien bag Local By Me?"
+    description="Rejsen startede med en passion for lokalt håndværk og et ønske om at støtte danske producenter. Lær mere om visionen, værdierne og det fællesskab, der ligger bag vores butik og café."
+    buttonText="Læs hele historien her"
+    buttonType="primary"
+    image={{src: Test, alt: "Beskrivelse af billede"}}
+    layout="image-right"/>
+</section>
+
+<!-- <section class="bg-brun500 w-full py-16">
   <div class="max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row items-center justify-center">
     
     <div class="md:w-1/2 flex justify-center items-center mb-6 md:mb-0 md:order-2">
@@ -59,4 +70,4 @@ import "../styles/global.css";
       <a href=""><Button variant="primary">Læs hele historien her</Button></a>
     </div>
   </div>
-</section>
+</section> -->
