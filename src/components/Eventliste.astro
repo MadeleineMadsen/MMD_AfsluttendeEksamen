@@ -1,7 +1,6 @@
 ---
 import Card from "./Card.astro";
 import Button from "./Button.astro";
-import Sections from "./Sections.astro";
 import { Image } from "astro:assets";
 import Test from "../assets/images/Test.jpg";
 import "../styles/global.css";
@@ -49,16 +48,6 @@ import "../styles/global.css";
 
 <!-- Sektion 4 - Henvisning til anden side-->
 <section class="bg-brun200 w-full py-16">
-  <Sections
-    title="Glæd en du holder af med vores gavekurve fyldt med lokale lækkerier"
-    description="Hos LocalByMe sammensætter vi gavekurve med alt fra hjemmelavet marmelade og økologiske snacks til bæredygtige specialiteter – den perfekte gave til enhver lejlighed."
-    buttonText="Se gavekurve"
-    buttonType="primary"
-    image={{src: Test, alt: "Beskrivelse af billede"}}
-    layout="image-right"/>
-</section>
-
-<!-- <section class="bg-brun200 w-full py-16">
   <div class="max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row items-center justify-center">
     
     <div class="md:w-1/2 flex justify-center items-center mb-6 md:mb-0 md:order-2">
@@ -73,4 +62,4 @@ import "../styles/global.css";
       <a href=""><Button variant="primary">Se gavekurve</Button></a>
     </div>
   </div>
-</section> -->
+</section>

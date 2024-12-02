@@ -19,28 +19,28 @@ const reviews = [
     <Image src={Test} alt="Testbillede" class="h-96 md:h-full"/>
   
     <div class="absolute top-12 md:top-1/2 md:left-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2 text-center">
-        <h1 class="text-4xl font-bold mb-4">Velkommen til Local By Me</h1>
+        <h1 class="text-mspecialh1 md:text-specialh1 text-pgron font-sigurd mb-m">Velkommen til Local By Me</h1>
 
-        <p class="text-lg mb-6">Din lokale gårdbutik og café, hvor <br/> bæredygtighed møder fælleskab</p>
+        <p class="text-mspecialh3 md:text-specialh3 text-pdefault font-sigurd mb-m">Din lokale gårdbutik og café, hvor <br/> bæredygtighed møder fælleskab</p>
 
         <a href=""><Button variant="primary">Shop lokalt nu</Button></a>
     </div>
 </section>
 
 <!-- Sektion 1 - Hos LocalByMe-->
-<section class="text-center py-8">
-    <h2 class="text-2xl font-bold mb-6">Hos LocalByMe bygger vi på tre grundsten: <br/> bæredygtighed, lokalt engagement og fællesskab </h2>
+<section class="text-pdefault text-center py-m">
+    <h2 class="text-mnormalh3 md:text-normalh3 font-poppins font-semibold mb-6">Hos LocalByMe bygger vi på tre grundsten: <br/> bæredygtighed, lokalt engagement og fællesskab </h2>
 
-    <p class="mb-6">Vi tror på at støtte lokale producenter, tilbyde produkter med omtanke og skabe et sted, hvor mennesker kan mødes og inspirere hinanden til en grønnere og mere meningsfuld hverdag.</p>
+    <p class="text-mpnormal md:pnormal font-poppins mb-m">Vi tror på at støtte lokale producenter, tilbyde produkter med omtanke og skabe et sted, hvor mennesker kan mødes og inspirere hinanden til en grønnere og mere meningsfuld hverdag.</p>
 
     <a href=""><Button variant="primary">Læs mere om LocalByMe</Button></a>
 </section>
 
 <!-- Sektion 2 - Hvad tilbyder vi?-->
-<section class="text-center py-8">
-    <h2 class="text-2xl font-bold mb-6">Hvad tilbyder vi</h2>
+<section class="text-pdefault text-center py-8">
+    <h2 class="text-mnormalh2 md:text-normalh2 font-poppins font-bold mb-m">Hvad tilbyder vi</h2>
 
-    <p class="">LocalByMe er din lokale destination for bæredygtige løsninger og hyggelige oplevelser. Udforsk vores unikke butik, nyd øjeblikke i vores café, eller deltag i inspirerende events – alt sammen skabt med omtanke og lokalt engagement.</p>
+    <p class="text-mpnormal md:pnormal font-poppins mb-m">LocalByMe er din lokale destination for bæredygtige løsninger og hyggelige oplevelser. Udforsk vores unikke butik, nyd øjeblikke i vores café, eller deltag i inspirerende events – alt sammen skabt med omtanke og lokalt engagement.</p>
 </section>
 
 <!-- Sektion 3 - Adskillige sektioner-->
@@ -71,24 +71,33 @@ const reviews = [
 </section>
 
 <!-- Sektion 4 - Nyhed -->
-<section class="bg-gron500 py-12 text-center">
-    <h2 class="text-2xl font-bold mb-6">Få varmen og nyd smagen af jul</h2>
+<section class="bg-gron500 w-full py-16">
+  <div class="max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row items-center justify-center">
+    
+    <div class="md:w-1/2 flex justify-center items-center mb-6 md:mb-0 md:order-2">
+      <Image src={Test} alt="Testbillede" class="h-80 w-80 object-cover"/>
+    </div>
 
-    <p class="text-lg mt-2">Gløgg-sæsonen er her, og vi har kræset for detaljerne for at tilbyde dig den bedste oplevelse. Kom forbi og smag på vores tre skønne varianter: <br/> Alkoholfri Æblegløgg – En frisk og krydret nydelse, perfekt for alle. Rød Årgangsgløgg – Traditionel gløgg med en rig smag af vinterens krydderier. Gin-Gløgg – En nyfortolkning med et strejf af elegance.<p>
+    <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-1 text-center md:text-left md:ml-xxl ml-0">
+      <h2 class="text-mnormalh2 md:text-normalh2 font-poppins font-bold mb-m">Få varmen og nyd smagen af jul</h2>
+
+      <p class="text-mpnormal md:pnormal font-poppins">Gløgg-sæsonen er her, og vi har kræset for detaljerne for at tilbyde dig den bedste oplevelse. Kom forbi og smag på vores tre skønne varianter: <br/> Alkoholfri Æblegløgg – En frisk og krydret nydelse, perfekt for alle. Rød Årgangsgløgg – Traditionel gløgg med en rig smag af vinterens krydderier. Gin-Gløgg – En nyfortolkning med et strejf af elegance.<p>
+    </div>
+  </div>
 </section>
 
 <!-- Sektion 5 - Anmeldelser -->
  
 <!-- <Anmeldelser reviews={reviews} /> -->
 
-<section class="py-12">
-    <h2 class="text-center text-2xl font-bold mb-6">Glade kunder fortæller</h2>
+<section class="text-pdefault py-xl">
+    <h2 class="text-mnormalh2 md:text-normalh2 font-poppins font-bold text-center mb-m">Glade kunder fortæller</h2>
   
     <div class="flex justify-center">
-      <div class="bg-brun200 shadow-md rounded-xl p-6 text-center max-w-xl">
-        <p class="text-lg font-medium">"Det er altid så hyggeligt at komme på Marianne's lille cafe Local by me på Musicon"</p>
+      <div class="bg-brun200 shadow-md rounded-lg p-m text-center max-w-xl">
+        <p class="text-mpnormal md:pnormal font-poppins font-semibold">"Det er altid så hyggeligt at komme på Marianne's lille cafe Local by me på Musicon"</p>
   
-        <p class="mt-4">Janni Schneider</p>
+        <p class="mt-s">Janni Schneider</p>
       </div>
     </div>
   </section>
