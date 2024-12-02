@@ -20,9 +20,9 @@ const { title, description, buttonText, buttonType = 'primary', image, layout = 
   </div>
   
   <!-- Tekstindhold -->
-  <div class="w-full md:w-1/2">
-    <h3 class="text-xl font-bold mb-2">{title}</h3>
-    <p class="text-gray-600 mb-4">{description}</p>
+  <div class="text-pdefault w-full md:w-1/2">
+    <h3 class="text-mnormalh3 md:text-normalh3 font-poppins font-semibold mb-s">{title}</h3>
+    <p class="text-mpnormal md:pnormal mb-m">{description}</p>
     <a href=""><Button variant={buttonType}>{buttonText}</Button></a>
   </div>
 </div>

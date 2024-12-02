@@ -1,30 +1,34 @@
 ---
 import Card from "./Card.astro";
 import Button from "./Button.astro";
-import Sections from "./Sections.astro";
 import { Image } from "astro:assets";
 import Test from "../assets/images/Test.jpg";
 import "../styles/global.css";
 ---
 
 <!-- Hero unit -->
-<section class="relative">
-  <Image src={Test} alt="Baggrundsbillede til produkter" class="h-96 md:h-full"/>
+<section class="bg-brun100 w-full py-xl">
+  <div class="max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row items-center justify-center">
+    
+    <div class="md:w-1/2 flex justify-center items-center mb-6 md:mb-0 md:order-2">
+      <Image src={Test} alt="Billede af små konditorkager" class="h-80 w-80 object-cover"/>
+    </div>
 
-  <div class="absolute top-12 md:top-1/2 md:left-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2 text-center">
-    <h1 class="text-specialh1">Arrangementer</h1>
+    <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-1 text-center md:text-left md:ml-xxl ml-0">
+      <h1 class="text-mspecialh1 md:text-specialh1 text-pgron font-sigurd mb-m">Arrangementer</h1>
 
-    <p class="mb-6">Find dit næste event og vær med til at gøre hverdagen lidt mere speciel</p>
+      <p class="text-mspecialh3 md:text-specialh3 text-pdefault font-sigurd mb-m">Find dit næste event og vær med til at gøre hverdagen lidt mere speciel</p>
 
     <a href=""><Button variant="primary">Se arrangementer</Button></a>
-</div>
+    </div>
+  </div>
 </section>
 
 <!-- Sektion 1 -->
-<section class="">
-  <h2 class="text-specialh1 text-center mb-6">Oplev fælleskab og bliv inspireret</h2>
+<section class="text-center text-pdefault py-m">
+  <h2 class="text-mnormalh2 md:text-normalh2 font-poppins font-semibold mb-m">Oplev fælleskab og bliv inspireret</h2>
 
-  <p class="text-center mb-6">Local By Me byder på hyggelige og nærværende arrangementer, der styrker fællesskabet. Fra fællesspisning og kreative workshops til strikkeaftener og særlige sæsonbegivenheder – her er der plads til samvær, inspiration og lokale smagsoplevelser. Hold øje med kalenderen og vær med til at skabe minder i hjertet af Musicon.</p>
+  <p class="text-mpnormal md:pnormal font-poppins mb-m">Local By Me byder på hyggelige og nærværende arrangementer, der styrker fællesskabet. Fra fællesspisning og kreative workshops til strikkeaftener og særlige sæsonbegivenheder – her er der plads til samvær, inspiration og lokale smagsoplevelser. Hold øje med kalenderen og vær med til at skabe minder i hjertet af Musicon.</p>
 </section>
 
 <!-- Sektion 2 - Arrangementer -->
@@ -43,22 +47,12 @@ import "../styles/global.css";
 </section>
 
 <!-- Sektion 3 - Tidligere arrangementer -->
- <section>
-  <h2 class="text-specialh1 text-center">Tidligere arrangementer</h2>
+ <section class="text-center text-pdefault py-m">
+  <h2 class="text-mnormalh2 md:text-normalh2 font-sigurd font-semibold mb-m">Tidligere arrangementer</h2>
  </section>
 
 <!-- Sektion 4 - Henvisning til anden side-->
-<section class="bg-brun200 w-full py-16">
-  <Sections
-    title="Glæd en du holder af med vores gavekurve fyldt med lokale lækkerier"
-    description="Hos LocalByMe sammensætter vi gavekurve med alt fra hjemmelavet marmelade og økologiske snacks til bæredygtige specialiteter – den perfekte gave til enhver lejlighed."
-    buttonText="Se gavekurve"
-    buttonType="primary"
-    image={{src: Test, alt: "Beskrivelse af billede"}}
-    layout="image-right"/>
-</section>
-
-<!-- <section class="bg-brun200 w-full py-16">
+<section class="bg-brun200 text-pdefault w-full py-xl">
   <div class="max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row items-center justify-center">
     
     <div class="md:w-1/2 flex justify-center items-center mb-6 md:mb-0 md:order-2">
@@ -66,11 +60,11 @@ import "../styles/global.css";
     </div>
 
     <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-1 text-center md:text-left md:ml-xxl ml-0">
-      <h2 class="text-specialh2 mb-6">Glæd en du holder af med vores gavekurve fyldt med lokale lækkerier</h2>
+      <h2 class="text-mnormalh2 md:text-normalh2 font-poppins font-semibold mb-m">Glæd en du holder af med vores gavekurve fyldt med lokale lækkerier</h2>
       
-      <p class="text-pnormal mb-6">Hos LocalByMe sammensætter vi gavekurve med alt fra hjemmelavet marmelade og økologiske snacks til bæredygtige specialiteter – den perfekte gave til enhver lejlighed.</p>
+      <p class="text-mpnormal md:pnormal font-poppins mb-m">Hos LocalByMe sammensætter vi gavekurve med alt fra hjemmelavet marmelade og økologiske snacks til bæredygtige specialiteter – den perfekte gave til enhver lejlighed.</p>
       
       <a href=""><Button variant="primary">Se gavekurve</Button></a>
     </div>
   </div>
-</section> -->
+</section>

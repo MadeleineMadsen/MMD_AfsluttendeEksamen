@@ -1,32 +1,36 @@
 ---
 import Button from "./Button.astro";
 import Card from "./Card.astro";
-import Sections from "./Sections.astro";
 import { Image } from "astro:assets";
 import Test from "../assets/images/Test.jpg";
 import "../styles/global.css";
 ---
 
 <!-- Hero unit -->
-<section class="relative">
-  <Image src={Test} alt="Baggrundsbillede til produkter" class="h-96 md:h-full"/>
+<section class="bg-brun100 w-full py-xl">
+  <div class="max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row items-center justify-center">
+    
+    <div class="md:w-1/2 flex justify-center items-center mb-6 md:mb-0 md:order-2">
+      <Image src={Test} alt="Billede af små konditorkager" class="h-80 w-80 object-cover"/>
+    </div>
 
-  <div class="absolute top-12 md:top-1/2 md:left-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2 text-center">
-    <h1 class="text-specialh1">Butikken</h1>
+    <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-1 text-center md:text-left md:ml-xxl ml-0">
+      <h1 class="text-mspecialh1 md:text-specialh1 text-pgron font-sigurd mb-m">Butikken</h1>
 
-    <p class="mb-6">Vores butik er dedikeret til produkter skabt med kærlighed og omhu i Danmark – altid med fokus på kort afstand fra producent til kunde.</p>
+      <p class="text-mspecialh3 md:text-specialh3 text-pdefault font-sigurd mb-m">Vores butik er dedikeret til produkter skabt med kærlighed og omhu i Danmark – altid med fokus på kort afstand fra producent til kunde.</p>
 
-    <a href=""><Button variant="primary">Shop lokalt nu</Button></a>
-</div>
+      <a href=""><Button variant="primary">Shop lokalt nu</Button></a>
+    </div>
+  </div>
 </section>
 
 <!-- Sektion 1 -->
-<section class="">
-<h2 class="text-specialh1 text-center mb-6">Unikke varer med lokale fortællinger</h2>
+<section class="text-center text-pdefault py-m">
+<h2 class="text-mnormalh2 md:text-normalh2 font-poppins font-semibold mb-m">Unikke varer med lokale fortællinger</h2>
 
-<p class="text-center mb-6">Local By Me har en forkærlighed for produkter, der er produceret i Danmark, og prioriterer en kort vej fra jord til bord.</p>
+<p class="text-mpnormal md:pnormal font-poppins mb-m">Local By Me har en forkærlighed for produkter, der er produceret i Danmark, og prioriterer en kort vej fra jord til bord.</p>
 
-<p class="text-center">Produkterne købes ofte direkte fra leverandørerne, hvilket giver mulighed for at lære historien bag hvert produkt at kende. Når du besøger butikken, kan du derfor ikke blot købe unikke varer, men også høre de inspirerende fortællinger om passion, håndværk og kvalitet fra de lokale producenter. Hvert produkt i butikken er nøje udvalgt for at støtte det lokale og for at skabe en tættere forbindelse mellem producent og kunde.</p>
+<p class="text-mpnormal md:pnormal font-poppins mb-m">Produkterne købes ofte direkte fra leverandørerne, hvilket giver mulighed for at lære historien bag hvert produkt at kende. Når du besøger butikken, kan du derfor ikke blot købe unikke varer, men også høre de inspirerende fortællinger om passion, håndværk og kvalitet fra de lokale producenter. Hvert produkt i butikken er nøje udvalgt for at støtte det lokale og for at skabe en tættere forbindelse mellem producent og kunde.</p>
 </section>
 
 <!-- Sektion 2 - Produkter -->
@@ -45,29 +49,19 @@ import "../styles/global.css";
 </section>
 
 <!-- Sektion 3 - Henvisning til anden side-->
-<section class="bg-brun500 w-full py-16">
-  <Sections
-    title="Kender du historien bag Local By Me?"
-    description="Rejsen startede med en passion for lokalt håndværk og et ønske om at støtte danske producenter. Lær mere om visionen, værdierne og det fællesskab, der ligger bag vores butik og café."
-    buttonText="Læs hele historien her"
-    buttonType="primary"
-    image={{src: Test, alt: "Beskrivelse af billede"}}
-    layout="image-right"/>
-</section>
-
-<!-- <section class="bg-brun500 w-full py-16">
+<section class="bg-brun500 text-pdefault w-full py-xl">
   <div class="max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row items-center justify-center">
     
-    <div class="md:w-1/2 flex justify-center items-center mb-6 md:mb-0 md:order-2">
-      <Image src={Test} alt="Billede af små konditorkager" class="h-80 w-80 object-cover"/>
+    <div class="md:w-1/2 flex justify-center items-center mb-m md:mb-0 md:order-2">
+      <Image src={Test} alt="" class="h-80 w-80 object-cover"/>
     </div>
 
     <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-1 text-center md:text-left md:ml-xxl ml-0">
-      <h2 class="text-specialh2 mb-6">Kender du historien bag Local By Me?</h2>
+      <h2 class="text-mnormalh2 md:text-normalh2 font-poppins font-semibold mb-m">Kender du historien bag Local By Me?</h2>
       
-      <p class="text-pnormal mb-6">Rejsen startede med en passion for lokalt håndværk og et ønske om at støtte danske producenter. Lær mere om visionen, værdierne og det fællesskab, der ligger bag vores butik og café.</p>
+      <p class="text-mpnormal md:pnormal font-poppins mb-m">Rejsen startede med en passion for lokalt håndværk og et ønske om at støtte danske producenter. Lær mere om visionen, værdierne og det fællesskab, der ligger bag vores butik og café.</p>
       
       <a href=""><Button variant="primary">Læs hele historien her</Button></a>
     </div>
   </div>
-</section> -->
+</section>
