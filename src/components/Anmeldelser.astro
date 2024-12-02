@@ -1,51 +1,50 @@
----
-const { reviews } = Astro.props;
+<section class="text-center text-pdefault py-xl" x-data="{ 
+  currentReview: 0, 
+  reviews: [
+    { text: 'Dette er en længere anmeldelse, som indeholder mange detaljer om, hvor fantastisk servicen var. Jeg blev mødt med et smil og fik al den hjælp, jeg havde brug for. hej jeg hedder madeleine', author: 'John Doe' },
 
-// State til at holde styr på, hvilken anmeldelse der vises
-let currentReview = 0;
+    { text: 'Hurtig levering og fremragende kundeservice! Jeg kan varmt anbefale denne virksomhed til alle, der leder efter kvalitet og pålidelighed.', author: 'Jane Smith' },
 
-// Funktion til at gå til næste anmeldelse
-function goToNextReview() {
-  currentReview = (currentReview + 1) % reviews.length;
-}
+    { text: 'Fantastisk oplevelse! Jeg vil helt sikkert handle her igen.', author: 'Emma Johnson' },
 
-// Funktion til at gå til forrige anmeldelse
-function goToPreviousReview() {
-  currentReview = (currentReview - 1 + reviews.length) % reviews.length;
-}
----
-<section class="py-12">
-  <h2 class="text-center text-2xl font-bold mb-6">Glade kunder fortæller</h2>
+    { text: 'Fantastisk oplevelse! Jeg vil helt sikkert handle her igen.', author: 'Emma Johnson' },
 
+    { text: 'Fantastisk oplevelse! Jeg vil helt sikkert handle her igen.', author: 'Emma Johnson' },
+
+    { text: 'Fantastisk oplevelse! Jeg vil helt sikkert handle her igen.', author: 'Emma Johnson' },
+  ] 
+}">
+
+  <h2 class="text-mnormalh2 md:text-normalh2 font-poppins font-bold text-center mb-m">Glade kunder fortæller</h2>
+
+  <!-- Selve anmeldelsesboksen -->
   <div class="flex justify-center">
 
-    <!-- Selve anmeldelsesboksen -->
-    <div class="bg-brun200 shadow-md rounded-xl p-10 text-center max-w-xl relative">
+    <div class="bg-brun200 shadow-md rounded-xl p-lg text-center max-w-xl w-full md:w-96 md:h-64 relative">
 
-      <!-- Forrige anmeldelse-knap -->
+      <!-- Forrige knap -->
       <button
         type="button"
         class="absolute left-4 top-1/2 transform -translate-y-1/2 w-10 h-10 flex items-center justify-center"
-        onClick={goToPreviousReview}
+        @click="currentReview = (currentReview - 1 + reviews.length) % reviews.length"
         aria-label="Forrige anmeldelse">
-
-        <span class="">←</span>
+        <span>←</span>
       </button>
 
-      <!-- Anmeldelsestekst -->
-      <p class="text-lg font-medium">"{reviews[currentReview].text}"</p>
+      <!-- Tekst -->
+      <p class="text-mpnormal md:pnormal font-poppins font-semibold">"<span x-text="reviews[currentReview].text"></span>"</p>
+      
+      <p class="text-mpnormal md:pnormal font-poppins mt-m" x-text="reviews[currentReview].author"></p>
 
-      <p class="mt-4 font-light">{reviews[currentReview].author}</p>
-
-      <!-- Næste anmeldelse-knap -->
+      <!-- Næste knap -->
       <button
         type="button"
-        class="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 flex items-center justify-center"
-        onClick={goToNextReview}
+        class="absolute right-4 top-1/2 transform -translate-y-1/2 w-10 h-10 flex items-center justify-center"
+        @click="currentReview = (currentReview + 1) % reviews.length"
         aria-label="Næste anmeldelse">
-        
-        <span class="">→</span>
+        <span>→</span>
       </button>
     </div>
   </div>
 </section>
+
