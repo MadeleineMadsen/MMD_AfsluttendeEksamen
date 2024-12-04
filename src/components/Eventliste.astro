@@ -3,6 +3,20 @@ import Card from "./Card.astro";
 import Button from "./Button.astro";
 import { Image } from "astro:assets";
 import Test from "../assets/images/Test.jpg";
+import Herounit from "../assets/images/Arrangementer1.webp";
+import Event1 from "../assets/images/Event1.webp";
+import Event2 from "../assets/images/Event2.webp";
+import Event3 from "../assets/images/Event3.webp";
+import Event4 from "../assets/images/Event4.webp";
+import Event5 from "../assets/images/Event5.webp";
+import Event6 from "../assets/images/Event6.webp";
+import TA1 from "../assets/images/A1.webp";
+import TA2 from "../assets/images/A2.webp";
+import TA3 from "../assets/images/A3.webp";
+import TA4 from "../assets/images/A4.webp";
+import TA5 from "../assets/images/A5.webp";
+import TA6 from "../assets/images/A5.webp";
+import Illustration from "../assets/images/Illustration4.png";
 import "../styles/global.css";
 ---
 
@@ -11,7 +25,7 @@ import "../styles/global.css";
   <div class="max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row items-center justify-center">
     
     <div class="md:w-1/2 flex justify-center items-center mb-6 md:mb-0 md:order-2">
-      <Image src={Test} alt="Billede af små konditorkager" class="h-80 w-80 object-cover"/>
+      <Image src={Herounit} alt="Billede af små konditorkager" class="w-full h-auto object-cover"/>
     </div>
 
     <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-1 text-center md:text-left md:ml-xxl ml-0">
@@ -33,17 +47,17 @@ import "../styles/global.css";
 
 <!-- Sektion 2 - Arrangementer -->
 <section class="mt-mxl md:mt-xxl mx-mxxl md:mx-xxxl md:grid md:grid-cols-3 md:grid-rows-10 md:gap-xl items-center place-items-center md:mb-xxl">
-  <Card imageSrc={Test} imageAlt="" title="Card 1" description="Beskrivelse"/>
+  <Card imageSrc={Event1} imageAlt="" title="Card 1" description="Beskrivelse"/>
 
-  <Card imageSrc={Test} imageAlt="" title="Card 2" description="Beskrivelse"/>
+  <Card imageSrc={Event2} imageAlt="" title="Card 2" description="Beskrivelse"/>
   
-  <Card imageSrc={Test} imageAlt="" title="Card 3" description="Beskrivelse"/>
+  <Card imageSrc={Event3} imageAlt="" title="Card 3" description="Beskrivelse"/>
   
-  <Card imageSrc={Test} imageAlt="" title="Card 4" description="Beskrivelse"/>
+  <Card imageSrc={Event4} imageAlt="" title="Card 4" description="Beskrivelse"/>
 
-  <Card imageSrc={Test} imageAlt="" title="Card 5" description="Beskrivelse"/>
+  <Card imageSrc={Event5} imageAlt="" title="Card 5" description="Beskrivelse"/>
 
-  <Card imageSrc={Test} imageAlt="" title="Card 6" description="Beskrivelse"/>
+  <Card imageSrc={Event6} imageAlt="" title="Card 6" description="Beskrivelse"/>
 </section>
 
 <!-- Sektion 3 - Tidligere arrangementer -->
@@ -56,7 +70,7 @@ import "../styles/global.css";
   <div class="max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row items-center justify-center">
     
     <div class="md:w-1/2 flex justify-center items-center mb-6 md:mb-0 md:order-2">
-      <Image src={Test} alt="Testbillede" class="h-80 w-80 object-cover"/>
+      <Image src={Illustration} alt="Testbillede" class="w-full h-auto object-cover"/>
     </div>
 
     <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-1 text-center md:text-left md:ml-xxl ml-0">
