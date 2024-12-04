@@ -3,6 +3,14 @@ import Button from "./Button.astro";
 import Card from "./Card.astro";
 import { Image } from "astro:assets";
 import Test from "../assets/images/Test.jpg";
+import Herounit from "../assets/images/Butik1.png";
+import Produkt1 from "../assets/images/Butik2.webp";
+import Produkt2 from "../assets/images/Butik3.webp";
+import Produkt3 from "../assets/images/Butik4.webp";
+import Produkt4 from "../assets/images/Butik5.webp";
+import Produkt5 from "../assets/images/Butik6.webp";
+import Produkt6 from "../assets/images/Butik7.webp";
+import Illustration from "../assets/images/Forside6.png";
 import "../styles/global.css";
 ---
 
@@ -11,7 +19,7 @@ import "../styles/global.css";
   <div class="max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row items-center justify-center">
     
     <div class="md:w-1/2 flex justify-center items-center mb-6 md:mb-0 md:order-2">
-      <Image src={Test} alt="Billede af små konditorkager" class="h-80 w-80 object-cover"/>
+      <Image src={Herounit} alt="Billede af små konditorkager" class="w-full h-auto object-cover"/>
     </div>
 
     <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-1 text-center md:text-left md:ml-xxl ml-0">
@@ -35,17 +43,17 @@ import "../styles/global.css";
 
 <!-- Sektion 2 - Produkter -->
 <section class="mt-mxl md:mt-xxl mx-mxxl md:mx-xxxl md:grid md:grid-cols-3 md:grid-rows-10 md:gap-xl items-center place-items-center md:mb-xxl">
-  <Card imageSrc={Test} imageAlt="" title="Gavekurv 1" description="Beskrivelse"/>
+  <Card imageSrc={Produkt1} imageAlt="" title="Gavekurv 1" description="Beskrivelse"/>
 
-  <Card imageSrc={Test} imageAlt="" title="Gavekurv 1" description="Beskrivelse"/>
+  <Card imageSrc={Produkt2} imageAlt="" title="Gavekurv 1" description="Beskrivelse"/>
   
-  <Card imageSrc={Test} imageAlt="" title="Gavekurv 3" description="Beskrivelse"/>
+  <Card imageSrc={Produkt3} imageAlt="" title="Gavekurv 3" description="Beskrivelse"/>
   
-  <Card imageSrc={Test} imageAlt="" title="Gavekurv 4" description="Beskrivelse"/>
+  <Card imageSrc={Produkt4} imageAlt="" title="Gavekurv 4" description="Beskrivelse"/>
 
-  <Card imageSrc={Test} imageAlt="" title="Gavekurv 5" description="Beskrivelse"/>
+  <Card imageSrc={Produkt5} imageAlt="" title="Gavekurv 5" description="Beskrivelse"/>
 
-  <Card imageSrc={Test} imageAlt="" title="Gavekurv 6" description="Beskrivelse"/>
+  <Card imageSrc={Produkt6} imageAlt="" title="Gavekurv 6" description="Beskrivelse"/>
 </section>
 
 <!-- Sektion 3 - Henvisning til anden side-->
@@ -53,7 +61,7 @@ import "../styles/global.css";
   <div class="max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row items-center justify-center">
     
     <div class="md:w-1/2 flex justify-center items-center mb-m md:mb-0 md:order-2">
-      <Image src={Test} alt="" class="h-80 w-80 object-cover"/>
+      <Image src={Illustration} alt="" class="h-80 w-80 object-cover"/>
     </div>
 
     <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-1 text-center md:text-left md:ml-xxl ml-0">
