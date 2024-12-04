@@ -3,7 +3,12 @@ import Sections from "./Sections.astro";
 import Anmeldelser from "./Anmeldelser.astro";
 import Button from "./Button.astro";
 import { Image } from "astro:assets";
-import Test from "../assets/images/Test.jpg";
+import Herounit from "../assets/images/Forside1.webp";
+import Illustration1 from "../assets/images/Forside2.png";
+import Billede1 from "../assets/images/Forside3.webp";
+import Billede2 from "../assets/images/Forside4.webp";
+import Billede3 from "../assets/images/Forside5.webp";
+import Illustration2 from "../assets/images/Forside6.png";
 import "../styles/global.css";
 
 // Anmeldelser som array af objekter
@@ -24,7 +29,7 @@ const reviews = [
 
 <!-- Hero unit -->
 <section class="relative">
-    <Image src={Test} alt="Testbillede" class="h-96 md:h-full"/>
+    <Image src={Herounit} alt="Testbillede" class="h-96 md:h-full"/>
   
     <div class="absolute top-12 md:top-1/2 md:left-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2 text-center">
         <h1 class="text-mspecialh1 md:text-specialh1 text-pgron font-sigurd mb-m">Velkommen til Local By Me</h1>
@@ -58,7 +63,7 @@ const reviews = [
     description="Oplev det bedste fra lokale producenter – gavekurve fyldt med kærlighed, grøntsagskasser direkte fra marken og caféens økologiske specialiteter. Alle produkter er nøje udvalgt med omtanke for både dig og miljøet."
     buttonText="Se gavekurve"
     buttonType="secondary"
-    image={{src: Test, alt: "Beskrivelse af billede"}}
+    image={{src: Billede1, alt: "Beskrivelse af billede"}}
     layout="image-right"/>
 
     <Sections
@@ -66,7 +71,7 @@ const reviews = [
     description="Træk vejret og nyd en pause i vores café. Her serverer vi hjemmelavede lækkerier, økologisk kaffe og sæsonens smage – alt i en afslappet og varm atmosfære."
     buttonText="Se cafeens menukort"
     buttonType="secondary"
-    image={{src: Test, alt: "Beskrivelse af billede"}}
+    image={{src: Billede2, alt: "Beskrivelse af billede"}}
     layout="image-left"/>
 
     <Sections
@@ -74,7 +79,7 @@ const reviews = [
     description="Bliv en del af vores fællesskab! Deltag i inspirerende arrangementer – fra kreative workshops til hyggelige fællesspisninger. Her hos LocalByMe handler det ikke kun om produkter, men også om at skabe minder og forbindelser."
     buttonText="Se kommende events"
     buttonType="secondary"
-    image={{src: Test, alt: "Beskrivelse af billede"}}
+    image={{src: Billede3, alt: "Beskrivelse af billede"}}
     layout="image-right"/>
 </section>
 
@@ -83,7 +88,7 @@ const reviews = [
   <div class="max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row items-center justify-center">
     
     <div class="md:w-1/2 flex justify-center items-center mb-m md:mb-0 md:order-2">
-      <Image src={Test} alt="Testbillede" class="h-80 w-80 object-cover"/>
+      <Image src={Illustration2} alt="Testbillede" class="h-80 w-80 object-cover"/>
     </div>
 
     <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-1 text-center md:text-left md:ml-xxl ml-0">
