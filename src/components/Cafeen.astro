@@ -1,43 +1,56 @@
 ---
 import { Image } from "astro:assets";
-import TestH from "../assets/images/test-horisontal.png"
+import Cafe from "../assets/images/cafe.svg"
 import Smiley from "../assets/images/smiley_big.png"
 import Menukort from "../components/Menukort.astro"
 import Button from "./Button.astro";
+import Flasker from "../assets/images/sorteflasker.webp";
 ---
 
-<section class="relative">
+<section class="relative bg-brun100 md:grid md:grid-cols-2">
     <Image
-      src={TestH}
-      alt="Baggrundsbillede til produkter"
-      class="h-64 md:h-96 mb-20"
+      src={Cafe}
+      alt="Illustration af et cafébord"
+      class="opacity-20 md:opacity-100 md:col-start-2 md:my-8 md:h-96 h-72"
     />
   
     <div
-      class="absolute top-12 md:top-1/2 md:left-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2 text-center"
+      class="absolute md:col-start-1 md:col-span-1 md:mr-10 md:ml-40 mx-8 top-8 md:top-16 text-center md:text-left"
     >
       <h1
-        class="text-mserifh1 md:text-serifh1 text-white"
+        class="font-sigurd text-mspecialh1 md:text-specialh1 text-pgrøn"
       >
         Caféen
       </h1>
-      <h4
-        class="text-mnormal md:text-normalh4 text-white"
+      <p
+        class="font-sigurd text-mspecialh4 md:text-specialh3 text-pdefault"
       >
-      Med bæredygtige og ofte økologiske produkter fra lokale producenter tilbyder Local By Me en caféoplevelse, der er helt unik. <br/>
-      Menukortet tager udgangspunkt i de varer, der findes i butikken. Det giver dig mulighed for at smage på de lokale råvarer, opleve deres høje kvalitet og høre historien om de mennesker, der står bag produktionen.
-      
-      </h4>
+      Tag en pause fra hverdagen og nyd et øjeblik med lækre, lokale smagsoplevelser.
+    </p>
+<div class="mt-6"
+>    <Button variant="primary" class="p-s md:p-m"><a href="#menukort">Se menu</a></Button></div>
+
     </div>
   </section>
+
+  <div id="menukort" class="mx-lg md:mx-xxl md:py-lg">
+    <p class="font-poppins text-mnormalh4 md:text-normalh3 pt-4 text-center text-pdefault font-semibold">Smagen af lokalt håndværk</p>
+    <p class="font-poppins text-mpnormal md:text-pnormal pt-2 text-center text-pdefault md:mx-xxl">Menukortet tager udgangspunkt i de varer, der findes i butikken. Det  giver dig mulighed for at smage på de lokale råvarer, opleve deres høje  kvalitet og høre historien om de mennesker, der står bag produktionen.</p>
+  </div>
+
+  <div class="">
+    <p class="font-sigurd text-mspecialh3 mb-6 md:text-specialh3 pt-4 text-center font-semibold">Menukort</p>
+
+  </div>
+
   <section class="flex justify-center mt-5">
     <Menukort />
   </section>
-  <section class="bg-beige px-10 md:px-20 py-10 md:grid md:grid-cols-2 my-10 md:my-20">
+  <section class=" px-10 md:px-20 py-4 md:py-10 md:grid md:grid-cols-2 my-10 md:my-20 md:mx-xxl">
    <div class="md:col-start-1 flex justify-center">
-    <ul class="text-black">
-      <li>Caféens åbningstider</li><br/>
-      <li><strong>Mandag:</strong> 12.00 - 16.00</li>
+    <ul class="text-pdefault font-poppins space-y-1">
+      <li class="text-mnormalh4 font-semibold">Caféens åbningstider</li><br/>
+      <li><strong>Mandag:</strong>12.00 - 16.00</li>
         <li><strong>Tirsdag:</strong> Lukket</li>
         <li><strong>Onsdag:</strong> Lukket</li>
         <li><strong>Torsdag:</strong> 12.00 - 18.00</li>
@@ -45,16 +58,39 @@ import Button from "./Button.astro";
         <li><strong>Lørdag:</strong> 14.00 - 16.00</li>
         <li><strong>Søndag:</strong> 12.00 - 16.00</li>
       </ul></div>
-    <div class="md:col-start-2 flex justify-center md:mt-0 mt-10 ">
-      <div class="md:flex md:flex-col grid grid-cols-2 items-center ">
+    <div class="md:col-start-2 flex justify-center md:mt-0 mt-10 mx-m">
+      <div class="md:flex md:flex-col items-center justify-center grid grid-cols-2 ">
     <Image
     src={Smiley}
     alt="E-smiley"
-    class="md:h-32 md:w-32 h-14 w-14"
+    class="md:h-32 md:w-32 h-20 w-20"
   />
   <div class="md:mt-6 mt-0 ">
-  <Button style="primary"> <a href="https://www.findsmiley.dk/1013380" target="_blank">
+  <Button variant="secondary" class="p-s md:p-m"> <a href="https://www.findsmiley.dk/1013380" target="_blank">
     Se smiley rapport
   </a></Button>
-</div></div>
-  </section>
+</div></div>  </section>
+
+<section class="bg-gron500 text-pdefault py-lg font-poppins md:grid md:grid-cols-2 ">
+  <div class="mx-lg md:ml-xxl pb-m md:py-lg md:col-start-1 md:row-start-1">
+  <p class="text-mnormalh4 md:text-normalh4 font-semibold text-center md:text-left pb-s">Glæd en du holder af med vores gavekurve fyldt med lokale lækkerier</p>
+    <p class="pb-s md:pb-m text-mpnormal md:text-pnormal">Hos LocalByMe sammensætter vi gavekurve med alt fra smagsfulde marmelader og lokale drikkevarer til bæredygtige specialiteter – den perfekte gave til enhver lejlighed.</p>
+    <Button variant="primary" class="p-s md:p-m"><a href="/butik">Se gavekurve</a></Button>
+  </div>
+
+  <div class="flex justify-center md:col-start-2">
+    <Image
+    src={Flasker}
+    alt="Billede af sorte flasker"
+    class="h-auto w-auto"
+  />
+  </div>
+
+</section>
+
+<!-- For at transition fra knap til sektion (ved link til samme side) er smooth, som om man selv scroller -->
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+</style>

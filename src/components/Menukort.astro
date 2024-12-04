@@ -3,11 +3,11 @@ import { ACTION_ERROR_CODES } from "astro:actions";
 ---
 
 <div class="container md:w-3/5">
-    <button type="button" class="collapsible"
+    <button type="button" class="collapsible font-poppins text-mpnormal"
       >Let og lækkert<span class="icon"></span></button
     >
-    <div class="content">
-        <div class="font-bold text-lg col-span-3 text-center mt-6">Det lette</div>
+    <div class="content font-poppins">
+        <div class="font-semibold text-lg col-span-3 text-center mt-6">Det lette</div>
 
         <div class="grid grid-cols-2 gap-4">
 
@@ -23,7 +23,7 @@ import { ACTION_ERROR_CODES } from "astro:actions";
          <p class="boldcontent">Fisk og muslinger fra Fangst</p><p class="boldprice flex justify-end">89 kr.</p><p class="col-span-2">
             Vælg mellem kvalitetsfisk eller muslinger på dåse. Serveres med hjemmerørt mayo, hjemmesyltede rødløg og hjemmebagt brød.</p>
 
-            <div class="font-bold text-lg col-span-3 text-center mt-6">Til deling</div>
+            <div class="font-semibold text-lg col-span-3 text-center mt-6">Til deling</div>
 
      <p class="boldcontent">Lille bræt</p><p class="boldprice flex justify-end">159 kr.</p><p class="col-span-2">
          2 varianter af pølse, 2 slags ost, hjemmesyltede produkter, hjemmebagt brød og kiks.</p>
@@ -34,7 +34,7 @@ import { ACTION_ERROR_CODES } from "astro:actions";
          <p class="boldcontent">Tapas "to go" pr. person</p><p class="boldprice flex justify-end">175 kr.</p><p class="col-span-2">
             Bestilles senest dagen før afhentning og til minimum 2 personer. Indeholder 2 varianter af pølse, vildtrullepølse, paté, 2 varianter af ost, hjemmesyltede rødløg, hjemmerørt mayo, hjemmelavet pickles, rugbrød, kiks og hjemmebagt brød.</p>
 
-            <div class="font-bold text-lg col-span-3 text-center mt-6">Det lækre</div>
+            <div class="font-semibold text-lg col-span-3 text-center mt-6">Det lækre</div>
 
             <p class="boldcontent">Dagens kage</p><p class="boldprice flex justify-end">40 kr.</p><p class="col-span-2">
                 Alt efter sæsonens bær og frugter.</p>
@@ -46,11 +46,11 @@ import { ACTION_ERROR_CODES } from "astro:actions";
     </div>
     </div>
   
-    <button type="button" class="collapsible"
+    <button type="button" class="collapsible font-poppins"
       >Kolde drikkevarer<span class="icon"></span></button
     >
     <div class="content">
-        <div class="font-bold text-lg col-span-3 text-center mt-6">Med procenter</div>
+        <div class="font-semibold text-lg col-span-3 text-center mt-6">Med procenter</div>
 
         <div class="grid grid-cols-2 gap-4">
 
@@ -77,7 +77,7 @@ import { ACTION_ERROR_CODES } from "astro:actions";
      <p class="boldcontent">Stor drink</p><p class="boldprice flex justify-end">75 kr.</p><p class="col-span-2">
         Laves på 4 cl alkohol.</p></div>
         <div class="grid grid-cols-2 gap-4">
-            <div class="font-bold text-lg col-span-3 text-center mt-6">Uden procenter</div>
+            <div class="font-semibold text-lg col-span-3 text-center mt-6">Uden procenter</div>
 
 
      <p class="boldcontent">Mocktails</p><p class="boldprice flex justify-end">50 kr.</p><p class="col-span-2">
@@ -100,11 +100,11 @@ import { ACTION_ERROR_CODES } from "astro:actions";
     </div>
     </div>
 
-    <button type="button" class="collapsible"
+    <button type="button" class="collapsible font-poppins"
       >Kaffe & the<span class="icon"></span></button
     >
     <div class="content border-b border-black">
-        <div class="font-bold text-lg col-span-3 text-center mt-6">Kaffe</div>
+        <div class="font-semibold text-lg col-span-3 text-center mt-6">Kaffe</div>
 
         <div class="grid grid-cols-2 gap-4">
 
@@ -127,7 +127,7 @@ import { ACTION_ERROR_CODES } from "astro:actions";
             Vi bruger Mørk Colombia fra Just Coffee.</p></div>
 
             <div class="grid grid-cols-2 gap-4">
-                <div class="font-bold text-lg col-span-3 text-center mt-6">The</div>
+                <div class="font-semibold text-lg col-span-3 text-center mt-6">The</div>
     
          <p class="boldcontent">Kop the</p><p class="boldprice flex justify-end">25 kr.</p><p class="col-span-2">
              Vælg mellem et bredt udvalg.</p>
@@ -147,6 +147,7 @@ import { ACTION_ERROR_CODES } from "astro:actions";
       margin-right: 10px;
       width: 24px;
       height: 24px;
+      color: #231B15;
       background: url("/src/assets/images/plus.svg") center/contain no-repeat;
     }
   
@@ -156,6 +157,7 @@ import { ACTION_ERROR_CODES } from "astro:actions";
       margin-right: 10px;
       width: 24px;
       height: 24px;
+      color: #231B15;
       background: url("/src/assets/images/minus.svg") center/contain no-repeat;
     }
     /* Collapsible */
@@ -166,11 +168,11 @@ import { ACTION_ERROR_CODES } from "astro:actions";
       cursor: pointer;
       padding: 20px 10px;
       width: 100%;
-      border-top: 1px solid black;
+      border-top: 1px solid #231B15;;
       text-align: left;
       outline: none;
-      font-size: 20px;
-      font-weight: 700;
+      font-size: 18px;
+      font-weight: 500;
     }
     /* Collapsible open */
     .collapsible.active {
@@ -182,6 +184,7 @@ import { ACTION_ERROR_CODES } from "astro:actions";
       overflow: hidden;
       font-size: 12px;
       opacity: 1;
+color:#231B15;;
       transition: max-height 0.5s ease-in-out, opacity 0s ease;
     }
     /* Bold font */
@@ -189,6 +192,7 @@ import { ACTION_ERROR_CODES } from "astro:actions";
         font-weight: bold;
         grid-column-start: 1;
         margin-top: 5cqw;
+        color: #231B15;
         grid-column-end: 3;
     }
     /* Price */
@@ -196,13 +200,14 @@ import { ACTION_ERROR_CODES } from "astro:actions";
         grid-column-end: 4;
         font-weight: bold;
         margin-top: 5cqw;
+        color: #231B15;
     }
     .active + .content {
       max-height: 1440px;
       padding: 0 20px 20px 20px;
-      border-top: 1px solid black;
-      border-left: 1px solid black;
-      border-right: 1px solid black;
+      border-top: 1px solid #231B15;;
+      border-left: 1px solid #231B15;;
+      border-right: 1px solid #231B15;;
 opacity: 1;
     }
     .container {
