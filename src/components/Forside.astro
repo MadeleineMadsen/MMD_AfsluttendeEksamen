@@ -29,6 +29,7 @@ const reviews = [
 
 <!-- Hero unit -->
 <section class="relative">
+  <div class="absolute inset-0 bg-white bg-opacity-50"></div>
     <Image src={Herounit} alt="Testbillede" class="h-96 md:h-full"/>
   
     <div class="absolute top-12 md:top-1/2 md:left-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2 text-center">
@@ -41,23 +42,32 @@ const reviews = [
 </section>
 
 <!-- Sektion 1 - Hos LocalByMe-->
-<section class="text-pdefault text-center py-m">
-    <h2 class="text-mnormalh3 md:text-normalh3 font-poppins font-semibold mb-m">Hos LocalByMe bygger vi på tre grundsten: <br/> bæredygtighed, lokalt engagement og fællesskab </h2>
+<section class="text-pdefault w-full py-xl px-m md:px-lg">
+  <div class="max-w-screen-xl mx-auto flex flex-col md:flex-row items-center justify-center gap-m">
+    
+    <div class="md:w-1/2 flex justify-center items-center mb-m md:mb-0 md:order-2">
+      <Image src={Illustration1} alt="Testbillede" class="w-full h-auto object-cover"/>
+    </div>
 
-    <p class="text-mpnormal md:pnormal font-poppins mb-m">Vi tror på at støtte lokale producenter, tilbyde produkter med omtanke og skabe et sted, hvor mennesker kan mødes og inspirere hinanden til en grønnere og mere meningsfuld hverdag.</p>
+    <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-1 text-center md:text-left md:ml-xxl ml-0">
+      <h2 class="text-mnormalh3 md:text-normalh3 font-poppins font-semibold mb-m">Hos LocalByMe bygger vi på tre grundsten: <br/> bæredygtighed, lokalt engagement og fællesskab </h2>
 
-    <a href=""><Button variant="primary">Læs mere om LocalByMe</Button></a>
+      <p class="text-mpnormal md:pnormal font-poppins mb-m">Vi tror på at støtte lokale producenter, tilbyde produkter med omtanke og skabe et sted, hvor mennesker kan mødes og inspirere hinanden til en grønnere og mere meningsfuld hverdag.</p>
+
+      <a href=""><Button variant="primary">Læs mere om LocalByMe</Button></a>
+    </div>
+  </div>
 </section>
 
 <!-- Sektion 2 - Hvad tilbyder vi?-->
-<section class="text-pdefault text-center py-m">
+<section class="text-pdefault text-center py-m px-m md:px-lg">
     <h2 class="text-mnormalh2 md:text-normalh2 font-poppins font-bold mb-m">Hvad tilbyder vi</h2>
 
     <p class="text-mpnormal md:pnormal font-poppins mb-m">LocalByMe er din lokale destination for bæredygtige løsninger og hyggelige oplevelser. Udforsk vores unikke butik, nyd øjeblikke i vores café, eller deltag i inspirerende events – alt sammen skabt med omtanke og lokalt engagement.</p>
 </section>
 
 <!-- Sektion 3 - Adskillige sektioner-->
-<section class="grid gap-m py-lg px-m">
+<section class="grid gap-m py-lg px-m md:px-lg">
     <Sections
     title="Lokal kvalitet der gør en forskel"
     description="Oplev det bedste fra lokale producenter – gavekurve fyldt med kærlighed, grøntsagskasser direkte fra marken og caféens økologiske specialiteter. Alle produkter er nøje udvalgt med omtanke for både dig og miljøet."
@@ -84,7 +94,7 @@ const reviews = [
 </section>
 
 <!-- Sektion 4 - Nyhed -->
-<section class="bg-gron500 w-full py-xl">
+<section class="bg-gron500 w-full py-xl px-m md:px-lg">
   <div class="max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row items-center justify-center">
     
     <div class="md:w-1/2 flex justify-center items-center mb-m md:mb-0 md:order-2">
@@ -100,7 +110,6 @@ const reviews = [
 </section>
 
 <!-- Sektion 5 - Anmeldelser -->
- 
 <Anmeldelser reviews={reviews} />
 
 <!-- <section class="text-pdefault py-xl">
