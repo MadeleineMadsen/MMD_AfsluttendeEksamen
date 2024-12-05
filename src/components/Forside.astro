@@ -11,26 +11,13 @@ import Billede3 from "../assets/images/Forside5.webp";
 import Illustration2 from "../assets/images/Illustration2.png";
 import "../styles/global.css";
 
-// Anmeldelser som array af objekter
-const reviews = [
-  { text: "Det er altid så hyggeligt at komme på Marianne's lille cafe Local by me på Musicon", author: "Janni Schneider" },
-  
-  { text: "Landlig stil Rolig og blid cafe, betjeningen var meget venlig, jeg stolede på sælgerens anbefaling og tog laks på dåse og brød til morgenmad. Fisken og olien med laksen var virkelig god! Varmt og frisk brød! Frøbrødet var også min absolutte favorit, tilpas salt. Cafeen sælger en masse produkter, der var på menuen, inklusive lokal gin", author: "Julie Suola" },
-
-  { text: "Super hyggelig lille café i Musicon. Vi fik serveret en dejlig morgenmadstallerken med spejlæg", author: "Helle Mûnsberg" },
-
-  { text: "Dejligt og hyggeligt sted. Prøvede den fælles frokost tallerken, og den var lækker.", author: "Henrik Schucany" },
-
-  { text: "Localbyme har et rigtig godt udvalg af lokale produkter, gavekurve, og det er også en cafe der serverer mad og drikkevarer. Ejeren er super dejlig og hjalp mig med at finde den perfekte gave.", author: "Melissa Robbins" },
-
-  { text: "Sindssygt lækkert og vanvittigt god service. Fedt koncept med produkter fra lokale og små virksomheder. Fik hjemmebagt brød med mayo, syltede rødløg og færøsk laks, økologisk limonade og en vegansk flødebolle for 155 kr.", author: "Søs Lamhauge" },
-];
+const reviews = [];
 ---
 
 <!-- Hero unit -->
 <section class="relative">
-  <div class="absolute inset-0 bg-white bg-opacity-50"></div>
-    <Image src={Herounit} alt="Testbillede" class="h-96 md:h-full"/>
+  <div class="absolute inset-0 bg-white bg-opacity-70"></div>
+    <Image src={Herounit} alt="Baggrundsbillede til Hero Unit" class="h-96 md:h-full"/>
   
     <div class="absolute top-12 md:top-1/2 md:left-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2 text-center">
         <h1 class="text-mspecialh1 md:text-specialh1 text-pgron font-sigurd mb-m">Velkommen til Local By Me</h1>
@@ -42,32 +29,32 @@ const reviews = [
 </section>
 
 <!-- Sektion 1 - Hos LocalByMe-->
-<section class="text-pdefault w-full py-xl px-m md:px-lg">
-  <div class="max-w-screen-xl mx-auto flex flex-col md:flex-row items-center justify-center gap-m">
-    
-    <div class="md:w-1/2 flex justify-center items-center mb-m md:mb-0 md:order-2">
-      <Image src={Illustration1} alt="Testbillede" class="w-full h-auto object-cover"/>
-    </div>
+<section class="text-pdefault w-full flex items-center justify-center">
+  <div class="mx-auto flex flex-col md:flex-row gap-lg items-center justify-between px-lg py-xl">
 
-    <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-1 text-center md:text-left md:ml-xxl ml-0">
-      <h2 class="text-mnormalh3 md:text-normalh3 font-poppins font-semibold mb-m">Hos LocalByMe bygger vi på tre grundsten: <br/> bæredygtighed, lokalt engagement og fællesskab </h2>
+    <div class="md:w-1/2 md:order-1 text-center md:text-left md:p-s md:ml-xxl ml-0">
+      <h2 class="text-mnormalh3 md:text-normalh3 font-poppins font-semibold leading-relaxed mb-lg">Hos LocalByMe bygger vi på tre grundsten: <br/> bæredygtighed, lokalt engagement og fællesskab </h2>
 
-      <p class="text-mpnormal md:pnormal font-poppins mb-m">Vi tror på at støtte lokale producenter, tilbyde produkter med omtanke og skabe et sted, hvor mennesker kan mødes og inspirere hinanden til en grønnere og mere meningsfuld hverdag.</p>
+      <p class="text-mpnormal md:pnormal font-poppins leading-relaxed mb-lg">Vi tror på at støtte lokale producenter, tilbyde produkter med omtanke og skabe et sted, hvor mennesker kan mødes og inspirere hinanden til en grønnere og mere meningsfuld hverdag.</p>
 
       <a href=""><Button variant="primary">Læs mere om LocalByMe</Button></a>
+    </div>
+
+    <div class="md:w-1/2 flex justify-center items-center mb-m md:mb-0 md:mr-xl md:order-2">
+      <Image src={Illustration1} alt="Små illustrationer af lokale råvarer" class="w-auto h-full object-obtain"/>
     </div>
   </div>
 </section>
 
 <!-- Sektion 2 - Hvad tilbyder vi?-->
-<section class="text-pdefault text-center py-m px-m md:px-lg">
+<section class="text-pdefault text-center py-lg px-m md:px-lg">
     <h2 class="text-mnormalh2 md:text-normalh2 font-poppins font-bold mb-m">Hvad tilbyder vi</h2>
 
-    <p class="text-mpnormal md:pnormal font-poppins mb-m">LocalByMe er din lokale destination for bæredygtige løsninger og hyggelige oplevelser. Udforsk vores unikke butik, nyd øjeblikke i vores café, eller deltag i inspirerende events – alt sammen skabt med omtanke og lokalt engagement.</p>
+    <p class="text-mpnormal md:pnormal font-poppins mb-m">LocalByMe er din lokale destination for bæredygtige løsninger og hyggelige oplevelser. <br/> Udforsk vores unikke butik, nyd øjeblikke i vores café, eller deltag i inspirerende events <br/> – alt sammen skabt med omtanke og lokalt engagement.</p>
 </section>
 
 <!-- Sektion 3 - Adskillige sektioner-->
-<section class="grid gap-m py-lg px-m md:px-lg">
+<section class="grid items-center justify-center py-lg px-m md:px-lg">
     <Sections
     title="Lokal kvalitet der gør en forskel"
     description="Oplev det bedste fra lokale producenter – gavekurve fyldt med kærlighed, grøntsagskasser direkte fra marken og caféens økologiske specialiteter. Alle produkter er nøje udvalgt med omtanke for både dig og miljøet."
@@ -94,17 +81,19 @@ const reviews = [
 </section>
 
 <!-- Sektion 4 - Nyhed -->
-<section class="bg-gron500 w-full py-xl px-m md:px-lg">
-  <div class="max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row items-center justify-center">
-    
-    <div class="md:w-1/2 flex justify-center items-center mb-m md:mb-0 md:order-2">
-      <Image src={Illustration2} alt="Testbillede" class="h-80 w-80 object-cover"/>
+<section class="bg-gron700 w-full flex items-center justify-center">
+  <div class="mx-auto flex flex-col md:flex-row gap-lg items-center justify-between px-lg py-xl">
+
+    <div class="font-poppins text-phvid md:w-1/2 md:order-1 text-center md:text-left md:p-s md:ml-xxl ml-0">
+      <h2 class="text-mnormalh2 md:text-normalh2 font-bold mb-m whitespace-nowrap">Få varmen og nyd smagen af jul</h2>
+
+      <p class="text-mpnormal md:text-pnormal leading-relaxed mb-m">Gløgg-sæsonen er her, og vi har kræset for detaljerne for at tilbyde dig den bedste oplevelse. Kom forbi og smag på vores tre skønne varianter:<p>
+
+      <p class="text-mpnormal md:text-pnormal leading-relaxed">Alkoholfri Æblegløgg – En frisk og krydret nydelse, perfekt for alle. <br/> Rød Årgangsgløgg – Traditionel gløgg med en rig smag af vinterens krydderier. <br/> Gin-Gløgg – En nyfortolkning med et strejf af elegance.<p>
     </div>
 
-    <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-1 text-center md:text-left md:ml-xxl ml-0">
-      <h2 class="text-mnormalh2 md:text-normalh2 font-poppins font-bold mb-m">Få varmen og nyd smagen af jul</h2>
-
-      <p class="text-mpnormal md:pnormal font-poppins">Gløgg-sæsonen er her, og vi har kræset for detaljerne for at tilbyde dig den bedste oplevelse. Kom forbi og smag på vores tre skønne varianter: <br/> Alkoholfri Æblegløgg – En frisk og krydret nydelse, perfekt for alle. Rød Årgangsgløgg – Traditionel gløgg med en rig smag af vinterens krydderier. Gin-Gløgg – En nyfortolkning med et strejf af elegance.<p>
+    <div class="md:w-1/2 flex justify-center items-center mb-m md:mb-0 md:order-2">
+      <Image src={Illustration2} alt="Små illustrationer af jul" class="w-auto h-full object-obtain"/>
     </div>
   </div>
 </section>
@@ -112,14 +101,3 @@ const reviews = [
 <!-- Sektion 5 - Anmeldelser -->
 <Anmeldelser reviews={reviews} />
 
-<!-- <section class="text-pdefault py-xl">
-    <h2 class="text-mnormalh2 md:text-normalh2 font-poppins font-bold text-center mb-m">Glade kunder fortæller</h2>
-  
-    <div class="flex justify-center">
-      <div class="bg-brun200 shadow-md rounded-lg p-m text-center max-w-xl">
-        <p class="text-mpnormal md:pnormal font-poppins font-semibold">"Det er altid så hyggeligt at komme på Marianne's lille cafe Local by me på Musicon"</p>
-  
-        <p class="text-mpnormal md:pnormal font-poppins mt-m">Janni Schneider</p>
-      </div>
-    </div>
-  </section> -->

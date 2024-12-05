@@ -1,48 +1,53 @@
-<section class="text-center text-pdefault py-xl" x-data="{ 
+<!-- Link til knapper brugt i boksen med anmeldselser -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+<section class="text-center text-pdefault py-xl px-m md:px-lg" x-data="{ 
   currentReview: 0, 
   reviews: [
-    { text: 'Dette er en længere anmeldelse, som indeholder mange detaljer om, hvor fantastisk servicen var. Jeg blev mødt med et smil og fik al den hjælp, jeg havde brug for. hej jeg hedder madeleine', author: 'John Doe' },
+    { text: 'Det er altid så hyggeligt at komme på Mariannes lille café Local by me på Musicon', author: 'Janni Schneider' },
 
-    { text: 'Hurtig levering og fremragende kundeservice! Jeg kan varmt anbefale denne virksomhed til alle, der leder efter kvalitet og pålidelighed.', author: 'Jane Smith' },
+    { text: 'Landlig stil Rolig og blid cafe, betjeningen var meget venlig, jeg stolede på sælgerens anbefaling og tog laks på dåse og brød til morgenmad. Fisken og olien med laksen var virkelig god! Varmt og frisk brød! Frøbrødet var også min absolutte favorit, tilpas salt. Cafeen sælger en masse produkter, der var på menuen, inklusive lokal gin', author: 'Julie Suola' },
 
-    { text: 'Fantastisk oplevelse! Jeg vil helt sikkert handle her igen.', author: 'Emma Johnson' },
+    { text: 'Super hyggelig lille café i Musicon. Vi fik serveret en dejlig morgenmadstallerken med spejlæg', author: 'Helle Mûnsberg' },
 
-    { text: 'Fantastisk oplevelse! Jeg vil helt sikkert handle her igen.', author: 'Emma Johnson' },
+    { text: 'Dejligt og hyggeligt sted. Prøvede den fælles frokost tallerken, og den var lækker.', author: 'Henrik Schucany' },
 
-    { text: 'Fantastisk oplevelse! Jeg vil helt sikkert handle her igen.', author: 'Emma Johnson' },
+    { text: 'Localbyme har et rigtig godt udvalg af lokale produkter, gavekurve, og det er også en cafe der serverer mad og drikkevarer. Ejeren er super dejlig og hjalp mig med at finde den perfekte gave.', author: 'Melissa Robbins' },
 
-    { text: 'Fantastisk oplevelse! Jeg vil helt sikkert handle her igen.', author: 'Emma Johnson' },
+    { text: 'Sindssygt lækkert og vanvittigt god service. Fedt koncept med produkter fra lokale og små virksomheder. Fik hjemmebagt brød med mayo, syltede rødløg og færøsk laks, økologisk limonade og en vegansk flødebolle for 155 kr.', author: 'Søs Lamhauge' },
   ] 
 }">
 
-  <h2 class="text-mnormalh2 md:text-normalh2 font-poppins font-bold text-center mb-m">Glade kunder fortæller</h2>
+  <h2 class="text-mnormalh2 md:text-normalh2 font-poppins font-bold text-center mb-xl">Glade kunder fortæller</h2>
 
   <!-- Selve anmeldelsesboksen -->
   <div class="flex justify-center">
 
-    <div class="bg-brun200 shadow-md rounded-xl p-lg text-center max-w-xl w-full md:w-96 md:h-64 relative">
+    <div class="bg-brun200 shadow-md rounded-xl p-lg text-center max-w-xxl w-full md:w-10/12 md:h-96 relative flex items-center justify-center">
 
       <!-- Forrige knap -->
       <button
         type="button"
-        class="absolute left-4 top-1/2 transform -translate-y-1/2 w-10 h-10 flex items-center justify-center"
+        class="absolute left-4 top-1/2 transform -translate-y-1/2 w-16 h-16 flex items-center justify-center"
         @click="currentReview = (currentReview - 1 + reviews.length) % reviews.length"
         aria-label="Forrige anmeldelse">
-        <span>←</span>
+        <i class="fa-solid fa-chevron-left"></i>
       </button>
 
       <!-- Tekst -->
-      <p class="text-mpnormal md:pnormal font-poppins font-semibold">"<span x-text="reviews[currentReview].text"></span>"</p>
+      <div class="p-lg">
+        <p class="text-mnormalh4 md:normalh4 font-poppins font-semibold">"<span x-text="reviews[currentReview].text"></span>"</p>
       
-      <p class="text-mpnormal md:pnormal font-poppins mt-m" x-text="reviews[currentReview].author"></p>
+        <p class="text-mpnormal md:pnormal font-poppins mt-m" x-text="reviews[currentReview].author"></p>
+      </div>
 
       <!-- Næste knap -->
       <button
         type="button"
-        class="absolute right-4 top-1/2 transform -translate-y-1/2 w-10 h-10 flex items-center justify-center"
+        class="absolute right-4 top-1/2 transform -translate-y-1/2 w-16 h-16 flex items-center justify-center"
         @click="currentReview = (currentReview + 1) % reviews.length"
         aria-label="Næste anmeldelse">
-        <span>→</span>
+        <i class="fa-solid fa-chevron-right"></i>
       </button>
     </div>
   </div>

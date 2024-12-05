@@ -13,16 +13,16 @@ export interface Props {
 
 const { title, description, buttonText, buttonType = 'primary', image, layout = 'image-left' } = Astro.props;
 ---
-<div class={`flex flex-col ${layout === 'image-left' ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-6 p-4`}>
+<div class={`mx-auto flex flex-col ${layout === 'image-left' ? 'md:flex-row' : 'md:flex-row-reverse'} items-center justify-center px-s py-xl`}>
   <!-- Billede -->
-  <div class="w-full md:w-1/2">
-    <Image src={image.src} alt={image.alt} class="object-cover w-full h-48 md:h-auto" />
+  <div class="md:w-1/2 flex justify-center items-center mb-m md:mb-0 md:p-s">
+    <Image src={image.src} alt={image.alt} class="object-obtain w-full md:w-auto h-48 md:h-full" />
   </div>
   
   <!-- Tekstindhold -->
-  <div class="text-pdefault w-full md:w-1/2">
-    <h3 class="text-mnormalh3 md:text-normalh3 font-poppins font-semibold mb-s">{title}</h3>
-    <p class="text-mpnormal md:pnormal mb-m">{description}</p>
+  <div class="font-poppins text-pdefault w-full md:w-1/2 text-center md:text-left md:ml-xxl ml-0 md:mb-m mb-0">
+    <h3 class="text-mnormalh3 md:text-normalh3 font-poppins font-semibold md:mb-m mb-0">{title}</h3>
+    <p class="text-mpnormal md:pnormal md:mb-m mb-0">{description}</p>
     <a href=""><Button variant={buttonType}>{buttonText}</Button></a>
   </div>
 </div>
