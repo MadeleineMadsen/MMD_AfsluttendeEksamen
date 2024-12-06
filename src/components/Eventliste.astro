@@ -21,11 +21,11 @@ import "../styles/global.css";
 ---
 
 <!-- Hero unit -->
-<section class="bg-brun100 w-full py-xl">
-  <div class="max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row items-center justify-center">
+<section class="bg-brun100 w-full py-m md:py-xxl">
+  <div class="mx-auto px-4 flex flex-col md:flex-row items-center justify-center">
     
     <div class="md:w-1/2 md:flex justify-center items-center mb-6 md:mb-0 md:order-2 hidden">
-      <Image src={Herounit} alt="Billede af små konditorkager" class="w-full h-auto object-cover"/>
+      <Image src={Herounit} alt="Billede af små konditorkager" class="w-auto h-full object-obtain"/>
     </div>
 
     <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-1 text-center md:text-left md:ml-xxl ml-0">
@@ -39,14 +39,14 @@ import "../styles/global.css";
 </section>
 
 <!-- Sektion 1 -->
-<section class="text-pdefault py-m">
-  <h2 class="text-mnormalh3 md:text-normalh2 font-poppins font-semibold text-center mx-lg mb-lg">Oplev fælleskab og bliv inspireret</h2>
+<section class="text-pdefault py-m md:px-64 md:py-xl">
+  <h2 class="text-mnormalh3 md:text-normalh2 font-poppins font-semibold text-center mx-lg mb-lg md:mx-24">Oplev fælleskab og bliv inspireret</h2>
 
-  <p class="text-mpnormal md:pnormal font-poppins text-left mx-lg">Local By Me byder på hyggelige og nærværende arrangementer, der styrker fællesskabet. Fra fællesspisning og kreative workshops til strikkeaftener og særlige sæsonbegivenheder – her er der plads til samvær, inspiration og lokale smagsoplevelser. Hold øje med kalenderen og vær med til at skabe minder i hjertet af Musicon.</p>
+  <p class="text-mpnormal md:pnormal font-poppins text-left md:text-center mx-lg md:mx-24 mb-m">Local By Me byder på hyggelige og nærværende arrangementer, der styrker fællesskabet. Fra fællesspisning og kreative workshops til strikkeaftener og særlige sæsonbegivenheder – her er der plads til samvær, inspiration og lokale smagsoplevelser. Hold øje med kalenderen og vær med til at skabe minder i hjertet af Musicon.</p>
 </section>
 
 <!-- Sektion 2 - Arrangementer -->
-<section class="mt-mxl md:mt-xxl mx-mxxl md:mx-xxxl md:grid md:grid-cols-3 md:grid-rows-10 md:gap-xl items-center place-items-center md:mb-xxl">
+<section class="md:grid md:grid-cols-3 md:grid-rows-10 md:gap-xl items-center place-items-center mx-m my-m md:mx-xl md:mb-xxl">
   <Card imageSrc={Event1} imageAlt="" title="Strik & drik" description="Så er det tid til håndarbejdsaften i caféen! Glæd dig til hyggeligt samvær, julehygge og smagsprøver på krydret gløgg og kage." buttonText="Køb billet"/>
 
   <Card imageSrc={Event2} imageAlt="" title="Fællesspisning" description="Den kommende mandag inviterer Local By Me til fællesspisning med Helle Skov. Glæd dig til smagsfulde retter samt hyggeligt samvær!" buttonText="Køb billet"/>
@@ -66,11 +66,11 @@ import "../styles/global.css";
  </section>
 
 <!-- Sektion 4 - Henvisning til anden side-->
-<section class="bg-brun500 text-pdefault w-full py-xl">
-  <div class="max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row items-center justify-center">
+<section class="bg-brun500 text-pdefault w-full flex items-center justify-center">
+  <div class="mx-auto flex flex-col md:flex-row gap-lg items-center justify-between px-lg py-xl">
     
-    <div class="md:w-1/2 flex justify-center items-center mb-6 md:mb-0 md:order-2">
-      <Image src={Illustration} alt="Testbillede" class="w-full h-auto object-cover"/>
+    <div class="md:w-1/2 flex justify-center items-center mb-m md:mb-0 md:order-2">
+      <Image src={Illustration} alt="Testbillede" class="w-auto h-full object-obtain"/>
     </div>
 
     <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-1 text-left md:ml-xxl ml-0">

@@ -14,17 +14,17 @@ import "../styles/global.css";
 ---
 
 <!-- Hero unit -->
-<section class="bg-brun100 w-full py-m">
-  <div class="max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row items-center justify-center">
+<section class="bg-brun100 w-full py-m md:py-xxl">
+  <div class="mx-auto px-4 flex flex-col md:flex-row items-center justify-center">
     
     <div class="md:w-1/2 md:flex justify-center items-center mb-6 md:mb-0 md:order-2 hidden">
-      <Image src={Herounit} alt="Billede af små konditorkager" class="w-full h-auto object-cover"/>
+      <Image src={Herounit} alt="Billede af små konditorkager" class="w-auto h-full object-obtain"/>
     </div>
 
     <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-1 text-center md:text-left p-s md:ml-xxl ml-0">
       <h1 class="text-mspecialh1 md:text-specialh1 text-pgron font-sigurd mb-m">Butikken</h1>
 
-      <p class="text-mspecialh3 md:text-specialh3 text-pdefault font-sigurd mb-m">Vores butik er dedikeret til produkter skabt med kærlighed og omhu i Danmark – altid med fokus på kort afstand fra producent til kunde.</p>
+      <p class="text-mspecialh3 md:text-specialh3 text-pdefault font-sigurd leading-relaxed mb-m">Vores butik er dedikeret til produkter skabt med kærlighed og omhu i Danmark – altid med fokus på kort afstand fra producent til kunde.</p>
 
       <a href=""><Button variant="primary">Shop lokalt nu</Button></a>
     </div>
@@ -34,16 +34,16 @@ import "../styles/global.css";
 <div class="flex flex-col">
 
 <!-- Sektion 1 -->
-<section class="order-2 md:order-1 md:text-center text-pdefault py-m">
+<section class="order-2 md:order-1 md:text-center text-pdefault py-m md:px-64 md:py-xl">
 <h2 class="text-mnormalh3 md:text-normalh2 font-poppins font-semibold text-center mx-lg mb-lg">Unikke varer med lokale fortællinger</h2>
 
-<p class="text-mpnormal md:pnormal font-poppins text-left mx-lg mb-m">Local By Me har en forkærlighed for produkter, der er produceret i Danmark, og prioriterer en kort vej fra jord til bord.</p>
+<p class="text-mpnormal md:pnormal font-poppins text-left md:text-center mx-lg md:mx-24 mb-m">Local By Me har en forkærlighed for produkter, der er produceret i Danmark, og prioriterer en kort vej fra jord til bord.</p>
 
-<p class="text-mpnormal md:pnormal font-poppins text-left mx-lg mb-m">Produkterne købes ofte direkte fra leverandørerne, hvilket giver mulighed for at lære historien bag hvert produkt at kende. Når du besøger butikken, kan du derfor ikke blot købe unikke varer, men også høre de inspirerende fortællinger om passion, håndværk og kvalitet fra de lokale producenter. Hvert produkt i butikken er nøje udvalgt for at støtte det lokale og for at skabe en tættere forbindelse mellem producent og kunde.</p>
+<p class="text-mpnormal md:pnormal font-poppins text-left  md:text-center mx-lg md:mx-24 mb-m">Produkterne købes ofte direkte fra leverandørerne, hvilket giver mulighed for at lære historien bag hvert produkt at kende. Når du besøger butikken, kan du derfor ikke blot købe unikke varer, men også høre de inspirerende fortællinger om passion, håndværk og kvalitet fra de lokale producenter. Hvert produkt i butikken er nøje udvalgt for at støtte det lokale og for at skabe en tættere forbindelse mellem producent og kunde.</p>
 </section>
 
 <!-- Sektion 2 - Produkter -->
-<section class="order-1 md:order-2 md:grid md:grid-cols-3 md:grid-rows-10 md:gap-xl items-center place-items-center mx-m my-m md:mx-xl md:my-xl md:mb-xl">
+<section class="order-1 md:order-2 md:grid md:grid-cols-3 md:grid-rows-10 md:gap-xl items-center place-items-center mx-m my-m md:mx-xl md:mb-xxl">
   <Card imageSrc={Produkt1} imageAlt="" title="Wellness kurven" description="Forkæl dig selv eller en du holder af, med en wellness kurv fyldt med selvforkælelse, fantastiske dufte og ro til både krop og sjæl." buttonText="Se kurvens indhold"/>
 
   <Card imageSrc={Produkt2} imageAlt="" title="Tapas kurven" description="En smagfuld kurv med blandede  lækkerier, der sætter stemningen til en hyggelig tapas aften, for både dig og dine nærmeste." buttonText="Se kurvens indhold"/>
@@ -59,11 +59,11 @@ import "../styles/global.css";
 </div>
 
 <!-- Sektion 3 - Henvisning til anden side-->
-<section class="bg-brun500 text-pdefault w-full py-xl">
-  <div class="max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row items-center justify-center">
+<section class="bg-brun500 text-pdefault w-full flex items-center justify-center py-xl">
+  <div class="mx-auto flex flex-col md:flex-row gap-lg items-center justify-between px-lg py-xl">
     
     <div class="md:w-1/2 flex justify-center items-center mb-m md:mb-0 md:order-2">
-      <Image src={Illustration} alt="" class="h-80 w-80 object-cover"/>
+      <Image src={Illustration} alt="" class="w-auto h-full object-obtain"/>
     </div>
 
     <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-1 text-left md:ml-xxl ml-0">
