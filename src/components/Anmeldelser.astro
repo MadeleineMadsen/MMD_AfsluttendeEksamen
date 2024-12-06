@@ -18,7 +18,7 @@
   ] 
 }">
 
-  <h2 class="text-mnormalh2 md:text-normalh2 font-poppins font-bold text-center mb-xl">Glade kunder fortæller</h2>
+  <h2 class="text-mnormalh3 md:text-normalh2 font-poppins font-bold text-center mb-xl">Glade kunder fortæller</h2>
 
   <!-- Selve anmeldelsesboksen -->
   <div class="flex justify-center">
@@ -28,15 +28,15 @@
       <!-- Forrige knap -->
       <button
         type="button"
-        class="absolute left-4 top-1/2 transform -translate-y-1/2 w-16 h-16 flex items-center justify-center"
+        class="absolute left-4 top-1/2 transform -translate-y-1/2 w-0 md:w-16 md:h-16 flex items-center justify-center"
         @click="currentReview = (currentReview - 1 + reviews.length) % reviews.length"
         aria-label="Forrige anmeldelse">
         <i class="fa-solid fa-chevron-left"></i>
       </button>
 
       <!-- Tekst -->
-      <div class="p-lg">
-        <p class="text-mnormalh4 md:normalh4 font-poppins font-semibold">"<span x-text="reviews[currentReview].text"></span>"</p>
+      <div class="p-s md:p-lg">
+        <p class="text-pbold md:normalh4 font-poppins font-semibold">"<span x-text="reviews[currentReview].text"></span>"</p>
       
         <p class="text-mpnormal md:pnormal font-poppins mt-m" x-text="reviews[currentReview].author"></p>
       </div>
@@ -44,7 +44,7 @@
       <!-- Næste knap -->
       <button
         type="button"
-        class="absolute right-4 top-1/2 transform -translate-y-1/2 w-16 h-16 flex items-center justify-center"
+        class="absolute right-4 top-1/2 transform -translate-y-1/2 w-0 md:w-16 md:h-16 flex items-center justify-center"
         @click="currentReview = (currentReview + 1) % reviews.length"
         aria-label="Næste anmeldelse">
         <i class="fa-solid fa-chevron-right"></i>
