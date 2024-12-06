@@ -14,14 +14,14 @@ import "../styles/global.css";
 ---
 
 <!-- Hero unit -->
-<section class="bg-brun100 w-full py-xl">
+<section class="bg-brun100 w-full py-m">
   <div class="max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row items-center justify-center">
     
-    <div class="md:w-1/2 flex justify-center items-center mb-6 md:mb-0 md:order-2">
+    <div class="md:w-1/2 md:flex justify-center items-center mb-6 md:mb-0 md:order-2 hidden">
       <Image src={Herounit} alt="Billede af små konditorkager" class="w-full h-auto object-cover"/>
     </div>
 
-    <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-1 text-center md:text-left md:ml-xxl ml-0">
+    <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-1 text-center md:text-left p-s md:ml-xxl ml-0">
       <h1 class="text-mspecialh1 md:text-specialh1 text-pgron font-sigurd mb-m">Butikken</h1>
 
       <p class="text-mspecialh3 md:text-specialh3 text-pdefault font-sigurd mb-m">Vores butik er dedikeret til produkter skabt med kærlighed og omhu i Danmark – altid med fokus på kort afstand fra producent til kunde.</p>
@@ -31,29 +31,32 @@ import "../styles/global.css";
   </div>
 </section>
 
+<div class="flex flex-col">
+
 <!-- Sektion 1 -->
-<section class="text-center text-pdefault py-m">
-<h2 class="text-mnormalh2 md:text-normalh2 font-poppins font-semibold mb-m">Unikke varer med lokale fortællinger</h2>
+<section class="order-2 md:order-1 md:text-center text-pdefault py-m">
+<h2 class="text-mnormalh3 md:text-normalh2 font-poppins font-semibold text-center mx-lg mb-lg">Unikke varer med lokale fortællinger</h2>
 
-<p class="text-mpnormal md:pnormal font-poppins mb-m">Local By Me har en forkærlighed for produkter, der er produceret i Danmark, og prioriterer en kort vej fra jord til bord.</p>
+<p class="text-mpnormal md:pnormal font-poppins text-left mx-lg mb-m">Local By Me har en forkærlighed for produkter, der er produceret i Danmark, og prioriterer en kort vej fra jord til bord.</p>
 
-<p class="text-mpnormal md:pnormal font-poppins mb-m">Produkterne købes ofte direkte fra leverandørerne, hvilket giver mulighed for at lære historien bag hvert produkt at kende. Når du besøger butikken, kan du derfor ikke blot købe unikke varer, men også høre de inspirerende fortællinger om passion, håndværk og kvalitet fra de lokale producenter. Hvert produkt i butikken er nøje udvalgt for at støtte det lokale og for at skabe en tættere forbindelse mellem producent og kunde.</p>
+<p class="text-mpnormal md:pnormal font-poppins text-left mx-lg mb-m">Produkterne købes ofte direkte fra leverandørerne, hvilket giver mulighed for at lære historien bag hvert produkt at kende. Når du besøger butikken, kan du derfor ikke blot købe unikke varer, men også høre de inspirerende fortællinger om passion, håndværk og kvalitet fra de lokale producenter. Hvert produkt i butikken er nøje udvalgt for at støtte det lokale og for at skabe en tættere forbindelse mellem producent og kunde.</p>
 </section>
 
 <!-- Sektion 2 - Produkter -->
-<section class="mt-mxl md:mt-xxl mx-mxxl md:mx-xxxl md:grid md:grid-cols-3 md:grid-rows-10 md:gap-xl items-center place-items-center md:mb-xxl">
-  <Card imageSrc={Produkt1} imageAlt="" title="Gavekurv 1" description="Beskrivelse"/>
+<section class="order-1 md:order-2 md:grid md:grid-cols-3 md:grid-rows-10 md:gap-xl items-center place-items-center mx-m my-m md:mx-xl md:my-xl md:mb-xl">
+  <Card imageSrc={Produkt1} imageAlt="" title="Wellness kurven" description="Forkæl dig selv eller en du holder af, med en wellness kurv fyldt med selvforkælelse, fantastiske dufte og ro til både krop og sjæl." buttonText="Se kurvens indhold"/>
 
-  <Card imageSrc={Produkt2} imageAlt="" title="Gavekurv 1" description="Beskrivelse"/>
+  <Card imageSrc={Produkt2} imageAlt="" title="Tapas kurven" description="En smagfuld kurv med blandede  lækkerier, der sætter stemningen til en hyggelig tapas aften, for både dig og dine nærmeste." buttonText="Se kurvens indhold"/>
   
-  <Card imageSrc={Produkt3} imageAlt="" title="Gavekurv 3" description="Beskrivelse"/>
+  <Card imageSrc={Produkt3} imageAlt="" title="Gin kurven" description="Den perfekte kurv til gin-elskeren. Gin kurven er spækket med alt, hvad der skal til for at skabe smagfuld drinks til alle begivenheder." buttonText="Se kurvens indhold"/>
   
-  <Card imageSrc={Produkt4} imageAlt="" title="Gavekurv 4" description="Beskrivelse"/>
+  <Card imageSrc={Produkt4} imageAlt="" title="Julehygge kurven" description="Den perfekte julekurv til at sprede varme, gode dufte og julestemning hos dig og dine nærmeste. Kurven er derfor ideel til hyggelige julestunder." buttonText="Se kurvens indhold"/>
 
-  <Card imageSrc={Produkt5} imageAlt="" title="Gavekurv 5" description="Beskrivelse"/>
+  <Card imageSrc={Produkt5} imageAlt="" title="Guld jul" description="Kurven er fyldt op med ren julestemning, og alt hvad du skal bruge til den perfekte gløgg, så man kan holde sig varm i juledagene." buttonText="Se kurvens indhold"/>
 
-  <Card imageSrc={Produkt6} imageAlt="" title="Gavekurv 6" description="Beskrivelse"/>
+  <Card imageSrc={Produkt6} imageAlt="" title="Pink jul" description="En moderne og farverigt twist på juleklassikeren. Denne pink kurv er fyldt med julestemning, gløgg og lækre snacks til den festlige tid." buttonText="Se kurvens indhold"/>
 </section>
+</div>
 
 <!-- Sektion 3 - Henvisning til anden side-->
 <section class="bg-brun500 text-pdefault w-full py-xl">
@@ -63,8 +66,8 @@ import "../styles/global.css";
       <Image src={Illustration} alt="" class="h-80 w-80 object-cover"/>
     </div>
 
-    <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-1 text-center md:text-left md:ml-xxl ml-0">
-      <h2 class="text-mnormalh2 md:text-normalh2 font-poppins font-semibold mb-m">Kender du historien bag Local By Me?</h2>
+    <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-1 text-left md:ml-xxl ml-0">
+      <h2 class="text-mnormalh3 md:text-normalh2 font-poppins font-semibold mb-m">Kender du historien bag Local By Me?</h2>
       
       <p class="text-mpnormal md:pnormal font-poppins mb-m">Rejsen startede med en passion for lokalt håndværk og et ønske om at støtte danske producenter. Lær mere om visionen, værdierne og det fællesskab, der ligger bag vores butik og café.</p>
       

@@ -24,7 +24,7 @@ import "../styles/global.css";
 <section class="bg-brun100 w-full py-xl">
   <div class="max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row items-center justify-center">
     
-    <div class="md:w-1/2 flex justify-center items-center mb-6 md:mb-0 md:order-2">
+    <div class="md:w-1/2 md:flex justify-center items-center mb-6 md:mb-0 md:order-2 hidden">
       <Image src={Herounit} alt="Billede af små konditorkager" class="w-full h-auto object-cover"/>
     </div>
 
@@ -39,46 +39,46 @@ import "../styles/global.css";
 </section>
 
 <!-- Sektion 1 -->
-<section class="text-center text-pdefault py-m">
-  <h2 class="text-mnormalh2 md:text-normalh2 font-poppins font-semibold mb-m">Oplev fælleskab og bliv inspireret</h2>
+<section class="text-pdefault py-m">
+  <h2 class="text-mnormalh3 md:text-normalh2 font-poppins font-semibold text-center mx-lg mb-lg">Oplev fælleskab og bliv inspireret</h2>
 
-  <p class="text-mpnormal md:pnormal font-poppins mb-m">Local By Me byder på hyggelige og nærværende arrangementer, der styrker fællesskabet. Fra fællesspisning og kreative workshops til strikkeaftener og særlige sæsonbegivenheder – her er der plads til samvær, inspiration og lokale smagsoplevelser. Hold øje med kalenderen og vær med til at skabe minder i hjertet af Musicon.</p>
+  <p class="text-mpnormal md:pnormal font-poppins text-left mx-lg">Local By Me byder på hyggelige og nærværende arrangementer, der styrker fællesskabet. Fra fællesspisning og kreative workshops til strikkeaftener og særlige sæsonbegivenheder – her er der plads til samvær, inspiration og lokale smagsoplevelser. Hold øje med kalenderen og vær med til at skabe minder i hjertet af Musicon.</p>
 </section>
 
 <!-- Sektion 2 - Arrangementer -->
 <section class="mt-mxl md:mt-xxl mx-mxxl md:mx-xxxl md:grid md:grid-cols-3 md:grid-rows-10 md:gap-xl items-center place-items-center md:mb-xxl">
-  <Card imageSrc={Event1} imageAlt="" title="Card 1" description="Beskrivelse"/>
+  <Card imageSrc={Event1} imageAlt="" title="Strik & drik" description="Så er det tid til håndarbejdsaften i caféen! Glæd dig til hyggeligt samvær, julehygge og smagsprøver på krydret gløgg og kage." buttonText="Køb billet"/>
 
-  <Card imageSrc={Event2} imageAlt="" title="Card 2" description="Beskrivelse"/>
+  <Card imageSrc={Event2} imageAlt="" title="Fællesspisning" description="Den kommende mandag inviterer Local By Me til fællesspisning med Helle Skov. Glæd dig til smagsfulde retter samt hyggeligt samvær!" buttonText="Køb billet"/>
   
-  <Card imageSrc={Event3} imageAlt="" title="Card 3" description="Beskrivelse"/>
+  <Card imageSrc={Event3} imageAlt="" title="Foredrag" description="Bliv inspireret til vores næste foredragsaften, hvor vi samles om spændende emner, gode samtaler og fællesskab." buttonText="Køb billet"/>
   
-  <Card imageSrc={Event4} imageAlt="" title="Card 4" description="Beskrivelse"/>
+  <Card imageSrc={Event4} imageAlt="" title="Smagen af jul" description="Kom og oplev en aften fyldt med krydrede smagsoplevelser der får dig i julestemning, samt et hyggeligt fællesskab omkring bordet." buttonText="Køb billet"/>
 
-  <Card imageSrc={Event5} imageAlt="" title="Card 5" description="Beskrivelse"/>
+  <Card imageSrc={Event5} imageAlt="" title="Nytårstaffel" description="Start det nye år med manér til vores hyggelige nytårstaffel. Nyd en aften med festlige retter, god stemning og dejligt selskab." buttonText="Køb billet"/>
 
-  <Card imageSrc={Event6} imageAlt="" title="Card 6" description="Beskrivelse"/>
+  <Card imageSrc={Event6} imageAlt="" title="Nørkle eftermiddag" description="Tag dit strikke- eller hækletøj med til caféen og nyd en hyggelig nørkle-eftermiddag med æblegløgg og gammeldags æblekage." buttonText="Køb billet"/>
 </section>
 
 <!-- Sektion 3 - Tidligere arrangementer -->
  <section class="text-center text-pdefault py-m">
-  <h2 class="text-mnormalh2 md:text-normalh2 font-sigurd font-semibold mb-m">Tidligere arrangementer</h2>
+  <h2 class="text-mnormalh3 md:text-normalh2 font-poppins font-semibold mx-lg mb-m">Tidligere arrangementer</h2>
  </section>
 
 <!-- Sektion 4 - Henvisning til anden side-->
-<section class="bg-brun200 text-pdefault w-full py-xl">
+<section class="bg-brun500 text-pdefault w-full py-xl">
   <div class="max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row items-center justify-center">
     
     <div class="md:w-1/2 flex justify-center items-center mb-6 md:mb-0 md:order-2">
       <Image src={Illustration} alt="Testbillede" class="w-full h-auto object-cover"/>
     </div>
 
-    <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-1 text-center md:text-left md:ml-xxl ml-0">
-      <h2 class="text-mnormalh2 md:text-normalh2 font-poppins font-semibold mb-m">Glæd en du holder af med vores gavekurve fyldt med lokale lækkerier</h2>
+    <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-1 text-left md:ml-xxl ml-0">
+      <h2 class="text-mnormalh3 md:text-normalh2 font-poppins font-semibold mb-m">Se hvad vi ellers har at byde på i vores cafe</h2>
       
-      <p class="text-mpnormal md:pnormal font-poppins mb-m">Hos LocalByMe sammensætter vi gavekurve med alt fra hjemmelavet marmelade og økologiske snacks til bæredygtige specialiteter – den perfekte gave til enhver lejlighed.</p>
+      <p class="text-mpnormal md:pnormal font-poppins mb-m">Hos LocalByMe tilbyder vi en caféoplevelse fyldt med varme og hygge. Vores menu byder på hjemmelavede lækkerier, friskbrygget økologisk kaffe og sæsonens favoritter – alt sammen lavet med kærlighed og omtanke. Kom forbi og nyd en pause i en indbydende atmosfære, hvor kvalitet og lokale råvarer er i centrum.</p>
       
-      <a href=""><Button variant="primary">Se gavekurve</Button></a>
+      <a href=""><Button variant="primary">Se vores menukort</Button></a>
     </div>
   </div>
 </section>
