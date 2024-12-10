@@ -1,112 +1,32 @@
 ---
 import { Image } from "astro:assets";
-import Face from "../assets/images/face.png"
+import Cross from "../assets/images/cross.png"
 import Button from "./Button.astro";
 ---
 
-<section class="bg-stone-200 w-fit absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 flex justify-center items-center px-10 rounded-3xl shadow-lg mt-4">
+<section class="font-poppins bg-brun50 md:w-fit w-10/12 absolute md:top-40 top-24 left-1/2 transform -translate-x-1/2 z-20 flex justify-center items-center md:px-lg rounded-3xl shadow-skygge">
 
     <form>
-    <div class="absolute top-0 right-0 p-2">
+    <div class="absolute top-2 right-2 p-2">
     <a href="/produkt"><Image
-        src={Face}
+        src={Cross}
         alt="test"
-        class="h-10 w-10 hover:scale-110"
+        class="md:h-7 md:w-7 h-5 w-5 hover:scale-110"
       /></a></div>
-<div class="text-center pt-10">
-    <h2 class="text-xl">Tak for din bestilling</h2>
-    <p>tak for det.</p>
+<div class="text-center pt-lg">
+    <h2 class="md:text-normalh3 text-mnormalh4 text-pgrøn font-semibold">Tak for din bestilling</h2>
+    <div class="text-pdefault md:text-pnormal text-mpnormal md:pt-s pt-0 md:mx-lg mx-m">
+    <p class="pt-s">Tak for din bestilling af en gavekurv fra Local By Me!</p>
+
+      <p class="pt-s">Vi pakker den med nøje udvalgte og lokale produkter, og den vil være klar til afhentning på din valgte dag i vores åbningstid.</p>
+      
+      <p class="pt-s">Du modtager en bekræftelsesmail med detaljer om din ordre.</p>
+      
+      <p class="pt-s">Vi glæder os til at se dig!</p></div>
 </div>
 
-
-        <div class="flex flex-wrap w-full justify-between pt-10">
-            <p>Fulde navn</p>
-            <div class="flex space-x-2 w-2/3 mr-ms">
-            <div class="w-1/2 rounded-md mb-6 md:mb-m border-2 border-stone-400">
-              <input
-                class="appearance-none rounded-md block bg-white border-none w-full py-1 leading-tight focus:outline-none text-pbodysmall placeholder-slate-500"
-                type="text"
-                placeholder="Julie"
-                aria-label="Full name"
-              /></div>
-              <div class="w-1/2 rounded-md  mb-6 md:mb-m border-2 border-stone-400">
-                <input
-                  class="appearance-none rounded-md block bg-white border-none w-full py-1 leading-tight focus:outline-none text-pbodysmall placeholder-slate-500"
-                  type="text"
-                  placeholder="Jensen"
-                  aria-label="Full name"
-                /></div>
-            </div>
-        </div>
-
-
-        <div class="flex flex-wrap justify-between">
-            <p>Mobilnummer</p>
-            <div class="w-2/3 rounded-md mx-ms mb-6 md:mb-m border-2 border-stone-400">
-              <input
-                class="appearance-none rounded-md block bg-white border-none w-full mr-3 py-1 px-2 leading-tight focus:outline-none text-pbodysmall placeholder-slate-500"
-                type="text"
-                placeholder="+45 12 34 56 78"
-                aria-label="Full Name"
-              />
-            </div>
-
-            <div class="flex flex-wrap justify-between">
-                <p>E-mail</p>
-                <div class="w-2/3 rounded-md mx-ms mb-6 md:mb-m border-2 border-stone-400">
-                  <input
-                    class="appearance-none rounded-md block bg-white border-none w-full mr-3 py-1 px-2 leading-tight focus:outline-none text-pbodysmall placeholder-slate-500"
-                    type="text"
-                    placeholder="juliejensen@gmail.com"
-                    aria-label="Full Name"
-                  />
-                </div>
-
-                <div class="flex flex-wrap w-full justify-between">
-                    <p>Post nr. & by</p>
-                    <div class="flex space-x-2 w-2/3 mr-ms">
-                    <div class="w-1/2 rounded-md mb-6 md:mb-m border-2 border-stone-400">
-                      <input
-                        class="appearance-none rounded-md block bg-white border-none w-full py-1 leading-tight focus:outline-none text-pbodysmall placeholder-slate-500"
-                        type="text"
-                        placeholder="Post nr."
-                        aria-label="City"
-                      /></div>
-                      <div class="w-1/2 rounded-md  mb-6 md:mb-m border-2 border-stone-400">
-                        <input
-                          class="appearance-none rounded-md block bg-white border-none w-full py-1 leading-tight focus:outline-none text-pbodysmall placeholder-slate-500"
-                          type="text"
-                          placeholder="By"
-                          aria-label="City"
-                        /></div>
-                    </div>
-                </div>
-                    <div class="flex flex-wrap justify-between">
-                            <p>Afhentningsdato</p></div>
-                          
-                            <div class="w-2/3 rounded-md mx-ms mb-6 md:mb-m border-2 border-stone-400">
-                              <input
-                                type="date"
-                                class="appearance-none rounded-md block bg-white border-none w-full py-1 px-2 leading-tight focus:outline-none text-pbodysmall placeholder-slate-400"
-                                aria-label="Afhentningsdato"
-                                placeholder="dd/mm/åååå"
-                              />
-                            </div>
-                          </div></div>
-
-                            <div class="flex flex-wrap justify-between">
-                                <p>Til/fra kort (+10,- kr)</p>
-                                <div class="w-2/3 rounded-md mx-ms mb-6 md:mb-m border-2 border-stone-400">
-                                  <textarea
-                                    class="appearance-none rounded-md block bg-white border-none w-full mr-3 px-2 leading-tight focus:outline-none text-pbodysmall placeholder-slate-500"
-                                    placeholder="Tekst til kortet (max 200 tegn)"
-                                    aria-label="Full Name"
-                                    rows="4"
-                                  />
-                                </div></div>
-
-                                <div class="flex justify-center mb-10 mt-6">
-                                    <Button><a href="/produkt">Luk vindue</a></Button></div>             
+<div class="flex justify-center my-m md:my-lg">
+ <Button><a href="/forside">Til forsiden</a></Button></div>             
     </form>
 
   </section>

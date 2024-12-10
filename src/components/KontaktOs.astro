@@ -3,48 +3,81 @@ import Button from "./Button.astro"
 import { Image } from "astro:assets";
 import Smiley from "../assets/images/test-kvadrat.png"
 import Map from "./Map.astro";
+import Ingrediens from "../assets/images/ingredienser.svg";
+import Facebook from "../assets/images/face.png";
+import Instagram from "../assets/images/insta.png";
 ---
 
-   <section class="px-10 pt-10">
-<div>
-    <h2 class="text-2xl pb-6 text-center">Kontakt os</h2>
-    <p class="text-center">Har du spørgsmål eller ønsker at høre mere om vores produkter og arrangementer?<br/> Tøv ikke med at kontakte os – vi ser frem til at høre fra dig!</p></div>
-   </section>
-   <section class="px-10 md:grid md:grid-cols-5 md:gap-10 md:justify-center">
-    <div class="md:col-start-2 md:py-10 md:transform-none scale-[0.65] flex justify-center items-center">
+   <section class="relative bg-brun100 md:grid md:grid-cols-2">
+    <Image
+      src={Ingrediens}
+      alt="Illustration af diverse ingredienser"
+      class="opacity-20 md:opacity-100 md:col-start-2 md:my-8 md:h-96 h-72"
+    />
+  
+    <div
+      class="absolute md:col-start-1 md:col-span-1 md:mr-10 md:ml-40 mx-8 top-8 md:top-16 text-center md:text-left"
+    >
+      <h1
+        class="font-sigurd text-mspecialh1 md:text-specialh1 text-pgrøn"
+      >
+        Kontakt os
+      </h1>
+      <p
+        class="font-sigurd text-mspecialh4 md:text-specialh3 text-pdefault"
+      >
+      Vi vil gerne høre fra dig! Uanset hvad du ønsker svar på, er du altid velkommen til at kontakte os.
+    </p>
+<div class="mt-6"
+>    <Button variant="primary" class="p-s md:p-m"><a href="/butik">Se vores produkter</a></Button></div>
+
+    </div>
+  </section>
+
+  <section class="px-m md:pl-20 md:grid md:grid-cols-3 md:gap-10 md:justify-center md:py-10 md:my-20 md:mx-xxl text-pdefault font-poppins font-mpnormal md:font-pnormal">
+    <div class="md:col-start-1  md:transform-none scale-[0.65] flex justify-center items-center">
  <Map/>
 </div>
-        <div class="md:col-start-4 md:py-10 pt-0">
-            <p class="text-lg pb-6"><strong>Kontakt</strong></p>
-                <ul class="text-black">
+        <div class="md:col-start-2 flex md:justify-center justify-start pl-lg md:pl-0">
+                <ul>
 
-                    <li><strong>Adresse</strong></li>
-                      <li class="pt-2"><a href="https://www.google.com/maps/place/localbyme/@55.6288125,12.0822781,17z/data=!3m1!4b1!4m6!3m5!1s0x46525fe1b2bbaf91:0xc7c8a86a98a7fe41!8m2!3d55.6288095!4d12.084853!16s%2Fg%2F11rhctbn45?entry=ttu&g_ep=EgoyMDI0MTEyNC4xIKXMDSoASAFQAw%3D%3D" class="hover:underline" target="_blanc"> Rabalderstræde 1, Musicon,
+                  <p class="md:text-normalh4 text-mnormalh4 pb-6 font-semibold">Kontakt</h2>
+                    <li class="font-semibold">Adresse</li>
+                      <li class="pt-2"><a href="https://www.google.com/maps/place/localbyme/@55.6288125,12.0822781,17z/data=!3m1!4b1!4m6!3m5!1s0x46525fe1b2bbaf91:0xc7c8a86a98a7fe41!8m2!3d55.6288095!4d12.084853!16s%2Fg%2F11rhctbn45?entry=ttu&g_ep=EgoyMDI0MTEyNC4xIKXMDSoASAFQAw%3D%3D" class="hover:underline" target="_blank">Rabalderstræde 1, Musicon,<br/>
                         4000 Roskilde</a></li>
-                      <li class="pt-2"><strong>Mobil</strong></li>
+                      <li class="pt-2 font-semibold">Mobil</li>
                       <li class="pt-2">+45 40 74 72 78</li>
-                      <li class="pt-2"><strong>Email</strong></li>
-                      <li class="pt-2"><a href="kontakt@localbyme.dk" class="hover:underline text-red-800">kontakt@localbyme.dk</a></li>
-                </ul></div>
+                      <li class="pt-2 font-semibold">Email</li>
+                      <li class="pt-2"><a href="mailto:kontakt@localbyme.dk?subject=Emne for e-mail&body=Hej Local By Me! Jeg vil gerne kontakte jer vedrørende..." target="_blank" class="hover:text-mgron700 text-mgron500">kontakt@localbyme.dk</a></li>
+                      <li class="pt-2 font-semibold">Følg os</li>
+                      <div class="grid grid-cols-5"><li class="col-start-1 pt-2"><a href="https://www.facebook.com/localbyme" target="_blank"><Image
+                        src={Facebook}
+                        alt="Facebook link"
+                        class="h-10 w-10 hover:scale-110"
+                      /></a></li>
+            <!-- Facebook icons created by fauzin idea - Flaticon -->
+                      <li class="col-start-2 pt-2"><a href="https://www.instagram.com/local_by_me/" target="_blank"><Image
+                        src={Instagram}
+                        alt="Instagram link"
+                        class="h-10 w-10 hover:scale-110"
+                      /></a></li>
+            <!-- Instagram icons created by edt.im - Flaticon -->
+                    </div>                    </ul>
+              
+
+        </div>
+
+                <div class="md:col-start-3 flex md:justify-center justify-start py-lg md:py-0 pl-m md:pl-0">
+                  <ul>
+                     <p class="md:text-normalh4 text-mnormalh4 pb-6 font-semibold">Åbningstider</h2>
+                         <li><strong class="font-semibold">Mandag:</strong> 12.00 - 16.00</li>
+                      <li class="pt-4"><strong class="font-semibold">Tirsdag:</strong> Lukket</li>
+                      <li class="pt-4"><strong class="font-semibold">Onsdag:</strong> Lukket</li>
+                      <li class="pt-4"><strong class="font-semibold">Torsdag:</strong> 12.00 - 18.00</li>
+                      <li class="pt-4"><strong class="font-semibold">Fredag:</strong> 12.00 - 18.00</li>
+                      <li class="pt-4"><strong class="font-semibold">Lørdag:</strong> 14.00 - 16.00</li>
+                      <li class="pt-4"><strong class="font-semibold">Søndag:</strong> 12.00 - 16.00</li>
+                    </ul></div>
    </section>
 
-   <section class="bg-beige px-10 md:px-20 py-10 md:grid md:grid-cols-2 my-10 md:my-20">
-    <div class="md:col-start-1 flex justify-center">
-     <ul class="text-black">
-        <p class="text-lg pb-6"><strong>Åbningstider</strong></h2>
-            <li><strong>Mandag:</strong> 12.00 - 16.00</li>
-         <li><strong>Tirsdag:</strong> Lukket</li>
-         <li><strong>Onsdag:</strong> Lukket</li>
-         <li><strong>Torsdag:</strong> 12.00 - 18.00</li>
-         <li><strong>Fredag:</strong> 12.00 - 18.00</li>
-         <li><strong>Lørdag:</strong> 14.00 - 16.00</li>
-         <li><strong>Søndag:</strong> 12.00 - 16.00</li>
-       </ul></div>
-     <div class="md:col-start-2 flex justify-center md:mt-0 mt-10 ">
-       <div class="md:flex md:flex-col grid-cols-2 items-center hidden">
-     <Image
-     src={Smiley}
-     alt="E-smiley"
-     class="md:h-56 md:w-56 h-14 w-14"
-   /></div></div>
-   </section>
+

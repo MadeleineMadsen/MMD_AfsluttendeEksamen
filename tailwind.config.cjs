@@ -7,7 +7,6 @@ module.exports = {
     require("@tailwindcss/aspect-ratio"),
     require("@tailwindcss/container-queries"),
     require('tailwind-hamburgers'),
-
   ],
   theme: {
     extend: {
@@ -78,7 +77,7 @@ module.exports = {
         mgron400: "#85AB77",
         mgron500: "#405937",
         mgron600: "#34482D",
-        mgron700: "#273621",
+        mgron700: "#273621", //hover button
         mgron800: "#192315",
         mgron900: "#0E130C",
         mgron950: "#070906",
@@ -153,7 +152,7 @@ module.exports = {
         mspecialh1: "2.5rem", //Bruges til headlineSpecial - h1
         mspecialh2: "2rem", //Bruges til headlineSpecial - h2
         mspecialh3: "1.75rem", //Bruges til headlineSpecial - h3
-        mspecialh4: "1.75rem", //Bruges til headlineSpecial - h4
+        mspecialh4: "1.25rem", //Bruges til headlineSpecial - h4
 
         mnormalh1: "2.5rem", //Bruges til headline - h1
         mnormalh2: "2rem", //Bruges til headline - h2
