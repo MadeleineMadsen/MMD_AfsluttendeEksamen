@@ -58,8 +58,8 @@ import "../styles/global.css";
 </section>
 </div>
 
-<!-- Sektion 3 - Henvisning til anden side-->
-<section class="bg-brun500 text-pdefault w-full flex items-center justify-center py-xl">
+<!-- Sektion 3 - Henvisning til anden side (Desktop) -->
+<section class="bg-brun500 text-pdefault w-full md:flex items-center justify-center py-xl hidden">
   <div class="mx-auto flex flex-col md:flex-row gap-lg items-center justify-between px-lg py-xl">
     
     <div class="md:w-1/2 flex justify-center items-center mb-m md:mb-0 md:order-2">
@@ -75,3 +75,21 @@ import "../styles/global.css";
     </div>
   </div>
 </section>
+
+<!-- Sektion 3 - Henvisning til anden side (Mobil) -->
+  <section class="bg-brun500 text-pdefault bg-[url('../assets/images/Illustration2.png')] bg-cover bg-center md:hidden w-full flex items-center justify-center py-xl relative">
+  <div class="mx-auto flex flex-col-reverse md:flex-row gap-lg items-center justify-between px-lg py-xl">
+ 
+    <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-1 text-left md:ml-xxl ml-0">
+      <h2 class="text-mnormalh3 md:text-normalh2 font-poppins font-semibold mb-m">Kender du historien bag Local By Me?</h2>
+      
+      <p class="text-mpnormal md:pnormal font-poppins mb-m">Rejsen startede med en passion for lokalt håndværk og et ønske om at støtte danske producenter. Lær mere om visionen, værdierne og det fællesskab, der ligger bag vores butik og café.</p>
+      
+      <a href=""><Button variant="primary">Læs hele historien her</Button></a>
+    </div>
+  </div>
+</section>
+
+
+
+
