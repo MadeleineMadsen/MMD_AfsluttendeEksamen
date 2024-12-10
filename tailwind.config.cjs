@@ -24,7 +24,7 @@ module.exports = {
 
         // Tekst farver
         pdefault: "#231B15", //farve til body tekst / brødtekst & button secondary
-        phvid: "#F0F0EF", //farve til button primary
+        phvid: "#FFFFFF", //farve til button primary
         pgron: "#405937", //farve til nav links og headline V1
         pgul: "#F2911B", //farve til headline V2
         pbrun: "#C9BCAB", //farve til headline V3
