@@ -54,7 +54,7 @@ import "../styles/global.css";
 </section>
 
 <!-- Sektion 1 -->
-<section class="text-pdefault py-m md:px-64 md:py-xl">
+<section class="text-pdefault py-m md:px-64 md:py-xl slide">
   <h2 class="text-mnormalh3 md:text-normalh2 font-poppins font-semibold text-center mx-lg mb-lg md:mx-24">Oplev fælleskab og bliv inspireret</h2>
 
   <p class="text-mpnormal md:pnormal font-poppins text-left md:text-center mx-lg md:mx-24 mb-m">Local By Me byder på hyggelige og nærværende arrangementer, der styrker fællesskabet. Fra fællesspisning og kreative workshops til strikkeaftener og særlige sæsonbegivenheder – her er der plads til samvær, inspiration og lokale smagsoplevelser. Hold øje med kalenderen og vær med til at skabe minder i hjertet af Musicon.</p>
@@ -147,3 +147,18 @@ import "../styles/global.css";
     </div>
   </div>
 </section>
+
+<script>
+  import { animate, stagger, inView, scroll, timeline } from "motion";
+
+  // Animation til: Sektion 1
+  const slide = document.querySelector(".slide");
+  inView(slide, () => {
+    slide.classList.add(
+      "animate__animated",
+      "animate__slideInUp",
+      "animate__delay-0.8s"
+    );
+  });
+
+</script>

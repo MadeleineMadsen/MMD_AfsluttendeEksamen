@@ -47,7 +47,7 @@ const reviews = [];
 </section>
 
 <!-- Sektion 2 - Hvad tilbyder vi?-->
-<section class="text-pdefault py-m px-lg md:px-lg md:py-lg">
+<section class="text-pdefault py-m px-lg md:px-lg md:py-lg slide">
     <h2 class="text-mnormalh3 md:text-normalh2 font-poppins font-bold text-center mb-m">Hvad tilbyder vi</h2>
 
     <p class="text-mpnormal md:pnormal font-poppins text-left md:text-center mb-m">LocalByMe er din lokale destination for bæredygtige løsninger og hyggelige oplevelser. <br/> Udforsk vores unikke butik, nyd øjeblikke i vores café, eller deltag i inspirerende events <br/> – alt sammen skabt med omtanke og lokalt engagement.</p>
@@ -117,3 +117,17 @@ const reviews = [];
 <!-- Sektion 5 - Anmeldelser -->
 <Anmeldelser reviews={reviews} />
 
+<script>
+  import { animate, stagger, inView, scroll, timeline } from "motion";
+
+  // Animation til: Hvad tilbyder vi sektion
+  const slide = document.querySelector(".slide");
+  inView(slide, () => {
+    slide.classList.add(
+      "animate__animated",
+      "animate__slideInUp",
+      "animate__delay-0.8s"
+    );
+  });
+
+</script>

@@ -51,7 +51,7 @@ import "../styles/global.css";
 <section class="text-pdefault w-full px-s py-s md:px-lg md:py-lg">
 
   <!-- Sektion 1 -->
-  <section class="mx-auto px-s py-s md:px-lg md:py-lg flex flex-col md:flex-row  items-center justify-center">
+  <section class="mx-auto px-s py-s md:px-lg md:py-lg flex flex-col md:flex-row  items-center justify-center fade1">
 
     <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-1 md:ml-xxl ml-0">
       <h2 class="text-mspecialh1 md:text-specialh1 text-pgron font-sigurd font-semibold text-center md:text-left mb-m">En drøm bliver til virkelighed</h2>
@@ -67,7 +67,7 @@ import "../styles/global.css";
   </section>
 
   <!-- Sektion 2 -->
-  <section class="mx-auto px-s py-s md:px-lg md:py-l flex flex-col md:flex-row items-center justify-center">
+  <section class="mx-auto px-s py-s md:px-lg md:py-l flex flex-col md:flex-row items-center justify-center fade2">
 
     <div class="md:w-1/2 flex justify-center items-center mb-m md:mb-0 order-1 md:order-2">
       <Image src={Om2} alt="Testbillede" class="w-full h-auto object-coverr"/>
@@ -81,7 +81,7 @@ import "../styles/global.css";
 </section>
 
   <!-- Sektion 3 -->
-  <section class="mx-auto px-s py-s md:px-lg md:py-l flex flex-col md:flex-row items-center justify-center">
+  <section class="mx-auto px-s py-s md:px-lg md:py-l flex flex-col md:flex-row items-center justify-center fade3">
     
     <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-1 md:ml-xxl ml-0">
       <h2 class="text-mspecialh1 md:text-specialh1 text-pgron font-sigurd font-semibold text-center md:text-left mb-m">Et liv dedikeret til fællesskab</h2>
@@ -97,7 +97,7 @@ import "../styles/global.css";
   </section>
 
   <!-- Sektion 4 -->
-  <section class="mx-auto px-s py-s md:px-lg md:py-l flex flex-col md:flex-row items-center justify-center">
+  <section class="mx-auto px-s py-s md:px-lg md:py-l flex flex-col md:flex-row items-center justify-center fade4">
 
     <div class="md:w-1/2 flex justify-center items-center mb-m md:mb-0 order-1 md:order-2">
       <Image src={Om4} alt="Testbillede" class="w-full h-auto object-cover"/>
@@ -111,7 +111,7 @@ import "../styles/global.css";
   </section>
 
   <!-- Sektion 5 -->
-  <section class="mx-auto px-s py-s md:px-lg md:py-l flex flex-col md:flex-row items-center justify-center">
+  <section class="mx-auto px-s py-s md:px-lg md:py-l flex flex-col md:flex-row items-center justify-center fade5">
     
     <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-1 text-center md:text-left md:ml-xxl ml-0">
       <h2 class="text-mspecialh1 md:text-specialh1 text-pgron font-sigurd font-semibold text-center md:text-left mb-m">Rejsen mod de rette producenter</h2>
@@ -127,7 +127,7 @@ import "../styles/global.css";
   </section>
 
   <!-- Sektion 6 -->
-  <section class="mx-auto px-s py-s md:px-lg md:py-l flex flex-col md:flex-row items-center justify-center">
+  <section class="mx-auto px-s py-s md:px-lg md:py-l flex flex-col md:flex-row items-center justify-center fade6">
 
     <div class="md:w-1/2 flex justify-center items-center mb-m md:mb-0 order-1 md:order-2">
       <Image src={Om6} alt="Testbillede" class="w-full h-auto object-cover"/>
@@ -143,7 +143,7 @@ import "../styles/global.css";
   </section>
 
   <!-- Sektion 7 -->
-  <section class="mx-auto px-s py-s md:px-lg md:py-l flex flex-col md:flex-row items-center justify-center">
+  <section class="mx-auto px-s py-s md:px-lg md:py-l flex flex-col md:flex-row items-center justify-center fade7">
     
     <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-1 text-center md:text-left md:ml-xxl ml-0">
       <h2 class="text-mspecialh1 md:text-specialh1 text-pgron font-sigurd font-semibold text-center md:text-left mb-m">Innovation og nye ideer</h2>
@@ -176,3 +176,77 @@ import "../styles/global.css";
         </div>
     </div>
   </section>
+
+  <script>
+    import { animate, stagger, inView, scroll, timeline } from "motion";
+  
+    // Animation til: Sektion 1
+    const fade1 = document.querySelector(".fade1");
+    inView(fade1, () => {
+      fade1.classList.add(
+        "animate__animated",
+        "animate__fadeInUp",
+        "animate__delay-1s"
+      );
+    });
+
+    // Animation til: Sektion 2
+    const fade2 = document.querySelector(".fade2");
+    inView(fade2, () => {
+      fade2.classList.add(
+        "animate__animated",
+        "animate__fadeInUp",
+        "animate__delay-1s"
+      );
+    });
+
+    // Animation til: Sektion 3
+    const fade3 = document.querySelector(".fade3");
+    inView(fade3, () => {
+      fade3.classList.add(
+        "animate__animated",
+        "animate__fadeInUp",
+        "animate__delay-1s"
+      );
+    });
+
+    // Animation til: Sektion 4
+    const fade4 = document.querySelector(".fade4");
+    inView(fade4, () => {
+      fade4.classList.add(
+        "animate__animated",
+        "animate__fadeInUp",
+        "animate__delay-1s"
+      );
+    });
+
+    // Animation til: Sektion 5
+    const fade5 = document.querySelector(".fade5");
+    inView(fade5, () => {
+      fade5.classList.add(
+        "animate__animated",
+        "animate__fadeInUp",
+        "animate__delay-1s"
+      );
+    });
+
+    // Animation til: Sektion 6
+    const fade6 = document.querySelector(".fade6");
+    inView(fade6, () => {
+      fade6.classList.add(
+        "animate__animated",
+        "animate__fadeInUp",
+        "animate__delay-1s"
+      );
+    });
+
+    // Animation til: Sektion 6
+    const fade7 = document.querySelector(".fade7");
+    inView(fade7, () => {
+      fade7.classList.add(
+        "animate__animated",
+        "animate__fadeInUp",
+        "animate__delay-1s"
+      );
+    });
+  </script>
