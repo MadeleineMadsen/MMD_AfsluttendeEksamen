@@ -3,7 +3,6 @@ import Sections from "./Sections.astro";
 import Anmeldelser from "./Anmeldelser.astro";
 import Button from "./Button.astro";
 import { Image } from "astro:assets";
-import Herounit from "../assets/images/Forside1.webp";
 import Illustration1 from "../assets/images/Illustration1.png";
 import Billede1 from "../assets/images/Forside3.webp";
 import Billede2 from "../assets/images/Forside4.webp";
@@ -17,7 +16,7 @@ const reviews = [];
 <!-- Hero unit -->
 <section class="relative">
   <div class="absolute inset-0 bg-white bg-opacity-70"></div>
-    <Image src={Herounit} alt="Baggrundsbillede til Hero Unit" class="h-96 md:h-full"/>
+  <video autoplay muted loop class="h-96 md:h-full w-full object-cover"><source src="/video/localbyme.mp4" type="video/mp4">Din browser understøtter ikke video-tagget.</video>
   
     <div class="absolute top-7 md:top-1/2 md:left-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2 text-center">
         <h1 class="text-mspecialh1 md:text-specialh1 text-pgron font-sigurd mx-lg mb-m md:mb-m">Velkommen til Local By Me</h1>
