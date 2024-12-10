@@ -13,8 +13,8 @@ import Illustration from "../assets/images/Illustration2.png";
 import "../styles/global.css";
 ---
 
-<!-- Hero unit -->
-<section class="bg-brun100 w-full py-m md:py-xxl">
+<!-- Hero unit (Desktop) -->
+<section class="bg-brun100 md:flex w-full py-m md:py-xxl hidden">
   <div class="mx-auto px-4 flex flex-col md:flex-row items-center justify-center">
     
     <div class="md:w-1/2 md:flex justify-center items-center mb-6 md:mb-0 md:order-2 hidden">
@@ -26,6 +26,22 @@ import "../styles/global.css";
 
       <p class="text-mspecialh3 md:text-specialh3 text-pdefault font-sigurd leading-relaxed mb-m">Vores butik er dedikeret til produkter skabt med kærlighed og omhu i Danmark – altid med fokus på kort afstand fra producent til kunde.</p>
 
+      <a href=""><Button variant="primary">Shop lokalt nu</Button></a>
+    </div>
+  </div>
+</section>
+
+<!-- Hero unit (Mobil) -->
+<section class="relative bg-brun100 text-pdefault w-full flex items-center justify-center py-lg md:hidden">
+  <Image src={Herounit} alt="Illustration" class="opacity-30 md:opacity-100 md:col-start-2 md:my-8 md:h-96 h-96"/>
+
+  <div class="absolute mx-auto flex flex-col-reverse md:flex-row gap-lg items-center justify-between px-lg py-xl">
+ 
+    <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-1 text-center md:ml-xxl ml-0">
+      <h2 class="text-mspecialh1 md:text-specialh1 text-pgron font-sigurd mb-m">Butikken</h2>
+      
+      <p class="text-mspecialh3 md:text-specialh3 text-pdefault font-sigurd leading-relaxed mb-m">Vores butik er dedikeret til produkter skabt med kærlighed og omhu i Danmark – altid med fokus på kort afstand fra producent til kunde.</p>
+      
       <a href=""><Button variant="primary">Shop lokalt nu</Button></a>
     </div>
   </div>
@@ -77,17 +93,19 @@ import "../styles/global.css";
 </section>
 
 <!-- Sektion 3 - Henvisning til anden side (Mobil) -->
-  <section class="bg-brun500 text-pdefault bg-[url('../assets/images/Illustration2.png')] bg-cover bg-center md:hidden w-full flex items-center justify-center py-xl relative">
-  <div class="mx-auto flex flex-col-reverse md:flex-row gap-lg items-center justify-between px-lg py-xl">
- 
-    <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-1 text-left md:ml-xxl ml-0">
-      <h2 class="text-mnormalh3 md:text-normalh2 font-poppins font-semibold mb-m">Kender du historien bag Local By Me?</h2>
-      
-      <p class="text-mpnormal md:pnormal font-poppins mb-m">Rejsen startede med en passion for lokalt håndværk og et ønske om at støtte danske producenter. Lær mere om visionen, værdierne og det fællesskab, der ligger bag vores butik og café.</p>
-      
-      <a href=""><Button variant="primary">Læs hele historien her</Button></a>
+  <section class="relative bg-brun500 text-pdefault w-full flex items-center justify-center py-s md:hidden">
+    <Image src={Illustration} alt="Illustration" class="opacity-30 md:opacity-100 md:col-start-2 md:my-8 md:h-96 h-full"/>
+
+    <div class="absolute mx-auto flex flex-col-reverse md:flex-row gap-lg items-center justify-between px-lg py-xl">
+   
+      <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-1 text-left md:ml-xxl ml-0">
+        <h2 class="text-mnormalh3 md:text-normalh2 font-poppins font-semibold mb-m">Kender du historien bag Local By Me?</h2>
+        
+        <p class="text-mpnormal md:pnormal font-poppins mb-m">Rejsen startede med en passion for lokalt håndværk og et ønske om at støtte danske producenter. Lær mere om visionen, værdierne og det fællesskab, der ligger bag vores butik og café.</p>
+        
+        <a href=""><Button variant="primary">Læs hele historien her</Button></a>
+      </div>
     </div>
-  </div>
 </section>
 
 

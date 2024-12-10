@@ -2,7 +2,7 @@
 import Card from "./Card.astro";
 import Button from "./Button.astro";
 import { Image } from "astro:assets";
-import Herounit from "../assets/images/Arrangementer1.webp";
+import Herounit from "../assets/images/Illustration5.png";
 import Event1 from "../assets/images/Event1.webp";
 import Event2 from "../assets/images/Event2.webp";
 import Event3 from "../assets/images/Event3.webp";
@@ -19,8 +19,8 @@ import Illustration from "../assets/images/Illustration4.png";
 import "../styles/global.css";
 ---
 
-<!-- Hero unit -->
-<section class="bg-brun100 w-full py-m md:py-xxl">
+<!-- Hero unit (Desktop) -->
+<section class="bg-brun100 md:flex w-full py-m md:py-xxl hidden">
   <div class="mx-auto px-4 flex flex-col md:flex-row items-center justify-center">
     
     <div class="md:w-1/2 md:flex justify-center items-center mb-6 md:mb-0 md:order-2 hidden">
@@ -33,6 +33,22 @@ import "../styles/global.css";
       <p class="text-mspecialh3 md:text-specialh3 text-pdefault font-sigurd mb-m">Find dit næste event og vær med til at gøre hverdagen lidt mere speciel</p>
 
     <a href=""><Button variant="primary">Se arrangementer</Button></a>
+    </div>
+  </div>
+</section>
+
+<!-- Hero unit (Mobil) -->
+<section class="relative bg-brun100 w-full flex items-center justify-center py-lg md:hidden">
+  <Image src={Herounit} alt="Illustration" class="opacity-30 md:opacity-100 md:col-start-2 md:my-8 md:h-96 h-96"/>
+
+  <div class="absolute mx-auto flex flex-col-reverse md:flex-row gap-lg items-center justify-between px-lg py-xl">
+ 
+    <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-1 text-center md:ml-xxl ml-0">
+      <h2 class="text-mspecialh1 md:text-specialh1 text-pgron font-sigurd mb-m">Arrangementer</h2>
+      
+      <p class="text-mspecialh3 md:text-specialh3 text-pdefault font-sigurd leading-relaxed mb-m">Find dit næste event og vær med til at gøre hverdagen lidt mere speciel</p>
+      
+      <a href=""><Button variant="primary">Se arrangementer</Button></a>
     </div>
   </div>
 </section>
@@ -68,27 +84,29 @@ import "../styles/global.css";
      <!-- Billeder -->
      <div class="flex justify-center gap-s">
 
-      <div class="flex-shrink-0">
+      <div class="flex-shrink-0 md:block hidden">
         <Image src={TA1} alt="Billede af små konditorkager" class="w-auto h-64 md:h-80 object-obtain"/>
       </div>
 
-      <div class="flex-shrink-0">
+      <div class="flex-shrink-0 md:block hidden">
         <Image src={TA2} alt="Billede af små konditorkager" class="w-auto h-64 md:h-80 object-obtain"/>
       </div>
 
+      <!-- Dette billede vises kun på mobil -->
       <div class="flex-shrink-0">
-        <Image src={TA3} alt="Billede af små konditorkager" class="w-auto h-64 md:h-80 object-obtain"/>
+        <Image src={TA3} alt="Billede af små konditorkager" class="w-auto h-56 md:h-80 object-obtain"/>
       </div>
 
+      <!-- Dette billede vises kun på mobil -->
       <div class="flex-shrink-0">
-        <Image src={TA4} alt="Billede af små konditorkager" class="w-auto h-64 md:h-80 object-obtain"/>
+        <Image src={TA4} alt="Billede af små konditorkager" class="w-auto h-56 md:h-80 object-obtain"/>
       </div>
 
-      <div class="flex-shrink-0">
+      <div class="flex-shrink-0 md:block hidden">
         <Image src={TA5} alt="Billede af små konditorkager" class="w-auto h-64 md:h-80 object-obtain"/>
       </div>
 
-      <div class="flex-shrink-0">
+      <div class="flex-shrink-0 md:block hidden">
         <Image src={TA6} alt="Billede af små konditorkager" class="w-auto h-64 md:h-80 object-obtain"/>
       </div>
     </div>
@@ -96,14 +114,30 @@ import "../styles/global.css";
 </section>
 
 
-<!-- Sektion 4 - Henvisning til anden side-->
-<section class="bg-brun500 text-pdefault w-full flex items-center justify-center">
+<!-- Sektion 4 - Henvisning til anden side (Desktop) -->
+<section class="bg-brun500 text-pdefault w-full md:flex items-center justify-center hidden">
   <div class="mx-auto flex flex-col md:flex-row gap-lg items-center justify-between px-lg py-xl">
     
     <div class="md:w-1/2 flex justify-center items-center mb-m md:mb-0 md:order-2">
       <Image src={Illustration} alt="Testbillede" class="w-auto h-full object-obtain"/>
     </div>
 
+    <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-1 text-left md:ml-xxl ml-0">
+      <h2 class="text-mnormalh3 md:text-normalh2 font-poppins font-semibold mb-m">Se hvad vi ellers har at byde på i vores cafe</h2>
+      
+      <p class="text-mpnormal md:pnormal font-poppins mb-m">Hos LocalByMe tilbyder vi en caféoplevelse fyldt med varme og hygge. Vores menu byder på hjemmelavede lækkerier, friskbrygget økologisk kaffe og sæsonens favoritter – alt sammen lavet med kærlighed og omtanke. Kom forbi og nyd en pause i en indbydende atmosfære, hvor kvalitet og lokale råvarer er i centrum.</p>
+      
+      <a href=""><Button variant="primary">Se vores menukort</Button></a>
+    </div>
+  </div>
+</section>
+
+<!-- Sektion 4 - Henvisning til anden side (Mobil) -->
+<section class="relative bg-brun500 text-pdefault w-full flex items-center justify-center py-xl md:hidden">
+  <Image src={Illustration} alt="Illustration" class="opacity-30 md:opacity-100 md:col-start-2 md:my-8 md:h-96 h-full"/>
+
+  <div class="absolute mx-auto flex flex-col-reverse md:flex-row gap-lg items-center justify-between px-lg py-xl">
+ 
     <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-1 text-left md:ml-xxl ml-0">
       <h2 class="text-mnormalh3 md:text-normalh2 font-poppins font-semibold mb-m">Se hvad vi ellers har at byde på i vores cafe</h2>
       

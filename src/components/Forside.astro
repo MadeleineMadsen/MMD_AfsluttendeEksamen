@@ -80,8 +80,8 @@ const reviews = [];
     layout="image-right"/>
 </section>
 
-<!-- Sektion 4 - Nyhed -->
-<section class="bg-gron700 w-full flex items-center justify-center">
+<!-- Sektion 4 - Nyhed (Desktop) -->
+<section class="bg-gron700 w-full md:flex items-center justify-center hidden">
   <div class="mx-auto flex flex-col md:flex-row gap-lg items-center justify-between px-lg py-xl">
 
     <div class="font-poppins text-phvid  md:w-1/2 md:order-1 text-left md:p-s md:ml-xxl ml-0">
@@ -94,6 +94,22 @@ const reviews = [];
 
     <div class="md:w-1/2 md:flex justify-center items-center mb-m md:mb-0 md:order-2 hidden">
       <Image src={Illustration2} alt="Små illustrationer af jul" class="w-auto h-full object-obtain"/>
+    </div>
+  </div>
+</section>
+
+<!-- Sektion 4 - Nyhed (Mobil) -->
+<section class="relative bg-gron700 text-phvid w-full flex items-center justify-center py-s md:hidden">
+  <Image src={Illustration2} alt="Illustration" class="opacity-30 md:opacity-100 md:col-start-2 md:my-8 md:h-96 h-full"/>
+
+  <div class="absolute mx-auto flex flex-col-reverse md:flex-row gap-lg items-center justify-between px-lg py-xl">
+ 
+    <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-1 text-left md:ml-xxl ml-0">
+      <h2 class="text-mnormalh3 md:text-normalh2 font-poppins font-semibold mb-m">Få varmen og nyd smagen af jul</h2>
+      
+      <p class="text-mpnormal md:pnormal font-poppins mb-m leading-relaxed">Gløgg-sæsonen er her, og vi har kræset for detaljerne for at tilbyde dig den bedste oplevelse. Kom forbi og smag på vores tre skønne varianter:</p>
+
+      <p class="text-mpnormal md:text-pnormal leading-relaxed">Alkoholfri Æblegløgg – En frisk og krydret nydelse, perfekt for alle. <br/> Rød Årgangsgløgg – Traditionel gløgg med en rig smag af vinterens krydderier. <br/> Gin-Gløgg – En nyfortolkning med et strejf af elegance.</p>
     </div>
   </div>
 </section>

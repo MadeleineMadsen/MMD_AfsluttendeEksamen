@@ -1,7 +1,7 @@
 ---
 import Button from "./Button.astro";
 import { Image } from "astro:assets";
-import Illustration from "../assets/images/Illustration4.png";
+import Herounit from "../assets/images/Illustration6.png";
 import Om1 from "../assets/images/Om1.webp";
 import Om2 from "../assets/images/Om2.webp";
 import Om3 from "../assets/images/Om3.webp";
@@ -14,19 +14,35 @@ import "../styles/global.css";
 ---
 
 <!-- Hero unit -->
-<section class="bg-brun100 w-full py-xl md:py-xxl">
+<section class="bg-brun100 md:flex w-full py-xl md:py-xxl hidden">
   <div class="mx-auto px-4 flex flex-col md:flex-row items-center justify-center">
     
     <div class="md:w-1/2 md:flex justify-center items-center mb-6 md:mb-0 md:order-2 hidden">
-      <Image src={Illustration} alt="Billede af små konditorkager" class="w-auto h-full object-obtain"/>
+      <Image src={Herounit} alt="Billede af små konditorkager" class="w-auto h-full object-obtain"/>
     </div>
 
-    <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-1 text-center md:text-left md:ml-xxl ml-0">
+    <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-1 text-left md:ml-xxl ml-0">
       <h1 class="text-mspecialh1 md:text-specialh1 text-pgron font-sigurd mx-lg md:mx-0 mb-m">Historien bag Local By Me</h1>
 
       <p class="text-mspecialh3 md:text-specialh3 text-pdefault font-sigurd mb-m">Stedet hvor lokalt og bæredygtigt går hånd i hånd. Tag med på rejsen bag vores historie</p>
 
     <a href=""><Button variant="primary">Se historie</Button></a>
+    </div>
+  </div>
+</section>
+
+<!-- Hero unit (Mobil) -->
+<section class="relative bg-brun100 w-full flex items-center justify-center py-lg md:hidden">
+  <Image src={Herounit} alt="Illustration" class="opacity-30 md:opacity-100 md:col-start-2 md:my-8 md:h-96 h-96"/>
+
+  <div class="absolute mx-auto flex flex-col-reverse md:flex-row gap-lg items-center justify-between px-lg py-xl">
+ 
+    <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-1 text-center md:ml-xxl ml-0">
+      <h2 class="text-mspecialh1 md:text-specialh1 text-pgron font-sigurd mx-lg md:mx-0 mb-m">Historien bag Local By Me</h2>
+      
+      <p class="text-mspecialh3 md:text-specialh3 text-pdefault font-sigurd mb-m">Stedet hvor lokalt og bæredygtigt går hånd i hånd. Tag med på rejsen bag vores historie</p>
+      
+      <a href=""><Button variant="primary">Se historie</Button></a>
     </div>
   </div>
 </section>
