@@ -19,134 +19,117 @@ import Illustration from "../assets/images/Illustration4.png";
 import "../styles/global.css";
 ---
 
-<!-- Hero unit (Desktop) -->
-<section class="bg-brun100 md:flex w-full py-m md:py-xxl hidden">
-  <div class="mx-auto px-4 flex flex-col md:flex-row items-center justify-center">
-    
-    <div class="md:w-1/2 md:flex justify-center items-center mb-6 md:mb-0 md:order-2 hidden">
-      <Image src={Herounit} alt="Billede af små konditorkager" class="w-auto h-full object-obtain"/>
-    </div>
+<!-- Hero unit -->
 
-    <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-1 text-center md:text-left md:ml-xxl ml-0">
-      <h1 class="text-mspecialh1 md:text-specialh1 text-pgron font-sigurd mb-m">Arrangementer</h1>
+<section class="relative bg-brun100 md:grid md:grid-cols-2">
+  <Image
+    src={Herounit}
+    alt="Illustration af café produkter"
+    class="opacity-20 md:opacity-100 md:col-start-2 md:my-8 py-8 md:h-96 h-72 w-fit md:w-auto md:pl-52 m-auto md:m-0"
+  />
 
-      <p class="text-mspecialh3 md:text-specialh3 text-pdefault font-sigurd mb-m">Find dit næste event og vær med til at gøre hverdagen lidt mere speciel</p>
+  <div
+    class="absolute md:col-start-1 md:col-span-1 md:mr-10 md:ml-40 mx-8 top-10 md:top-24 text-center md:text-left"
+  >
+    <h1
+      class="font-sigurd text-mspecialh1 md:text-specialh1 text-pgron"
+    >
+    Arrangementer
+    </h1>
+    <p
+      class="font-sigurd text-mspecialh4 md:text-specialh4 text-pdefault"
+    >
+    Find dit næste event og vær med til at gøre hverdagen lidt mere speciel.
+  </p>
+<div class="mt-6"
+>    <Button variant="primary" class="p-s md:p-m"><a href="/butik">Se vores arrangementer</a></Button></div>
 
-    <a href=""><Button variant="primary">Se arrangementer</Button></a>
-    </div>
   </div>
 </section>
 
-<!-- Hero unit (Mobil) -->
-<section class="relative bg-brun100 w-full flex items-center justify-center py-lg md:hidden">
-  <Image src={Herounit} alt="Illustration" class="opacity-30 md:opacity-100 md:col-start-2 md:my-8 md:h-96 h-96"/>
 
-  <div class="absolute mx-auto flex flex-col-reverse md:flex-row gap-lg items-center justify-between px-lg py-xl">
- 
-    <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-1 text-center md:ml-xxl ml-0">
-      <h2 class="text-mspecialh1 md:text-specialh1 text-pgron font-sigurd mb-m">Arrangementer</h2>
-      
-      <p class="text-mspecialh3 md:text-specialh3 text-pdefault font-sigurd leading-relaxed mb-m">Find dit næste event og vær med til at gøre hverdagen lidt mere speciel</p>
-      
-      <a href=""><Button variant="primary">Se arrangementer</Button></a>
-    </div>
-  </div>
-</section>
 
 <!-- Sektion 1 -->
-<section class="text-pdefault py-m md:px-64 md:py-xl slide">
-  <h2 class="text-mnormalh3 md:text-normalh2 font-poppins font-semibold text-center mx-lg mb-lg md:mx-24">Oplev fælleskab og bliv inspireret</h2>
 
-  <p class="text-mpnormal md:pnormal font-poppins text-left md:text-center mx-lg md:mx-24 mb-m">Local By Me byder på hyggelige og nærværende arrangementer, der styrker fællesskabet. Fra fællesspisning og kreative workshops til strikkeaftener og særlige sæsonbegivenheder – her er der plads til samvær, inspiration og lokale smagsoplevelser. Hold øje med kalenderen og vær med til at skabe minder i hjertet af Musicon.</p>
-</section>
+<div class="mx-lg md:mx-xxl md:py-lg slide">
+  <p class="font-poppins text-mnormalh4 md:text-normalh3 pt-m text-center text-pdefault font-semibold">Oplev fælleskab og bliv inspireret</p>
+  <p class="font-poppins text-mpnormal md:text-pnormal pt-4 md:text-center text-left text-pdefault md:mx-56">Local By Me byder på hyggelige og nærværende arrangementer, der styrker fællesskabet. Fra fællesspisning og kreative workshops til strikkeaftener og særlige sæsonbegivenheder – her er der plads til samvær, inspiration og lokale smagsoplevelser. Hold øje med kalenderen og vær med til at skabe minder i hjertet af Musicon.</p>
+</div>
+
 
 <!-- Sektion 2 - Arrangementer -->
-<section class="md:grid md:grid-cols-3 md:grid-rows-10 md:gap-xl items-center place-items-center mx-m my-m md:mx-xl md:mb-xxl">
-  <Card imageSrc={Event1} imageAlt="" title="Strik & drik" description="Så er det tid til håndarbejdsaften i caféen! Glæd dig til hyggeligt samvær, julehygge og smagsprøver på krydret gløgg og kage." buttonText="Køb billet"/>
+<section class="order-1 md:order-2 md:grid md:grid-cols-3 md:grid-rows-10 md:gap-xl items-center place-items-center mx-m my-m md:mx-xxl md:px-xxl md:mb-xl">
+  <Card imageSrc={Event1} imageAlt="Strik & drik" title="Strik & drik" description="Så er det tid til håndarbejdsaften i caféen! Glæd dig til hyggeligt samvær, julehygge og smagsprøver på krydret gløgg og kage." buttonText="Køb billet" buttonLink="https://www.place2book.com/da/sw2/sales/8u9lse1593"/>
 
-  <Card imageSrc={Event2} imageAlt="" title="Fællesspisning" description="Den kommende mandag inviterer Local By Me til fællesspisning med Helle Skov. Glæd dig til smagsfulde retter samt hyggeligt samvær!" buttonText="Køb billet"/>
+  <Card imageSrc={Event2} imageAlt="Fællesspisning" title="Fællesspisning" description="Den kommende mandag inviterer Local By Me til fællesspisning med Helle Skov. Glæd dig til smagsfulde retter samt hyggeligt samvær!" buttonText="Køb billet" buttonLink="https://www.place2book.com/da/sw2/sales/8u9lse1593"/>
   
-  <Card imageSrc={Event3} imageAlt="" title="Foredrag" description="Bliv inspireret til vores næste foredragsaften, hvor vi samles om spændende emner, gode samtaler og fællesskab." buttonText="Køb billet"/>
+  <Card imageSrc={Event3} imageAlt="Foredrag" title="Foredrag" description="Bliv inspireret til vores næste foredragsaften i caféen, hvor vi samles om spændende og relevante emner, gode samtaler og fællesskab." buttonText="Køb billet" buttonLink="https://www.place2book.com/da/sw2/sales/8u9lse1593"/>
   
-  <Card imageSrc={Event4} imageAlt="" title="Smagen af jul" description="Kom og oplev en aften fyldt med krydrede smagsoplevelser der får dig i julestemning, samt et hyggeligt fællesskab omkring bordet." buttonText="Køb billet"/>
+  <Card imageSrc={Event4} imageAlt="Smagen af jul" title="Smagen af jul" description="Kom og oplev en aften fyldt med krydrede smagsoplevelser der får dig i julestemning, samt et hyggeligt fællesskab omkring bordet." buttonText="Køb billet" buttonLink="https://www.place2book.com/da/sw2/sales/8u9lse1593"/>
 
-  <Card imageSrc={Event5} imageAlt="" title="Nytårstaffel" description="Start det nye år med manér til vores hyggelige nytårstaffel. Nyd en aften med festlige retter, god stemning og dejligt selskab." buttonText="Køb billet"/>
+  <Card imageSrc={Event5} imageAlt="Nytårstaffel" title="Nytårstaffel" description="Start det nye år med manér til vores hyggelige nytårstaffel i caféen. Nyd en aften med festlige retter, god stemning og dejligt selskab." buttonText="Køb billet" buttonLink="https://www.place2book.com/da/sw2/sales/8u9lse1593"/>
 
-  <Card imageSrc={Event6} imageAlt="" title="Nørkle eftermiddag" description="Tag dit strikke- eller hækletøj med til caféen og nyd en hyggelig nørkle-eftermiddag med æblegløgg og gammeldags æblekage." buttonText="Køb billet"/>
+  <Card imageSrc={Event6} imageAlt="Nørkle eftermiddag" title="Nørkle eftermiddag" description="Tag dit strikke- eller hækletøj med til caféen og nyd en hyggelig nørkle-eftermiddag med æblegløgg og gammeldags æblekage." buttonText="Køb billet" buttonLink="https://www.place2book.com/da/sw2/sales/8u9lse1593"/>
 </section>
 
 <!-- Sektion 3 - Tidligere arrangementer -->
- <section class="text-center text-pdefault py-xxl">
+ <section class="text-center text-pdefault pt-0 pb-m md:pt-lg md:pb-xl">
   <div class="max-w-screen-xl mx-auto px-4 text-center">
    
-    <h2 class="text-mnormalh3 md:text-normalh2 font-poppins font-semibold mx-lg mb-m">Tidligere arrangementer</h2>
+    <h2 class="text-mnormalh3 md:text-normalh3 font-poppins font-semibold mx-lg mb-m">Tidligere arrangementer</h2>
     
      <!-- Billeder -->
      <div class="flex justify-center gap-s">
 
       <div class="flex-shrink-0 md:block hidden">
-        <Image src={TA1} alt="Billede af små konditorkager" class="w-auto h-64 md:h-80 object-obtain"/>
+        <Image src={TA1} alt="Sommerdag i caféen" class="w-auto h-64 md:h-80 object-obtain"/>
       </div>
 
       <div class="flex-shrink-0 md:block hidden">
-        <Image src={TA2} alt="Billede af små konditorkager" class="w-auto h-64 md:h-80 object-obtain"/>
+        <Image src={TA2} alt="Nørkledag udenfor" class="w-auto h-64 md:h-80 object-obtain"/>
       </div>
 
       <!-- Dette billede vises kun på mobil -->
       <div class="flex-shrink-0">
-        <Image src={TA3} alt="Billede af små konditorkager" class="w-auto h-56 md:h-80 object-obtain"/>
+        <Image src={TA3} alt="Sang ved Local By Me" class="w-auto h-56 md:h-80 object-obtain"/>
       </div>
 
       <!-- Dette billede vises kun på mobil -->
       <div class="flex-shrink-0">
-        <Image src={TA4} alt="Billede af små konditorkager" class="w-auto h-56 md:h-80 object-obtain"/>
+        <Image src={TA4} alt="Strik & drik" class="w-auto h-56 md:h-80 object-obtain"/>
       </div>
 
       <div class="flex-shrink-0 md:block hidden">
-        <Image src={TA5} alt="Billede af små konditorkager" class="w-auto h-64 md:h-80 object-obtain"/>
+        <Image src={TA5} alt="Billede af ejer og kunder" class="w-auto h-64 md:h-80 object-obtain"/>
       </div>
 
       <div class="flex-shrink-0 md:block hidden">
-        <Image src={TA6} alt="Billede af små konditorkager" class="w-auto h-64 md:h-80 object-obtain"/>
+        <Image src={TA6} alt="Servering af drikkevarer" class="w-auto h-64 md:h-80 object-obtain"/>
       </div>
     </div>
   </div>
 </section>
 
 
-<!-- Sektion 4 - Henvisning til anden side (Desktop) -->
-<section class="bg-brun500 text-pdefault w-full md:flex items-center justify-center hidden">
-  <div class="mx-auto flex flex-col md:flex-row gap-lg items-center justify-between px-lg py-xl">
-    
-    <div class="md:w-1/2 flex justify-center items-center mb-m md:mb-0 md:order-2">
-      <Image src={Illustration} alt="Testbillede" class="w-auto h-full object-obtain"/>
-    </div>
+<!-- Sektion 4 - Henvisning til anden side  -->
 
-    <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-1 text-left md:ml-xxl ml-0">
-      <h2 class="text-mnormalh3 md:text-normalh2 font-poppins font-semibold mb-m">Se hvad vi ellers har at byde på i vores cafe</h2>
-      
-      <p class="text-mpnormal md:pnormal font-poppins mb-m">Hos LocalByMe tilbyder vi en caféoplevelse fyldt med varme og hygge. Vores menu byder på hjemmelavede lækkerier, friskbrygget økologisk kaffe og sæsonens favoritter – alt sammen lavet med kærlighed og omtanke. Kom forbi og nyd en pause i en indbydende atmosfære, hvor kvalitet og lokale råvarer er i centrum.</p>
-      
-      <a href=""><Button variant="primary">Se vores menukort</Button></a>
-    </div>
+<section class="relative bg-brun500 text-pdefault py-lg font-poppins md:grid md:grid-cols-2 md:px-xl">
+  <div class="absolute md:static z-20 mx-lg md:ml-xxl md:py-lg md:col-start-1 md:row-start-1 content-center">
+  <p class="text-mnormalh4 md:text-normalh4 font-semibold text-center md:text-left pb-s">Se hvad vi ellers har at byde på i vores cafe</p>
+    <p class="pb-s md:pb-m text-mpnormal md:text-pnormal">Hos LocalByMe tilbyder vi en caféoplevelse fyldt med varme og hygge. Vores menu byder på hjemmelavede lækkerier, friskbrygget økologisk kaffe og sæsonens favoritter – alt sammen lavet med kærlighed og omtanke. Kom forbi og nyd en pause i en indbydende atmosfære, hvor kvalitet og lokale råvarer er i centrum.</p>
+    <Button variant="primary" class="p-s md:p-m"><a href="/cafe">Se vores menukort</a></Button>
+  </div>
+
+  <div class="flex justify-center md:col-start-2">
+    <Image
+    src={Illustration}
+    alt="Illustrationer af blandede varer"
+    class="h-80 md:h-96 w-auto opacity-20 md:opacity-100"
+  />
   </div>
 </section>
 
-<!-- Sektion 4 - Henvisning til anden side (Mobil) -->
-<section class="relative bg-brun500 text-pdefault w-full flex items-center justify-center py-xl md:hidden">
-  <Image src={Illustration} alt="Illustration" class="opacity-30 md:opacity-100 md:col-start-2 md:my-8 md:h-96 h-full"/>
 
-  <div class="absolute mx-auto flex flex-col-reverse md:flex-row gap-lg items-center justify-between px-lg py-xl">
- 
-    <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-1 text-left md:ml-xxl ml-0">
-      <h2 class="text-mnormalh3 md:text-normalh2 font-poppins font-semibold mb-m">Se hvad vi ellers har at byde på i vores cafe</h2>
-      
-      <p class="text-mpnormal md:pnormal font-poppins mb-m">Hos LocalByMe tilbyder vi en caféoplevelse fyldt med varme og hygge. Vores menu byder på hjemmelavede lækkerier, friskbrygget økologisk kaffe og sæsonens favoritter – alt sammen lavet med kærlighed og omtanke. Kom forbi og nyd en pause i en indbydende atmosfære, hvor kvalitet og lokale råvarer er i centrum.</p>
-      
-      <a href=""><Button variant="primary">Se vores menukort</Button></a>
-    </div>
-  </div>
-</section>
 
 <script>
   import { animate, stagger, inView, scroll, timeline } from "motion";

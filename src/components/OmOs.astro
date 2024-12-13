@@ -14,168 +14,163 @@ import "../styles/global.css";
 ---
 
 <!-- Hero unit -->
-<section class="bg-brun100 md:flex w-full py-xl md:py-xxl hidden">
-  <div class="mx-auto px-4 flex flex-col md:flex-row items-center justify-center">
-    
-    <div class="md:w-1/2 md:flex justify-center items-center mb-6 md:mb-0 md:order-2 hidden">
-      <Image src={Herounit} alt="Billede af små konditorkager" class="w-auto h-full object-obtain"/>
-    </div>
+<section class="relative bg-brun100 md:grid md:grid-cols-2">
+  <Image
+    src={Herounit}
+    alt="Blandede illustrationer"
+    class="opacity-20 md:opacity-100 md:col-start-2 md:my-8 md:h-96 h-72"
+  />
 
-    <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-1 text-left md:ml-xxl ml-0">
-      <h1 class="text-mspecialh1 md:text-specialh1 text-pgron font-sigurd mx-lg md:mx-0 mb-m">Historien bag Local By Me</h1>
+  <div
+    class="absolute md:col-start-1 md:col-span-1 md:mr-10 md:ml-40 mx-8 top-10 md:top-24 text-center md:text-left"
+  >
+    <h1
+      class="font-sigurd text-mspecialh1 md:text-specialh1 text-pgron"
+    >
+    Vores historie
+    </h1>
+    <p
+      class="font-sigurd text-mspecialh4 md:text-specialh4 text-pdefault"
+    >
+    Stedet hvor lokalt og bæredygtigt går hånd i hånd. Tag med på rejsen bag vores historie.
+  </p>
+<div class="mt-6"
+>    <Button variant="primary" class="p-s md:p-m"><a href="#historie">Læs historien</a></Button></div>
 
-      <p class="text-mspecialh3 md:text-specialh3 text-pdefault font-sigurd mb-m">Stedet hvor lokalt og bæredygtigt går hånd i hånd. Tag med på rejsen bag vores historie</p>
-
-    <a href=""><Button variant="primary">Se historie</Button></a>
-    </div>
-  </div>
-</section>
-
-<!-- Hero unit (Mobil) -->
-<section class="relative bg-brun100 w-full flex items-center justify-center py-lg md:hidden">
-  <Image src={Herounit} alt="Illustration" class="opacity-30 md:opacity-100 md:col-start-2 md:my-8 md:h-96 h-96"/>
-
-  <div class="absolute mx-auto flex flex-col-reverse md:flex-row gap-lg items-center justify-between px-lg py-xl">
- 
-    <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-1 text-center md:ml-xxl ml-0">
-      <h2 class="text-mspecialh1 md:text-specialh1 text-pgron font-sigurd mx-lg md:mx-0 mb-m">Historien bag Local By Me</h2>
-      
-      <p class="text-mspecialh3 md:text-specialh3 text-pdefault font-sigurd mb-m">Stedet hvor lokalt og bæredygtigt går hånd i hånd. Tag med på rejsen bag vores historie</p>
-      
-      <a href=""><Button variant="primary">Se historie</Button></a>
-    </div>
   </div>
 </section>
 
 <!-- Overordnet sektion -->
-<section class="text-pdefault w-full px-s py-s md:px-lg md:py-lg">
+<section id="historie" class="md:mx-xxl text-pdefault px-s py-s md:px-lg md:py-lg">
 
   <!-- Sektion 1 -->
-  <section class="mx-auto px-s py-s md:px-lg md:py-lg flex flex-col md:flex-row  items-center justify-center fade1">
+  <section class="mx-auto px-s py-s md:px-lg md:py-lg flex flex-col md:flex-row items-center justify-center fade1">
 
-    <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-1 md:ml-xxl ml-0">
-      <h2 class="text-mspecialh1 md:text-specialh1 text-pgron font-sigurd font-semibold text-center md:text-left mb-m">En drøm bliver til virkelighed</h2>
+    <div class="md:w-1/2 md:pr-8 md:order-1 md:mx-lg">
+      <h2 class="text-mspecialh2 md:text-specialh2 text-pgron font-sigurd font-semibold text-center md:text-left mb-m">En drøm bliver til virkelighed</h2>
       
-      <p class="text-mpnormal md:pnormal font-poppins text-left mb-m">Local By Me er en lille virksomhed med et stort hjerte for lokale producenter, skabt og drevet af mig, Marianne. Idéen opstod ud fra en drøm om at lære mit lokalområde og dets mennesker bedre at kende.</p>
+      <p class="text-mpnormal md:text-pnormal font-poppins text-left mb-m">Local By Me er en lille virksomhed med et stort hjerte for lokale producenter, skabt og drevet af mig, Marianne. Idéen opstod ud fra en drøm om at lære mit lokalområde og dets mennesker bedre at kende.</p>
 
-      <p class="text-mpnormal md:pnormal font-poppins text-left mb-m">Denne mangeårige drøm blev en realitet, da jeg i oktober 2021 åbnede dørene til Local By Me i det kreative område Musicon i Roskilde.</p>
+      <p class="text-mpnormal md:text-pnormal font-poppins text-left mb-m">Denne mangeårige drøm blev en realitet, da jeg i oktober 2021 åbnede dørene til Local By Me i det kreative område Musicon i Roskilde.</p>
     </div>
 
     <div class="md:w-1/2 flex justify-center items-center mb-m md:mb-0 order-1 md:order-2">
-        <Image src={Om1} alt="Testbillede" class="w-full h-auto object-cover"/>
+        <Image src={Om1} alt="Logo på dåser" class="w-auto h-auto object-cover"/>
     </div>
   </section>
 
   <!-- Sektion 2 -->
-  <section class="mx-auto px-s py-s md:px-lg md:py-l flex flex-col md:flex-row items-center justify-center fade2">
+  <section class="mx-auto px-s py-s md:px-lg md:py-xl flex flex-col md:flex-row items-center justify-center fade2">
 
     <div class="md:w-1/2 flex justify-center items-center mb-m md:mb-0 order-1 md:order-2">
-      <Image src={Om2} alt="Testbillede" class="w-full h-auto object-coverr"/>
+      <Image src={Om2} alt="Local By Me´s hund" class="w-auto h-auto object-coverr"/>
     </div>
 
-    <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-2 md:ml-xxl ml-0">
-      <h2 class="text-mspecialh1 md:text-specialh1 text-pgron font-sigurd font-semibold text-center md:text-left mb-m">Hjernen bag</h2>
+    <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-2 md:mx-lg">
+      <h2 class="text-mspecialh2 md:text-specialh2 text-pgron font-sigurd font-semibold text-center md:text-left mb-m">Hjernen bag</h2>
       
-      <p class="text-mpnormal md:pnormal font-poppins text-left mb-m">Marianne, uddannet kommis, har arbejdet som butikschef, souschef og tørvarechef i supermarkeder samt i en økologisk bager og på Herslev Bryghus. Hendes passion for blomster og erfaring fra blomsterbutikker har inspireret til at skabe Local By Me. Privat støttes hun af sin mand Mads og datteren Ea, der ofte hjælper ved arrangementer. Sammen er de en vigtig del af Local By Me’s succes.</p>
+      <p class="text-mpnormal md:text-pnormal font-poppins text-left mb-m">Marianne, uddannet kommis, har arbejdet som butikschef, souschef og tørvarechef i supermarkeder samt i en økologisk bager og på Herslev Bryghus. Hendes passion for blomster og erfaring fra blomsterbutikker har inspireret til at skabe Local By Me. Privat støttes hun af sin mand Mads og datteren Ea, der ofte hjælper ved arrangementer. Sammen er de en vigtig del af Local By Me’s succes.</p>
     </div>
 </section>
 
   <!-- Sektion 3 -->
-  <section class="mx-auto px-s py-s md:px-lg md:py-l flex flex-col md:flex-row items-center justify-center fade3">
+  <section class="mx-auto px-s py-s md:px-lg md:py-xl flex flex-col md:flex-row items-center justify-center fade3">
     
-    <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-1 md:ml-xxl ml-0">
-      <h2 class="text-mspecialh1 md:text-specialh1 text-pgron font-sigurd font-semibold text-center md:text-left mb-m">Et liv dedikeret til fællesskab</h2>
+    <div class="md:w-1/2 md:pr-8 md:order-1 md:mx-lg">
+      <h2 class="text-mspecialh2 md:text-specialh2 text-pgron font-sigurd font-semibold text-center md:text-left mb-m">Et liv dedikeret til fællesskab</h2>
       
-      <p class="text-mpnormal md:pnormal font-poppins text-left mb-m">Marianne har været engageret i flere frivillige projekter, bl.a. som måltidsvært på Hospice i Roskilde og i Kræftens Bekæmpelses samtalekøkken. Siden 2009 har hun og Ea samlet ind til Kræftens Bekæmpelse hvert år. Som medlem af Zonta Roskilde har Marianne også arbejdet for at forbedre vilkårene for kvinder både lokalt og globalt.</p>
+      <p class="text-mpnormal md:text-pnormal font-poppins text-left mb-m">Marianne har været engageret i flere frivillige projekter, bl.a. som måltidsvært på Hospice i Roskilde og i Kræftens Bekæmpelses samtalekøkken. Siden 2009 har hun og Ea samlet ind til Kræftens Bekæmpelse hvert år. Som medlem af Zonta Roskilde har Marianne også arbejdet for at forbedre vilkårene for kvinder både lokalt og globalt.</p>
 
-      <p class="text-mpnormal md:pnormal font-poppins mb-m">Local By Me er hendes måde at styrke forbindelsen mellem mennesker og de lokale produkter, der betyder så meget for os alle.</p>
+      <p class="text-mpnormal md:text-pnormal font-poppins mb-m">Local By Me er hendes måde at styrke forbindelsen mellem mennesker og de lokale produkter, der betyder så meget for os alle.</p>
     </div>
     
     <div class="md:w-1/2 flex justify-center items-center mb-m md:mb-0 order-1 md:order-2">
-      <Image src={Om3} alt="Testbillede" class="w-full h-auto object-cover"/>
+      <Image src={Om3} alt="Kaffe fra Just Coffee" class="w-auto h-auto object-cover"/>
     </div>
   </section>
 
   <!-- Sektion 4 -->
-  <section class="mx-auto px-s py-s md:px-lg md:py-l flex flex-col md:flex-row items-center justify-center fade4">
+  <section class="mx-auto px-s py-s md:px-lg md:py-xl flex flex-col md:flex-row items-center justify-center fade4">
 
     <div class="md:w-1/2 flex justify-center items-center mb-m md:mb-0 order-1 md:order-2">
-      <Image src={Om4} alt="Testbillede" class="w-full h-auto object-cover"/>
+      <Image src={Om4} alt="En hel væg af produkter" class="w-auto h-auto object-cover"/>
     </div>
 
-    <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-2 text-center md:text-left md:ml-xxl ml-0">
-      <h2 class="text-mspecialh1 md:text-specialh1 text-pgron font-sigurd font-semibold text-center md:text-left mb-m">Støtte til de lokale</h2>
+    <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-2 text-center md:text-left md:mx-lg">
+      <h2 class="text-mspecialh2 md:text-specialh2 text-pgron font-sigurd font-semibold text-center md:text-left mb-m">Støtte til de lokale</h2>
       
-      <p class="text-mpnormal md:pnormal font-poppins text-left mb-m">Marianne brænder for at støtte lokale leverandører, der skaber med passion og omhu. Gennem nære samtaler har hun lært dem og deres arbejde at kende, og i butikken deler hun med stolthed deres historier, mens kunderne udforsker de unikke produkter.</p>
+      <p class="text-mpnormal md:text-pnormal font-poppins text-left mb-m">Marianne brænder for at støtte lokale leverandører, der skaber med passion og omhu. Gennem nære samtaler har hun lært dem og deres arbejde at kende, og i butikken deler hun med stolthed deres historier, mens kunderne udforsker de unikke produkter.</p>
     </div>
   </section>
 
   <!-- Sektion 5 -->
-  <section class="mx-auto px-s py-s md:px-lg md:py-l flex flex-col md:flex-row items-center justify-center fade5">
+  <section class="mx-auto px-s py-s md:px-lg md:py-xl flex flex-col md:flex-row items-center justify-center fade5">
     
-    <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-1 text-center md:text-left md:ml-xxl ml-0">
-      <h2 class="text-mspecialh1 md:text-specialh1 text-pgron font-sigurd font-semibold text-center md:text-left mb-m">Rejsen mod de rette producenter</h2>
+    <div class="md:w-1/2 md:pr-8 md:order-1 text-center md:text-left md:mx-lg">
+      <h2 class="text-mspecialh2 md:text-specialh2 text-pgron font-sigurd font-semibold text-center md:text-left mb-m">Rejsen mod de rette producenter</h2>
       
-      <p class="text-mpnormal md:pnormal font-poppins text-left mb-m">Marianne finder producenter til Local By Me gennem en spændende proces præget af unikke møder. Hun opsøger ofte lokale produkter på markeder, events eller i andre butikker og kontakter producenterne, når hun ser noget, der passer til butikkens værdier. Derudover modtager hun også henvendelser fra virksomheder, der ønsker deres varer inkluderet i sortimentet.</p>
+      <p class="text-mpnormal md:text-pnormal font-poppins text-left mb-m">Marianne finder producenter til Local By Me gennem en spændende proces præget af unikke møder. Hun opsøger ofte lokale produkter på markeder, events eller i andre butikker og kontakter producenterne, når hun ser noget, der passer til butikkens værdier. Derudover modtager hun også henvendelser fra virksomheder, der ønsker deres varer inkluderet i sortimentet.</p>
 
-      <p class="text-mpnormal md:pnormal font-poppins text-left mb-m">Alle producenter har det til fælles, at deres varer er lokalt produceret i Danmark og opfylder høje standarder for bæredygtighed og kvalitet. Hvert produkt i butikken fortæller en historie om passion, dedikation og omsorg for miljø og mennesker. Marianne er altid åben for samarbejde med leverandører, der deler Local By Me’s kerneværdier.</p>
+      <p class="text-mpnormal md:text-pnormal font-poppins text-left mb-m">Alle producenter har det til fælles, at deres varer er lokalt produceret i Danmark og opfylder høje standarder for bæredygtighed og kvalitet. Hvert produkt i butikken fortæller en historie om passion, dedikation og omsorg for miljø og mennesker. Marianne er altid åben for samarbejde med leverandører, der deler Local By Me’s kerneværdier.</p>
     </div>
     
     <div class="md:w-1/2 flex justify-center items-center mb-m md:mb-0 order-1 md:order-2">
-      <Image src={Om5} alt="Testbillede" class="w-full h-auto object-cover"/>
+      <Image src={Om5} alt="Flasker i vinduet" class="w-auto h-auto object-cover"/>
     </div>
   </section>
 
   <!-- Sektion 6 -->
-  <section class="mx-auto px-s py-s md:px-lg md:py-l flex flex-col md:flex-row items-center justify-center fade6">
+  <section class="mx-auto px-s py-s md:px-lg md:py-xl flex flex-col md:flex-row items-center justify-center fade6">
 
     <div class="md:w-1/2 flex justify-center items-center mb-m md:mb-0 order-1 md:order-2">
-      <Image src={Om6} alt="Testbillede" class="w-full h-auto object-cover"/>
+      <Image src={Om6} alt="Puder der er syet af skjorter" class="w-auto h-auto object-cover"/>
     </div>
 
-    <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-2 text-center md:text-left md:ml-xxl ml-0">
-      <h2 class="text-mspecialh1 md:text-specialh1 text-pgron font-sigurd font-semibold text-center md:text-left mb-m">Genbrug og bæredygtighed i fokus</h2>
+    <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-2 text-center md:text-left md:mx-lg">
+      <h2 class="text-mspecialh2 md:text-specialh2 text-pgron font-sigurd font-semibold text-center md:text-left mb-m">Genbrug og bæredygtighed i fokus</h2>
       
-      <p class="text-mpnormal md:pnormal font-poppins text-left mb-m">Hos Local By Me er bæredygtighed og genbrug kerneværdier, som afspejles i butikkens indretning. Møblerne er fremstillet af genbrugstræ, mens servicen stammer fra Kirkens Korshær og Kræftens Bekæmpelse. Selv forklæderne er håndsyet af Fie med genbrugsduge.</p>
+      <p class="text-mpnormal md:text-pnormal font-poppins text-left mb-m">Hos Local By Me er bæredygtighed og genbrug kerneværdier, som afspejles i butikkens indretning. Møblerne er fremstillet af genbrugstræ, mens servicen stammer fra Kirkens Korshær og Kræftens Bekæmpelse. Selv forklæderne er håndsyet af Fie med genbrugsduge.</p>
 
-      <p class="text-mpnormal md:pnormal font-poppins text-left mb-m">Marianne ønsker at skabe en butik og café, hvor bæredygtighed og det lokale er en naturlig del af helhedsoplevelsen, og hvor hvert valg understreger hendes engagement i miljøet og det nære samfund.</p>
+      <p class="text-mpnormal md:text-pnormal font-poppins text-left mb-m">Marianne ønsker at skabe en butik og café, hvor bæredygtighed og det lokale er en naturlig del af helhedsoplevelsen, og hvor hvert valg understreger hendes engagement i miljøet og det nære samfund.</p>
     </div>
   </section>
 
   <!-- Sektion 7 -->
-  <section class="mx-auto px-s py-s md:px-lg md:py-l flex flex-col md:flex-row items-center justify-center fade7">
+  <section class="mx-auto px-s py-s md:px-lg md:py-xl flex flex-col md:flex-row items-center justify-center fade7">
     
-    <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-1 text-center md:text-left md:ml-xxl ml-0">
-      <h2 class="text-mspecialh1 md:text-specialh1 text-pgron font-sigurd font-semibold text-center md:text-left mb-m">Innovation og nye ideer</h2>
+    <div class="md:w-1/2 md:pr-8 md:order-1 text-center md:text-left md:mx-lg">
+      <h2 class="text-mspecialh2 md:text-specialh2 text-pgron font-sigurd font-semibold text-center md:text-left mb-m">Innovation og nye ideer</h2>
       
-      <p class="text-mpnormal md:pnormal font-poppins text-left mb-m">Som medlem af Corolab, et centrum for partnerskaber og innovation, arbejder Local By Me's ejer Marianne aktivt med at udforske nye måder at fremme bæredygtighed og lokalforankring. Et af de spændende projekter var et "klidforsøg", hvor hun undersøgte, hvordan klid kan integreres i madlavning. Disse erfaringer lever videre i caféens bagværk, der nu indeholder klid som en sund og nærende ingrediens.</p>
+      <p class="text-mpnormal md:text-pnormal font-poppins text-left mb-m">Som medlem af Corolab, et centrum for partnerskaber og innovation, arbejder Local By Me's ejer Marianne aktivt med at udforske nye måder at fremme bæredygtighed og lokalforankring. Et af de spændende projekter var et "klidforsøg", hvor hun undersøgte, hvordan klid kan integreres i madlavning. Disse erfaringer lever videre i caféens bagværk, der nu indeholder klid som en sund og nærende ingrediens.</p>
 
-      <p class="text-mpnormal md:pnormal font-poppins text-left mb-m">Local By Me er ikke bare en butik og café; det er et samlingspunkt for værdier, lokale historier og innovation, hvor miljøbevidsthed møder kreative løsninger.</p>
+      <p class="text-mpnormal md:text-pnormal font-poppins text-left mb-m">Local By Me er ikke bare en butik og café; det er et samlingspunkt for værdier, lokale historier og innovation, hvor miljøbevidsthed møder kreative løsninger.</p>
     </div>
 
     <div class="md:w-1/2 flex justify-center items-center mb-m md:mb-0 order-1 md:order-2">
-      <Image src={Om7} alt="Testbillede" class="w-full h-auto object-cover"/>
+      <Image src={Om7} alt="Til og fra kort med forskellige motiver" class="w-auto h-auto object-cover"/>
     </div>
   </section>
 </section>
 
 <!-- Sektion 8 - Henvisning til anden side-->
-<section class="bg-gron500 text-pdefault w-full flex items-center justify-center py-xl ">
-    <div class="mx-auto px-s flex flex-col md:flex-row items-center justify-center">
-
-        <div class="md:w-1/2 flex justify-center items-center mb-m md:mb-0 md:order-2">
-            <Image src={Om8} alt="Testbillede" class="w-auto h-full object-obtain"/>
-        </div>
-      
-        <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-1 md:text-left md:ml-xxl ml-0">
-            <h2 class="text-mnormalh2 md:text-normalh2 font-poppins font-semibold text-center md:text-left mb-m">Oplev vores arrangementer</h2>
-        
-            <p class="text-mpnormal md:pnormal font-poppins text-left mb-m">Udover at være en butik og café er LocalByMe et samlingspunkt for fællesskab og kreativitet. Udforsk vores kommende arrangementer og find noget, der inspirerer dig – fra workshops og foredrag til hyggelige fællesspisninger. Tag del i en oplevelse, der skaber forbindelser og minder.</p>
-
-            <a href=""><Button variant="primary">Se arrangementer</Button></a>
-        </div>
+  <section class="bg-gron500 text-pdefault py-lg font-poppins md:grid md:grid-cols-2 md:px-xl">
+    <div class="mx-lg md:ml-xxl pb-m md:py-lg md:col-start-1 md:row-start-1">
+    <p class="text-mnormalh4 md:text-normalh4 font-semibold text-center md:text-left pb-s">Oplev en af vores kommende arrangementer</p>
+      <p class="pb-s md:pb-m text-mpnormal md:text-pnormal">Udover at være en butik og café er Local By Me et samlingspunkt for fællesskab og kreativitet. Udforsk vores kommende arrangementer og find noget, der inspirerer dig – fra workshops og foredrag til hyggelige fællesspisninger. Tag del i en oplevelse, der skaber forbindelser og minder.</p>
+      <Button variant="primary" class="p-s md:p-m"><a href="/arrangementer">Se arrangementer</a></Button>
+    </div>
+  
+    <div class="flex justify-center md:col-start-2">
+      <Image
+      src={Om8}
+      alt="Billede af butikken"
+      class="h-auto w-auto px-lg md:px-0"
+    />
     </div>
   </section>
+
+
+
 
   <script>
     import { animate, stagger, inView, scroll, timeline } from "motion";

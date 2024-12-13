@@ -13,100 +13,82 @@ import Illustration from "../assets/images/Illustration2.png";
 import "../styles/global.css";
 ---
 
-<!-- Hero unit (Desktop) -->
-<section class="bg-brun100 md:flex w-full py-m md:py-xxl hidden">
-  <div class="mx-auto px-4 flex flex-col md:flex-row items-center justify-center">
-    
-    <div class="md:w-1/2 md:flex justify-center items-center mb-6 md:mb-0 md:order-2 hidden">
-      <Image src={Herounit} alt="Billede af små konditorkager" class="w-auto h-full object-obtain"/>
-    </div>
+<section class="relative bg-brun100 md:grid md:grid-cols-2">
+  <Image
+    src={Herounit}
+    alt="Illustration af et cafébord"
+    class="opacity-20 md:opacity-100 md:col-start-2 md:my-8 md:h-96 h-72"
+  />
 
-    <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-1 text-center md:text-left p-s md:ml-xxl ml-0">
-      <h1 class="text-mspecialh1 md:text-specialh1 text-pgron font-sigurd mb-m">Butikken</h1>
+  <div
+    class="absolute md:col-start-1 md:col-span-1 md:mr-10 md:ml-40 mx-8 top-5 md:top-20 text-center md:text-left"
+  >
+    <h1
+      class="font-sigurd text-mspecialh1 md:text-specialh1 text-pgron"
+    >
+      Butikken
+    </h1>
+    <p
+      class="font-sigurd text-mspecialh4 md:text-specialh4 text-pdefault"
+    >
+    Vores butik er dedikeret til produkter skabt med kærlighed og omhu i Danmark – altid med fokus på kort afstand fra producent til kunde.
+  </p>
+<div class="mt-6"
+>    <Button variant="primary" class="p-s md:p-m"><a href="#menukort">Køb lokalt</a></Button></div>
 
-      <p class="text-mspecialh3 md:text-specialh3 text-pdefault font-sigurd leading-relaxed mb-m">Vores butik er dedikeret til produkter skabt med kærlighed og omhu i Danmark – altid med fokus på kort afstand fra producent til kunde.</p>
-
-      <a href=""><Button variant="primary">Shop lokalt nu</Button></a>
-    </div>
   </div>
 </section>
 
-<!-- Hero unit (Mobil) -->
-<section class="relative bg-brun100 text-pdefault w-full flex items-center justify-center py-lg md:hidden">
-  <Image src={Herounit} alt="Illustration" class="opacity-30 md:opacity-100 md:col-start-2 md:my-8 md:h-96 h-96"/>
-
-  <div class="absolute mx-auto flex flex-col-reverse md:flex-row gap-lg items-center justify-between px-lg py-xl">
- 
-    <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-1 text-center md:ml-xxl ml-0">
-      <h2 class="text-mspecialh1 md:text-specialh1 text-pgron font-sigurd mb-m">Butikken</h2>
-      
-      <p class="text-mspecialh3 md:text-specialh3 text-pdefault font-sigurd leading-relaxed mb-m">Vores butik er dedikeret til produkter skabt med kærlighed og omhu i Danmark – altid med fokus på kort afstand fra producent til kunde.</p>
-      
-      <a href=""><Button variant="primary">Shop lokalt nu</Button></a>
-    </div>
-  </div>
-</section>
-
-<div class="flex flex-col">
 
 <!-- Sektion 1 -->
-<section class="order-2 md:order-1 md:text-center text-pdefault py-m md:px-64 md:py-xl slide">
-<h2 class="text-mnormalh3 md:text-normalh2 font-poppins font-semibold text-center mx-lg mb-lg">Unikke varer med lokale fortællinger</h2>
+<div class="mx-lg md:mx-xxl md:pt-lg slide">
+  <p class="font-poppins text-mnormalh4 md:text-normalh3 pt-m text-center text-pdefault font-semibold">Unikke varer med lokale fortællinger</p>
+  <p class="font-poppins text-mpnormal md:text-pnormal pt-4 md:text-center text-left text-pdefault md:mx-56">Local By Me har en forkærlighed for produkter, der er produceret i Danmark,<br/>og prioriterer en kort vej fra jord til bord.<br/><br/>Produkterne købes ofte direkte fra leverandørerne, hvilket giver mulighed for at lære historien bag hvert produkt at kende. Når du besøger butikken, kan du derfor ikke blot købe unikke varer, men også høre de inspirerende fortællinger om passion, håndværk og kvalitet fra de lokale producenter. Hvert produkt i butikken er nøje udvalgt for at støtte det lokale og for at skabe en tættere forbindelse mellem producent og kunde.</p>
+</div>
 
-<p class="text-mpnormal md:pnormal font-poppins text-left md:text-center mx-lg md:mx-24 mb-m">Local By Me har en forkærlighed for produkter, der er produceret i Danmark, og prioriterer en kort vej fra jord til bord.</p>
-
-<p class="text-mpnormal md:pnormal font-poppins text-left  md:text-center mx-lg md:mx-24 mb-m">Produkterne købes ofte direkte fra leverandørerne, hvilket giver mulighed for at lære historien bag hvert produkt at kende. Når du besøger butikken, kan du derfor ikke blot købe unikke varer, men også høre de inspirerende fortællinger om passion, håndværk og kvalitet fra de lokale producenter. Hvert produkt i butikken er nøje udvalgt for at støtte det lokale og for at skabe en tættere forbindelse mellem producent og kunde.</p>
-</section>
 
 <!-- Sektion 2 - Produkter -->
-<section class="order-1 md:order-2 md:grid md:grid-cols-3 md:grid-rows-10 md:gap-xl items-center place-items-center mx-m my-m md:mx-xl md:mb-xxl">
-  <Card imageSrc={Produkt1} imageAlt="" title="Wellness kurven" description="Forkæl dig selv eller en du holder af, med en wellness kurv fyldt med selvforkælelse, fantastiske dufte og ro til både krop og sjæl." buttonText="Se kurvens indhold"/>
+<section class="order-1 md:order-2 md:grid md:grid-cols-3 md:grid-rows-10 md:gap-xl items-center place-items-center mx-m my-m md:mx-xxl md:px-xxl md:mb-xl">
+  <Card imageSrc={Produkt1} imageAlt="Wellness kurv" title="Wellness kurven" description="Forkæl dig selv eller en du holder af, med en wellness kurv fyldt med selvforkælelse, fantastiske dufte og ro til både krop og sjæl." buttonText="Se kurvens indhold"
+  buttonLink="/produkt"
+  />
 
-  <Card imageSrc={Produkt2} imageAlt="" title="Tapas kurven" description="En smagfuld kurv med blandede  lækkerier, der sætter stemningen til en hyggelig tapas aften, for både dig og dine nærmeste." buttonText="Se kurvens indhold"/>
+  <Card imageSrc={Produkt2} imageAlt="Tapas kurv" title="Tapas kurven" description="En smagfuld kurv med blandede  lækkerier, der sætter stemningen til en hyggelig tapas aften, for både dig og dine nærmeste." buttonText="Se kurvens indhold" buttonLink="/produkt"/>
   
-  <Card imageSrc={Produkt3} imageAlt="" title="Gin kurven" description="Den perfekte kurv til gin-elskeren. Gin kurven er spækket med alt, hvad der skal til for at skabe smagfuld drinks til alle begivenheder." buttonText="Se kurvens indhold"/>
+  <Card imageSrc={Produkt3} imageAlt="Gin kurv" title="Gin kurven" description="Den perfekte kurv til gin-elskeren. Gin kurven er spækket med alt, hvad der skal til for at skabe smagfuld drinks til alle begivenheder." buttonText="Se kurvens indhold" buttonLink="/produkt"/>
   
-  <Card imageSrc={Produkt4} imageAlt="" title="Julehygge kurven" description="Den perfekte julekurv til at sprede varme, gode dufte og julestemning hos dig og dine nærmeste. Kurven er derfor ideel til hyggelige julestunder." buttonText="Se kurvens indhold"/>
+  <Card imageSrc={Produkt4} imageAlt="Julehygge kurv" title="Julehygge kurven" description="Den perfekte julekurv til at sprede varme, gode dufte og julestemning hos dig og dine nærmeste. Kurven er derfor ideel til hyggelige julestunder." buttonText="Se kurvens indhold" buttonLink="/produkt"/>
 
-  <Card imageSrc={Produkt5} imageAlt="" title="Guld jul" description="Kurven er fyldt op med ren julestemning, og alt hvad du skal bruge til den perfekte gløgg, så man kan holde sig varm i juledagene." buttonText="Se kurvens indhold"/>
+  <Card imageSrc={Produkt5} imageAlt="Guld jul" title="Guld jul" description="Kurven er fyldt op med ren julestemning, og alt hvad du skal bruge til den perfekte gløgg, så man kan holde sig varm i juledagene." buttonText="Se kurvens indhold" buttonLink="/produkt"/>
 
-  <Card imageSrc={Produkt6} imageAlt="" title="Pink jul" description="En moderne og farverigt twist på juleklassikeren. Denne pink kurv er fyldt med julestemning, gløgg og lækre snacks til den festlige tid." buttonText="Se kurvens indhold"/>
+  <Card imageSrc={Produkt6} imageAlt="Pink jul" title="Pink jul" description="En moderne og farverigt twist på juleklassikeren. Denne pink kurv er fyldt med julestemning, gløgg og lækre snacks til den festlige tid." buttonText="Se kurvens indhold" buttonLink="/produkt"/>
 </section>
 </div>
 
-<!-- Sektion 3 - Henvisning til anden side (Desktop) -->
-<section class="bg-brun500 text-pdefault w-full md:flex items-center justify-center py-xl hidden">
-  <div class="mx-auto flex flex-col md:flex-row gap-lg items-center justify-between px-lg py-xl">
-    
-    <div class="md:w-1/2 flex justify-center items-center mb-m md:mb-0 md:order-2">
-      <Image src={Illustration} alt="" class="w-auto h-full object-obtain"/>
-    </div>
+<!-- Sektion 3 - Henvisning til anden side -->
 
-    <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-1 text-left md:ml-xxl ml-0">
-      <h2 class="text-mnormalh3 md:text-normalh2 font-poppins font-semibold mb-m">Kender du historien bag Local By Me?</h2>
-      
-      <p class="text-mpnormal md:pnormal font-poppins mb-m">Rejsen startede med en passion for lokalt håndværk og et ønske om at støtte danske producenter. Lær mere om visionen, værdierne og det fællesskab, der ligger bag vores butik og café.</p>
-      
-      <a href=""><Button variant="primary">Læs hele historien her</Button></a>
-    </div>
+<section class="relative bg-brun500 text-pdefault py-lg font-poppins md:grid md:grid-cols-2 md:px-xl">
+  <div class="absolute md:static z-20 mx-lg md:ml-xxl py-m md:py-lg md:col-start-1 md:row-start-1 content-center">
+  <p class="text-mnormalh4 md:text-normalh4 font-semibold text-center md:text-left pb-s">Kender du historien bag Local By Me?</p>
+    <p class="pb-s md:pb-m text-mpnormal md:text-pnormal">Rejsen startede med en passion for lokalt håndværk og et ønske om at støtte danske producenter.<br/><br/>Lær mere om visionen, værdierne og det fællesskab, der ligger bag vores butik og café.</p>
+    <Button variant="primary" class="p-s md:p-m"><a href="/om">Læs hele historien her</a></Button>
+  </div>
+
+  <div class="flex justify-center md:col-start-2">
+    <Image
+    src={Illustration}
+    alt="Illustrationer af juleting"
+    class="h-80 md:h-96 w-auto opacity-20 md:opacity-100"
+  />
   </div>
 </section>
 
-<!-- Sektion 3 - Henvisning til anden side (Mobil) -->
-  <section class="relative bg-brun500 text-pdefault w-full flex items-center justify-center py-s md:hidden">
-    <Image src={Illustration} alt="Illustration" class="opacity-30 md:opacity-100 md:col-start-2 md:my-8 md:h-96 h-full"/>
 
-    <div class="absolute mx-auto flex flex-col-reverse md:flex-row gap-lg items-center justify-between px-lg py-xl">
-   
-      <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-1 text-left md:ml-xxl ml-0">
-        <h2 class="text-mnormalh3 md:text-normalh2 font-poppins font-semibold mb-m">Kender du historien bag Local By Me?</h2>
-        
-        <p class="text-mpnormal md:pnormal font-poppins mb-m">Rejsen startede med en passion for lokalt håndværk og et ønske om at støtte danske producenter. Lær mere om visionen, værdierne og det fællesskab, der ligger bag vores butik og café.</p>
-        
-        <a href=""><Button variant="primary">Læs hele historien her</Button></a>
-      </div>
-    </div>
-</section>
+
+
+
+
+
 
 <script>
   import { animate, stagger, inView, scroll, timeline } from "motion";

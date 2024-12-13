@@ -8,9 +8,10 @@ interface CardProps {
   title: string;
   description: string;
   buttonText: string;
+  buttonLink: string;
 }
 
-const { imageSrc, imageAlt, title, description, buttonText } = Astro.props;
+const { imageSrc, imageAlt, title, description, buttonText, buttonLink } = Astro.props;
 ---
 
 <div class="my-xl md:my-0 max-w-xs overflow-hidden shadow-skygge m-auto scale-100 rounded-lg">
@@ -32,6 +33,6 @@ const { imageSrc, imageAlt, title, description, buttonText } = Astro.props;
 
 <!-- Knap -->
   <div class="mb-lg ml-5">
-    <a href="/produktside/"><Button variant="secondary">{buttonText}</Button></a>
+    <a href={buttonLink}><Button variant="secondary">{buttonText}</Button></a>
   </div>
 </div>

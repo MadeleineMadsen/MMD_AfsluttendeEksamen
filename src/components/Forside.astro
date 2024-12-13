@@ -21,97 +21,154 @@ const reviews = [];
     <div class="absolute top-7 md:top-1/2 md:left-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2 text-center">
         <h1 class="text-mspecialh1 md:text-specialh1 text-pgron font-sigurd mx-lg mb-m md:mb-m">Velkommen til Local By Me</h1>
 
-        <p class="text-mspecialh3 md:text-specialh3 text-pdefault font-sigurd mx-m md:mx-48 mb-m md:mb-m">Din lokale gårdbutik og café, hvor bæredygtighed møder fælleskab</p>
+        <p class="text-mspecialh4 md:text-specialh4 text-pdefault font-sigurd mx-m">Din lokale gårdbutik og café, hvor bæredygtighed møder fælleskab</p>
 
-        <a href=""><Button variant="primary">Shop lokalt nu</Button></a>
+        <div class="mt-6">
+        <Button variant="primary" class="p-s md:p-m"><a href="/butik">Shop lokalt nu</a></Button></a></div>
     </div>
 </section>
 
 <!-- Sektion 1 - Hos LocalByMe-->
-<section class="text-pdefault w-full flex items-center justify-center">
-  <div class="mx-auto flex flex-col md:flex-row gap-lg items-center justify-between px-m py-m md:px-lg md:py-xl">
 
-    <div class="md:w-1/2 md:order-1 md:text-left md:p-s md:ml-xxl ml-0 mt-m">
-      <h2 class="text-mnormalh4 md:text-normalh3 font-poppins font-semibold leading-relaxed mb-lg">Hos LocalByMe bygger vi på tre grundsten: <br/> Bæredygtighed, lokalt engagement og fællesskab </h2>
+<section class="text-pdefault font-poppins md:grid md:grid-cols-2 md:px-xl">
+  <div class="mx-lg md:ml-xxl pb-m md:py-lg md:col-start-1 md:row-start-1">
+  <p class="text-mnormalh4 md:text-normalh4 font-semibold text-left pb-s">Hos LocalByMe bygger vi på tre grundsten:<br/>Bæredygtighed, lokalt engagement og fællesskab</p>
+    <p class="pb-s md:pb-m text-mpnormal md:text-pnormal">Vi tror på at støtte lokale producenter, tilbyde produkter med omtanke og skabe et sted, hvor mennesker kan mødes og inspirere hinanden til en grønnere og mere meningsfuld hverdag.</p>
+    <Button variant="primary" class="p-s md:p-m"><a href="/om">Læs mere om Local By Me</a></Button>
+  </div>
 
-      <p class="text-mpnormal md:pnormal font-poppins leading-relaxed mb-lg">Vi tror på at støtte lokale producenter, tilbyde produkter med omtanke og skabe et sted, hvor mennesker kan mødes og inspirere hinanden til en grønnere og mere meningsfuld hverdag.</p>
-
-      <a href=""><Button variant="primary">Læs mere om LocalByMe</Button></a>
-    </div>
-
-    <div class="md:w-1/2 justify-center items-center mb-m md:mb-0 md:mr-xl md:order-2 hidden md:flex">
-      <Image src={Illustration1} alt="Små illustrationer af lokale råvarer" class="w-auto h-full object-obtain"/>
-    </div>
+  <div class="flex justify-center md:col-start-2">
+    <Image
+    src={Illustration1}
+    alt="Små illustrationer af lokale råvarer"
+    class="h-72 md:h-96 w-auto hidden md:block"
+  />
   </div>
 </section>
 
+
 <!-- Sektion 2 - Hvad tilbyder vi?-->
 <section class="text-pdefault py-m px-lg md:px-lg md:py-lg slide">
-    <h2 class="text-mnormalh3 md:text-normalh2 font-poppins font-bold text-center mb-m">Hvad tilbyder vi</h2>
+    <h2 class="text-mnormalh3 md:text-normalh3 font-poppins font-bold text-center mb-m">Hvad tilbyder vi</h2>
 
     <p class="text-mpnormal md:pnormal font-poppins text-left md:text-center mb-m">LocalByMe er din lokale destination for bæredygtige løsninger og hyggelige oplevelser. <br/> Udforsk vores unikke butik, nyd øjeblikke i vores café, eller deltag i inspirerende events <br/> – alt sammen skabt med omtanke og lokalt engagement.</p>
 </section>
 
 <!-- Sektion 3 - Adskillige sektioner-->
-<section class="grid items-center justify-center px-m md:px-lg">
+<!-- <section class="grid items-center justify-center px-m md:px-lg md:mx-lg">
     <Sections
     title="Lokal kvalitet der gør en forskel"
     description="Oplev det bedste fra lokale producenter – gavekurve fyldt med kærlighed, grøntsagskasser direkte fra marken og caféens økologiske specialiteter. Alle produkter er nøje udvalgt med omtanke for både dig og miljøet."
     buttonText="Se gavekurve"
     buttonType="secondary"
-    image={{src: Billede1, alt: "Beskrivelse af billede"}}
+    link="/butik"
+    image={{src: Billede1, alt: "Gløgg og andre produkter"}}
     layout="image-right"/>
 
     <Sections
     title="Et hyggeligt åndehul"
     description="Træk vejret og nyd en pause i vores café. Her serverer vi hjemmelavede lækkerier, økologisk kaffe og sæsonens smage – alt i en afslappet og varm atmosfære."
-    buttonText="Se cafeens menukort"
+    buttonText="Se caféens menukort"
     buttonType="secondary"
-    image={{src: Billede2, alt: "Beskrivelse af billede"}}
+    link="/cafe"
+    image={{src: Billede2, alt: "Nisser i vinduet"}}
     layout="image-left"/>
 
     <Sections
     title="Samlingspunkt for inspiration og fællesskab"
     description="Bliv en del af vores fællesskab! Deltag i inspirerende arrangementer – fra kreative workshops til hyggelige fællesspisninger. Her hos LocalByMe handler det ikke kun om produkter, men også om at skabe minder og forbindelser."
-    buttonText="Se kommende events"
+    buttonText="Se kommende arrangementer"
     buttonType="secondary"
-    image={{src: Billede3, alt: "Beskrivelse af billede"}}
+    link="/arrangementer"
+    image={{src: Billede3, alt: "Forskellige chokolader"}}
     layout="image-right"/>
-</section>
+</section> -->
 
-<!-- Sektion 4 - Nyhed (Desktop) -->
-<section class="bg-gron700 w-full md:flex items-center justify-center hidden">
-  <div class="mx-auto flex flex-col md:flex-row gap-lg items-center justify-between px-lg py-xl">
+  <!-- Sektion 3.1 -->
+  <section class="md:mx-xxl text-pdefault px-s py-s md:px-lg">
+  <section class="mx-auto px-s md:py-s md:px-lg flex flex-col md:flex-row items-center justify-center fade1">
 
-    <div class="font-poppins text-phvid  md:w-1/2 md:order-1 text-left md:p-s md:ml-xxl ml-0">
-      <h2 class="text-mnormalh3 md:text-normalh2 font-bold mb-m whitespace-nowrap">Få varmen og nyd smagen af jul</h2>
-
-      <p class="text-mpnormal md:text-pnormal leading-relaxed mb-m">Gløgg-sæsonen er her, og vi har kræset for detaljerne for at tilbyde dig den bedste oplevelse. Kom forbi og smag på vores tre skønne varianter:<p>
-
-      <p class="text-mpnormal md:text-pnormal leading-relaxed">Alkoholfri Æblegløgg – En frisk og krydret nydelse, perfekt for alle. <br/> Rød Årgangsgløgg – Traditionel gløgg med en rig smag af vinterens krydderier. <br/> Gin-Gløgg – En nyfortolkning med et strejf af elegance.<p>
-    </div>
-
-    <div class="md:w-1/2 md:flex justify-center items-center mb-m md:mb-0 md:order-2 hidden">
-      <Image src={Illustration2} alt="Små illustrationer af jul" class="w-auto h-full object-obtain"/>
-    </div>
-  </div>
-</section>
-
-<!-- Sektion 4 - Nyhed (Mobil) -->
-<section class="relative bg-gron700 text-phvid w-full flex items-center justify-center py-s md:hidden">
-  <Image src={Illustration2} alt="Illustration" class="opacity-30 md:opacity-100 md:col-start-2 md:my-8 md:h-96 h-full"/>
-
-  <div class="absolute mx-auto flex flex-col-reverse md:flex-row gap-lg items-center justify-between px-lg py-xl">
- 
-    <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-1 text-left md:ml-xxl ml-0">
-      <h2 class="text-mnormalh3 md:text-normalh2 font-poppins font-semibold mb-m">Få varmen og nyd smagen af jul</h2>
+    <div class="md:w-1/2 md:pr-8 md:order-1 md:mx-lg">
+      <h2 class="text-mnormalh4 md:text-normalh4 text-pdefault font-poppins font-semibold text-center md:text-left mb-m">Lokal kvalitet der gør en forskel</h2>
       
-      <p class="text-mpnormal md:pnormal font-poppins mb-m leading-relaxed">Gløgg-sæsonen er her, og vi har kræset for detaljerne for at tilbyde dig den bedste oplevelse. Kom forbi og smag på vores tre skønne varianter:</p>
+      <p class="text-mpnormal md:text-pnormal font-poppins text-left mb-m">Oplev det bedste fra lokale producenter – gavekurve fyldt med kærlighed, grøntsagskasser direkte fra marken og caféens økologiske specialiteter. Alle produkter er nøje udvalgt med omtanke for både dig og miljøet.</p>
 
-      <p class="text-mpnormal md:text-pnormal leading-relaxed">Alkoholfri Æblegløgg – En frisk og krydret nydelse, perfekt for alle. <br/> Rød Årgangsgløgg – Traditionel gløgg med en rig smag af vinterens krydderier. <br/> Gin-Gløgg – En nyfortolkning med et strejf af elegance.</p>
+      <div class="mt-6 mb-lg md:mb-0"
+      >    <Button variant="secondary" class="p-s md:p-m"><a href="/butik">Se gavekurve</a></Button></div>
+      
+        </div>
     </div>
+
+    <div class="md:w-1/2 flex justify-center items-center mb-m md:mb-0 order-1 md:order-2">
+        <Image src={Billede1} alt="Gløgg og andre produkter" class="w-auto h-auto object-cover"/>
+    </div>
+
+  
+  </section>
+
+  <!-- Sektion 3.2 -->
+  <section class="mx-auto px-s md:py-s md:px-lg flex flex-col md:flex-row items-center justify-center fade2">
+
+    <div class="md:w-1/2 flex justify-center items-center mb-m md:mb-0 order-1 md:order-2">
+      <Image src={Billede2} alt="Nisser i vinduet" class="w-auto h-auto object-coverr"/>
+    </div>
+
+    <div class="md:w-1/2 md:pr-8 md:pl-8 md:order-2 md:mx-lg">
+      <h2 class="text-mnormalh4 md:text-normalh4 text-pdefault font-poppins font-semibold text-center md:text-left mb-m">Et hyggeligt åndehul</h2>
+      
+      <p class="text-mpnormal md:text-pnormal font-poppins text-left mb-m">Træk vejret og nyd en pause i vores café. Her serverer vi hjemmelavede lækkerier, økologisk kaffe og sæsonens smage – alt i en afslappet og varm atmosfære.</p>
+
+      <div class="mt-6 mb-lg md:mb-0"
+      >    <Button variant="secondary" class="p-s md:p-m"><a href="/butik">Se caféens menukort</a></Button></div>
+
+    </div>
+</section>
+
+  <!-- Sektion 3.3 -->
+  <section class="mx-auto px-s md:py-s md:px-lg flex flex-col md:flex-row items-center justify-center fade3">
+    
+    <div class="md:w-1/2 md:pr-8 md:order-1 md:mx-lg">
+      <h2 class="text-mnormalh4 md:text-normalh4 text-pdefault font-poppins font-semibold text-center md:text-left mb-m">Samlingspunkt for inspiration og fællesskab</h2>
+      
+      <p class="text-mpnormal md:text-pnormal font-poppins text-left mb-m">Bliv en del af vores fællesskab! Deltag i inspirerende arrangementer – fra kreative workshops til hyggelige fællesspisninger. Her hos LocalByMe handler det ikke kun om produkter, men også om at skabe minder og forbindelser.</p>
+
+      <div class="mt-6 mb-lg md:mb-0"
+      >    <Button variant="secondary" class="p-s md:p-m"><a href="/arrangementer">Se kommende arrangementer</a></Button></div>
+    </div>
+    
+    <div class="md:w-1/2 flex justify-center items-center mb-m md:mb-0 order-1 md:order-2">
+      <Image src={Billede3} alt="Forskellige chokolader" class="w-auto h-auto object-cover"/>
+    </div>
+  </section></section>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Sektion 4 - Nyhed -->
+
+<section class="relative bg-gron700 text-phvid py-lg font-poppins md:grid md:grid-cols-2 md:px-xl md:mt-lg">
+  <div class="absolute md:static mx-lg md:ml-xxl md:py-lg md:col-start-1 md:row-start-1">
+  <p class="text-mnormalh4 md:text-normalh4 font-semibold text-center md:text-left md:pt-s pb-m ">Få varmen og nyd smagen af jul</p>
+    <p class="text-mpnormal md:text-pnormal">Gløgg-sæsonen er her, og vi har kræset for detaljerne for at tilbyde dig den bedste oplevelse. Kom forbi og smag på vores tre skønne varianter:<br/><br/>Alkoholfri Æblegløgg – En frisk og krydret nydelse, perfekt for alle. <br/>Rød Årgangsgløgg – Traditionel gløgg med en rig smag af vinterens krydderier.<br/>Gin-Gløgg – En nyfortolkning med et strejf af elegance.</p>
+  </div>
+
+  <div class="flex justify-center md:col-start-2">
+    <Image
+    src={Illustration2}
+    alt="Illustrationer af juleting"
+    class="h-80 md:h-96 w-auto opacity-20 md:opacity-100"
+  />
   </div>
 </section>
+
 
 <!-- Sektion 5 - Anmeldelser -->
 <Anmeldelser reviews={reviews} />
