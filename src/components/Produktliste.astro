@@ -16,7 +16,7 @@ import "../styles/global.css";
 <section class="relative bg-brun100 md:grid md:grid-cols-2">
   <Image
     src={Herounit}
-    alt="Illustration af et cafébord"
+    alt="Illustration af blandede varer"
     class="opacity-20 md:opacity-100 md:col-start-2 md:my-8 md:h-96 h-72"
   />
 
@@ -34,7 +34,7 @@ import "../styles/global.css";
     Vores butik er dedikeret til produkter skabt med kærlighed og omhu i Danmark – altid med fokus på kort afstand fra producent til kunde.
   </p>
 <div class="mt-6"
->    <Button variant="primary" class="p-s md:p-m"><a href="#menukort">Køb lokalt</a></Button></div>
+>    <Button variant="primary" class="p-s md:p-m"><a href="#cards">Køb lokalt</a></Button></div>
 
   </div>
 </section>
@@ -48,7 +48,7 @@ import "../styles/global.css";
 
 
 <!-- Sektion 2 - Produkter -->
-<section class="order-1 md:order-2 md:grid md:grid-cols-3 md:grid-rows-10 md:gap-xl items-center place-items-center mx-m my-m md:mx-xxl md:px-xxl md:mb-xl">
+<section id="cards" class="order-1 md:order-2 md:grid md:grid-cols-3 md:grid-rows-10 md:gap-xl items-center place-items-center mx-m my-m md:mx-xxl md:px-xxl md:mb-xl">
   <Card imageSrc={Produkt1} imageAlt="Wellness kurv" title="Wellness kurven" description="Forkæl dig selv eller en du holder af, med en wellness kurv fyldt med selvforkælelse, fantastiske dufte og ro til både krop og sjæl." buttonText="Se kurvens indhold"
   buttonLink="/produkt"
   />
