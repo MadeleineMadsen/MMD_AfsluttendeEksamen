@@ -3,7 +3,8 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import '../styles/tailwind.css';
 import 'animate.css';
-
+import { Image } from "astro:assets";
+import Op from "../assets/images/op.svg";
 const { title } = Astro.props;
 ---
 <html lang="da">
@@ -12,6 +13,8 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/png" href="/Favicon.png" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content="LocalByMe - stedet hvor bæredygtighed møder fællesskab. Køb vores gavekurve online, eller besøg os for en smagsfuld madoplevelse og inspirerende events."
+		<meta name="keywords" content="Local By Me, økologisk, lokale produkter, gavekurve, lokalt, bæredygtig, fællesskab, butik, cafe, Roskilde, workshop, events"/>
 		<title>{Astro.props.title}</title>
 	</head>
 	<body>
@@ -22,6 +25,14 @@ const { title } = Astro.props;
 		
 		<main class="">
 			<slot />
+			
+	<div id="scrollButton" class="fixed rounded-full bg-mgron600 p-2 bottom-lg shadow-skygge right-lg z-50 transition-opacity duration-300 transform translate-y-2 opacity-0 flex justify-center content-center hover:bg-mgron700">
+	<button><Image
+		src={Op}
+		alt="test"
+		class="h-5 w-5"
+	  /></button>
+	  </div>  
 		</main>
 
 		<footer class="mt-l p-s bg-sgron200">
@@ -37,3 +48,29 @@ const { title } = Astro.props;
 	  scroll-behavior: smooth;
 	}
   </style>
+
+  <script>
+	document.addEventListener("scroll", () => {
+    const scrollButton = document.getElementById("scrollButton");
+    if (window.scrollY > 100) {
+        scrollButton.classList.remove("hidden", "opacity-0", "translate-y-2");
+        scrollButton.classList.add("opacity-100", "translate-y-0");
+    } else {
+        scrollButton.classList.add("opacity-0", "translate-y-2");
+        scrollButton.classList.remove("opacity-100", "translate-y-0");
+        setTimeout(() => {
+            if (window.scrollY <= 100) {
+                scrollButton.classList.add("hidden");
+            }
+        }, 300);
+    }
+});
+
+document.getElementById("scrollButton").addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+
+  </script>

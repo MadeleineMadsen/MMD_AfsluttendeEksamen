@@ -4,10 +4,11 @@ import DLogo from "../assets/images/desktoplogo.svg"
 import Facebook from "../assets/images/face.png"
 import Instagram from "../assets/images/insta.png"
 import Button from "./Button.astro";
+import "../styles/global.css";
 ---
-<section class="md:pt-m grid grid-rows-auto justify-center md:grid-cols-7 font-poppins text-mlink text-mgron500">
+<section class="md:pt-lg grid grid-rows-auto justify-center md:grid-cols-7 font-poppins text-mlink text-mgron500">
 <div class="flex justify-center items-center md:col-start-1 md:col-span-2 md:my-0 mt-4 mb-8">
-   <a href="/forside"><Image
+   <a href="/startside"><Image
     src={DLogo}
     alt="test"
   /></a></div>
@@ -24,7 +25,7 @@ import Button from "./Button.astro";
   <div class="mx-8 mb-10 md:col-start-4 md:m-0 ">
     <ul>
         <li><strong>Information</strong></li>
-        <li class="pt-2"><a href="#" class="hover:text-mgron700">Om os</a></li>
+        <li class="pt-2"><a href="/om" class="hover:text-mgron700">Om os</a></li>
         <li class="pt-2"><a href="/kontakt" class="hover:text-mgron700">Kontakt</a></li>
         <li class="pt-2"><a href="https://maps.app.goo.gl/54tnmp4SvUvVVc5j6" target="_blank" class="hover:text-mgron700">Find vej</a></li>
     </ul>
@@ -33,7 +34,7 @@ import Button from "./Button.astro";
   <div class="mx-8 mb-10 md:col-start-5 md:m-0">
     <ul>
         <li><strong>Følg os</strong></li>
-        <div class="grid grid-cols-6 md:grid-cols-4"><li class="col-start-1 pt-2"><a href="https://www.facebook.com/localbyme" target="_blank"><Image
+        <div class="grid grid-cols-6 md:grid-cols-5"><li class="col-start-1 pt-2"><a href="https://www.facebook.com/localbyme" target="_blank"><Image
             src={Facebook}
             alt="Facebook icon"
             class="h-10 w-10 hover:scale-110 fill-current text-mgron500"

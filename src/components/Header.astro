@@ -4,26 +4,26 @@ import DLogo from "../assets/images/desktoplogo.svg";
 import MLogo from "../assets/images/mobillogo.svg";
 ---
 <header>
-    <div class="relative flex items-center md:p-4 z-50 py-4 md:py-4">
+    <div class="relative flex items-center md:p-4 z-50 py-4">
       <!-- Logo -->
       <div class="absolute">
-        <a href="/forside"><Image
+        <a href="/startside"><Image
           src={DLogo}
           alt="Desktop logo"
-          class="md:block hidden"
+          class="md:block hidden md:h-32 md:w-32 pl-s"
         /><Image
         src={MLogo}
-        alt="Desktop logo"
+        alt="Mobil logo"
         class="block md:hidden w-12 h-12"
       /></a>
       </div>
 
           <!-- Desktop Navigation -->
-    <nav class="hidden md:flex space-x-12 md:py-6 md:flex-grow md:justify-center font-poppins md:text-link text-mgron500">
+    <nav class="hidden md:flex space-x-12 md:py-2 md:flex-grow md:justify-center font-poppins md:text-link text-mgron500">
         <a href="/cafe" class="hover:text-mgron700">Caféen</a>
         <a href="/butik" class="hover:text-mgron700">Butikken</a>
         <a href="/arrangementer" class="hover:text-mgron700">Arrangementer</a>
-        <a href="#" class="hover:text-mgron700">Om os</a>
+        <a href="/om" class="hover:text-mgron700">Om os</a>
         <a href="/kontakt" class="hover:text-mgron700">Kontakt</a>
       </nav>
   
@@ -47,7 +47,7 @@ import MLogo from "../assets/images/mobillogo.svg";
         <li><a href="/cafe" class="hover:text-mgron700">Caféen</a></li>
         <li><a href="/butik" class="hover:text-mgron700">Butikken</a></li>
         <li><a href="/arrangementer" class="hover:text-mgron700">Arrangementer</a></li>
-        <li><a href="#" class="hover:text-mgron700">Om os</a></li>
+        <li><a href="/om" class="hover:text-mgron700">Om os</a></li>
         <li><a href="/kontakt" class="hover:text-mgron700">Kontakt</a></li>
       </ul>
     </nav>

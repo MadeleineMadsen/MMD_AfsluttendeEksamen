@@ -1,30 +1,29 @@
 ---
 import Button from "./Button.astro"
 import { Image } from "astro:assets";
-import Smiley from "../assets/images/test-kvadrat.png"
 import Map from "./Map.astro";
-import Ingrediens from "../assets/images/ingredienser.svg";
+import Kontakt from "../assets/images/kontakter.png";
 import Facebook from "../assets/images/face.png";
 import Instagram from "../assets/images/insta.png";
 ---
 
    <section class="relative bg-brun100 md:grid md:grid-cols-2">
     <Image
-      src={Ingrediens}
-      alt="Illustration af diverse ingredienser"
-      class="opacity-20 md:opacity-100 md:col-start-2 md:my-8 md:h-96 h-72"
+      src={Kontakt}
+      alt="Illustration af samtlige måder man kan kontaktes på"
+      class="opacity-20 md:opacity-100 md:col-start-2 md:my-8 py-8 md:h-96 h-72 w-fit md:w-auto md:pl-44 m-auto md:m-0"
     />
   
     <div
-      class="absolute md:col-start-1 md:col-span-1 md:mr-10 md:ml-40 mx-8 top-8 md:top-16 text-center md:text-left"
+      class="absolute md:col-start-1 md:col-span-1 md:mr-10 md:ml-40 mx-8 top-10 md:top-24 text-center md:text-left"
     >
       <h1
-        class="font-sigurd text-mspecialh1 md:text-specialh1 text-pgrøn"
+        class="font-sigurd text-mspecialh1 md:text-specialh1 text-pgron"
       >
         Kontakt os
       </h1>
       <p
-        class="font-sigurd text-mspecialh4 md:text-specialh3 text-pdefault"
+        class="font-sigurd text-mspecialh4 md:text-specialh4 text-pdefault"
       >
       Vi vil gerne høre fra dig! Uanset hvad du ønsker svar på, er du altid velkommen til at kontakte os.
     </p>
@@ -41,15 +40,15 @@ import Instagram from "../assets/images/insta.png";
         <div class="md:col-start-2 flex md:justify-center justify-start pl-lg md:pl-0">
                 <ul>
 
-                  <p class="md:text-normalh4 text-mnormalh4 pb-6 font-semibold">Kontakt</h2>
-                    <li class="font-semibold">Adresse</li>
-                      <li class="pt-2"><a href="https://www.google.com/maps/place/localbyme/@55.6288125,12.0822781,17z/data=!3m1!4b1!4m6!3m5!1s0x46525fe1b2bbaf91:0xc7c8a86a98a7fe41!8m2!3d55.6288095!4d12.084853!16s%2Fg%2F11rhctbn45?entry=ttu&g_ep=EgoyMDI0MTEyNC4xIKXMDSoASAFQAw%3D%3D" class="hover:underline" target="_blank">Rabalderstræde 1, Musicon,<br/>
+                  <p class="md:text-normalh4 text-mnormalh4 md:pb-12 pb-6 font-semibold">Kontakt</h2>
+                    <li class="font-semibold text-mpnormal md:text-pnormal">Adresse</li>
+                      <li class="pt-2 text-mpnormal md:text-pnormal"><a href="https://www.google.com/maps/place/localbyme/@55.6288125,12.0822781,17z/data=!3m1!4b1!4m6!3m5!1s0x46525fe1b2bbaf91:0xc7c8a86a98a7fe41!8m2!3d55.6288095!4d12.084853!16s%2Fg%2F11rhctbn45?entry=ttu&g_ep=EgoyMDI0MTEyNC4xIKXMDSoASAFQAw%3D%3D" class="hover:underline" target="_blank">Rabalderstræde 1, Musicon,<br/>
                         4000 Roskilde</a></li>
-                      <li class="pt-2 font-semibold">Mobil</li>
-                      <li class="pt-2">+45 40 74 72 78</li>
-                      <li class="pt-2 font-semibold">Email</li>
-                      <li class="pt-2"><a href="mailto:kontakt@localbyme.dk?subject=Emne for e-mail&body=Hej Local By Me! Jeg vil gerne kontakte jer vedrørende..." target="_blank" class="hover:text-mgron700 text-mgron500">kontakt@localbyme.dk</a></li>
-                      <li class="pt-2 font-semibold">Følg os</li>
+                      <li class="pt-2 font-semibold text-mpnormal md:text-pnormal">Mobil</li>
+                      <li class="pt-2 text-mpnormal md:text-pnormal">+45 40 74 72 78</li>
+                      <li class="pt-2 font-semibold text-mpnormal md:text-pnormal">Email</li>
+                      <li class="pt-2 text-mpnormal md:text-pnormal"><a href="mailto:kontakt@localbyme.dk?subject=Emne for e-mail&body=Hej Local By Me! Jeg vil gerne kontakte jer vedrørende..." target="_blank" class="hover:text-mgron700 text-mgron500">kontakt@localbyme.dk</a></li>
+                      <li class="pt-2 font-semibold text-mpnormal md:text-pnormal">Følg os</li>
                       <div class="grid grid-cols-5"><li class="col-start-1 pt-2"><a href="https://www.facebook.com/localbyme" target="_blank"><Image
                         src={Facebook}
                         alt="Facebook link"
@@ -67,8 +66,8 @@ import Instagram from "../assets/images/insta.png";
 
         </div>
 
-                <div class="md:col-start-3 flex md:justify-center justify-start py-lg md:py-0 pl-m md:pl-0">
-                  <ul>
+                <div class="md:col-start-3 flex md:justify-center justify-start py-lg md:py-0 pl-lg md:pl-0">
+                  <!-- <ul>
                      <p class="md:text-normalh4 text-mnormalh4 pb-6 font-semibold">Åbningstider</h2>
                          <li><strong class="font-semibold">Mandag:</strong> 12.00 - 16.00</li>
                       <li class="pt-4"><strong class="font-semibold">Tirsdag:</strong> Lukket</li>
@@ -77,7 +76,40 @@ import Instagram from "../assets/images/insta.png";
                       <li class="pt-4"><strong class="font-semibold">Fredag:</strong> 12.00 - 18.00</li>
                       <li class="pt-4"><strong class="font-semibold">Lørdag:</strong> 14.00 - 16.00</li>
                       <li class="pt-4"><strong class="font-semibold">Søndag:</strong> 12.00 - 16.00</li>
-                    </ul></div>
+                    </ul> -->
+                  
+                  
+                  
+                  
+                    <div class="grid grid-cols-2">
+                      <p class="md:text-normalh4 text-mnormalh4 pb-6 md:pb-0 font-semibold">Åbningstider</h2>
+                      <div class="col-start-1">
+                      <ul class="text-pdefault font-poppins font-semibold space-y-1 text-mpnormal md:text-pnormal">
+                        <li>Mandag:</li>
+                          <li class="pt-2">Tirsdag:</li>
+                          <li class="pt-2">Onsdag:</li>
+                          <li class="pt-2">Torsdag:</li>
+                          <li class="pt-2">Fredag:</li>
+                          <li class="pt-2">Lørdag:</li>
+                          <li class="pt-2">Søndag:</li>
+                        </ul></div>
+                  
+                      <div class="col-start-2">
+                        <ul class="text-pdefault font-poppins space-y-1 text-mpnormal md:text-pnormal">
+                          <li>12.00 - 16.00</li>
+                            <li class="pt-2">Lukket</li>
+                            <li class="pt-2">Lukket</li>
+                            <li class="pt-2">12.00 - 18.00</li>
+                            <li class="pt-2">12.00 - 18.00</li>
+                            <li class="pt-2">14.00 - 16.00</li>
+                            <li class="pt-2">12.00 - 16.00</li>
+                          </ul></div></div>
+                  
+                  
+                  
+                  
+                  
+                  </div>
    </section>
 
 

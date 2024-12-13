@@ -1,10 +1,12 @@
 ---
 import { Image } from "astro:assets";
-import Cafe from "../assets/images/cafe.svg"
-import Smiley from "../assets/images/smiley_big.png"
-import Menukort from "../components/Menukort.astro"
+import Cafe from "../assets/images/cafe.png";
+import Smiley from "../assets/images/smiley_big.png";
+import Menukort from "../components/Menukort.astro";
 import Button from "./Button.astro";
-import Flasker from "../assets/images/sorteflasker.webp";
+import Flaske from "../assets/images/3flasker.webp";
+import Menu1 from "../assets/images/menu1.png";
+import Menu2 from "../assets/images/menu2.png";
 ---
 
 <section class="relative bg-brun100 md:grid md:grid-cols-2">
@@ -15,15 +17,15 @@ import Flasker from "../assets/images/sorteflasker.webp";
     />
   
     <div
-      class="absolute md:col-start-1 md:col-span-1 md:mr-10 md:ml-40 mx-8 top-8 md:top-16 text-center md:text-left"
+      class="absolute md:col-start-1 md:col-span-1 md:mr-10 md:ml-40 mx-8 top-10 md:top-24 text-center md:text-left"
     >
       <h1
-        class="font-sigurd text-mspecialh1 md:text-specialh1 text-pgrøn"
+        class="font-sigurd text-mspecialh1 md:text-specialh1 text-pgron"
       >
         Caféen
       </h1>
       <p
-        class="font-sigurd text-mspecialh4 md:text-specialh3 text-pdefault"
+        class="font-sigurd text-mspecialh4 md:text-specialh4 text-pdefault"
       >
       Tag en pause fra hverdagen og nyd et øjeblik med lækre, lokale smagsoplevelser.
     </p>
@@ -33,31 +35,62 @@ import Flasker from "../assets/images/sorteflasker.webp";
     </div>
   </section>
 
-  <div id="menukort" class="mx-lg md:mx-xxl md:py-lg">
+  <div id="menukort" class="mx-lg md:mx-xxl md:pt-lg">
     <p class="font-poppins text-mnormalh4 md:text-normalh3 pt-4 text-center text-pdefault font-semibold">Smagen af lokalt håndværk</p>
-    <p class="font-poppins text-mpnormal md:text-pnormal pt-2 text-center text-pdefault md:mx-xxl">Menukortet tager udgangspunkt i de varer, der findes i butikken. Det  giver dig mulighed for at smage på de lokale råvarer, opleve deres høje  kvalitet og høre historien om de mennesker, der står bag produktionen.</p>
+    <p class="font-poppins text-mpnormal md:text-pnormal pt-2 text-center text-pdefault md:mx-56">Menukortet tager udgangspunkt i de varer, der findes i butikken. Det  giver dig mulighed for at smage på de lokale råvarer, opleve deres høje  kvalitet og høre historien om de mennesker, der står bag produktionen.</p>
   </div>
 
-  <div class="">
+  <div class="md:grid md:grid-cols-3">
+    <div class="md:col-start-1 md:flex md:justify-end">
+      <Image
+      src={Menu1}
+      alt="Illustration af en kande med blomster"
+      class="hidden md:block md:h-32 md:w-20"
+    />
+    </div>
+    <div class="md:col-start-2 md:flex md:flex-col md:justify-end">
     <p class="font-sigurd text-mspecialh3 mb-6 md:text-specialh3 pt-4 text-center font-semibold">Menukort</p>
+    </div>
 
+    <div class="md:col-start-3 md:flex md:items-center">
+      <Image
+      src={Menu2}
+      alt="Illustration af en kaffekande"
+      class="hidden md:block md:h-28 md:w-24"
+    />
+    </div>
   </div>
 
-  <section class="flex justify-center mt-5">
+  <section class="flex justify-center mt-5 håndværk">
     <Menukort />
   </section>
-  <section class=" px-10 md:px-20 py-4 md:py-10 md:grid md:grid-cols-2 my-10 md:my-20 md:mx-xxl">
+  <section class="px-10 md:px-20 pb-4 md:py-10 md:grid md:grid-cols-2 mb-10 md:my-20 md:mx-xxl">
+    <p class="text-mnormalh4 font-semibold flex justify-center md:mb-s md:text-normalh4 md:pl-lg">Caféens åbningstider</p><br/>
    <div class="md:col-start-1 flex justify-center">
-    <ul class="text-pdefault font-poppins space-y-1">
-      <li class="text-mnormalh4 font-semibold">Caféens åbningstider</li><br/>
-      <li><strong>Mandag:</strong>12.00 - 16.00</li>
-        <li><strong>Tirsdag:</strong> Lukket</li>
-        <li><strong>Onsdag:</strong> Lukket</li>
-        <li><strong>Torsdag:</strong> 12.00 - 18.00</li>
-        <li><strong>Fredag:</strong> 12.00 - 18.00</li>
-        <li><strong>Lørdag:</strong> 14.00 - 16.00</li>
-        <li><strong>Søndag:</strong> 12.00 - 16.00</li>
+    <div class="grid grid-cols-2">
+    <div class="md:col-start-1">
+    <ul class="text-pdefault font-poppins font-semibold space-y-1 text-mpnormal md:text-pnormal">
+      <li>Mandag:</li>
+        <li>Tirsdag:</li>
+        <li>Onsdag:</li>
+        <li>Torsdag:</li>
+        <li>Fredag:</li>
+        <li>Lørdag:</li>
+        <li>Søndag:</li>
       </ul></div>
+
+    <div class="md:col-start-2">
+      <ul class="text-pdefault font-poppins space-y-1 text-mpnormal md:text-pnormal">
+        <li>12.00 - 16.00</li>
+          <li>Lukket</li>
+          <li>Lukket</li>
+          <li>12.00 - 18.00</li>
+          <li>12.00 - 18.00</li>
+          <li>14.00 - 16.00</li>
+          <li>12.00 - 16.00</li>
+        </ul></div></div>
+    </div>
+
     <div class="md:col-start-2 flex justify-center md:mt-0 mt-10 mx-m">
       <div class="md:flex md:flex-col items-center justify-center grid grid-cols-2 ">
     <Image
@@ -69,9 +102,9 @@ import Flasker from "../assets/images/sorteflasker.webp";
   <Button variant="secondary" class="p-s md:p-m"> <a href="https://www.findsmiley.dk/1013380" target="_blank">
     Se smiley rapport
   </a></Button>
-</div></div>  </section>
+</div></div></section>
 
-<section class="bg-gron500 text-pdefault py-lg font-poppins md:grid md:grid-cols-2 ">
+<section class="bg-gron500 text-pdefault py-lg font-poppins md:grid md:grid-cols-2 md:px-xl">
   <div class="mx-lg md:ml-xxl pb-m md:py-lg md:col-start-1 md:row-start-1">
   <p class="text-mnormalh4 md:text-normalh4 font-semibold text-center md:text-left pb-s">Glæd en du holder af med vores gavekurve fyldt med lokale lækkerier</p>
     <p class="pb-s md:pb-m text-mpnormal md:text-pnormal">Hos LocalByMe sammensætter vi gavekurve med alt fra smagsfulde marmelader og lokale drikkevarer til bæredygtige specialiteter – den perfekte gave til enhver lejlighed.</p>
@@ -80,12 +113,25 @@ import Flasker from "../assets/images/sorteflasker.webp";
 
   <div class="flex justify-center md:col-start-2">
     <Image
-    src={Flasker}
+    src={Flaske}
     alt="Billede af sorte flasker"
-    class="h-auto w-auto rounded-none"
+    class="h-auto w-auto"
   />
   </div>
-
-
 </section>
 
+
+<script>
+
+  import { inView } from "motion";
+  
+  const håndværk = document.querySelector(".håndværk");
+  
+  inView(håndværk, () => {
+    håndværk.classList.add(
+      "animate__animated",
+      "animate__fadeInUp",
+      "animate__delay-0.5s"
+    );
+  });
+  </script>
