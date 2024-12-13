@@ -2,9 +2,10 @@
 import { Image } from "astro:assets";
 import Cross from "../assets/images/cross.png"
 import Button from "./Button.astro";
+import "../styles/global.css";
 ---
 
-<section class="font-poppins bg-brun50 md:w-fit w-10/12 absolute md:top-40 top-24 left-1/2 transform -translate-x-1/2 z-20 flex justify-center items-center md:px-lg rounded-3xl shadow-skygge">
+<section class="font-poppins bg-brun50 md:w-fit w-10/12 absolute md:top-32 top-24 left-1/2 transform -translate-x-1/2 z-20 flex justify-center items-center md:px-lg rounded-3xl shadow-skygge">
 
     <form>
     <div class="absolute top-2 right-2 p-2">
@@ -14,22 +15,22 @@ import Button from "./Button.astro";
         class="md:h-7 md:w-7 h-5 w-5 hover:scale-110"
       /></a></div>
 <div class="text-center pt-lg">
-    <h2 class="md:text-normalh3 text-mnormalh4 text-pgrøn font-semibold">Bestilling af gavekurv</h2>
+    <h2 class="md:text-normalh3 text-mnormalh4 text-pgron font-semibold">Bestilling af gavekurv</h2>
     <p class="text-pdefault md:text-pnormal text-mpnormal pt-s md:mx-lg mx-m">Udfyld formularen for at bestille din gavekurv, og vi vender tilbage til dig med en bekræftelse på din bestilling.</p>
 </div>
 
 
-        <div class="flex flex-col md:flex-row flex-wrap w-full justify-between pt-m text-pgrøn mx-m md:mx-0 md:text-pnormal text-mpnormal">
-            <p>Fulde navn</p>
+        <div class="flex flex-col md:flex-row flex-wrap w-full justify-between pt-m text-pgron mx-m md:mx-0 md:text-pnormal text-mpnormal">
+            <p class="md:mt-s">Fulde navn</p>
             <div class="flex flex-col md:flex-row md:space-x-2 w-2/3 mr-ms md:gap-s">
-            <div class="md:w-1/2 w-72 rounded-md mb-s md:my-0 md:mb-m border-2 border-sgron100">
+            <div class="md:w-1/2 w-72 rounded-md mb-s md:my-0 md:mb-s mt-s border-2 border-sgron100">
               <input
                 class="appearance-none rounded-md block bg-white border-none w-full py-1 leading-tight focus:outline-none text-pbodysmall placeholder-sgron200 md:text-pnormal text-mpnormal"
                 type="text"
                 placeholder="Julie"
                 aria-label="Full name"
               /></div>
-              <div class="md:w-1/2 w-72 rounded-md mb-s md:my-0 md:mb-m border-2 border-sgron100">
+              <div class="md:w-1/2 w-72 rounded-md mb-s md:my-0 md:mb-s border-2 border-sgron100">
                 <input
                   class="appearance-none rounded-md block bg-white border-none w-full py-1 leading-tight focus:outline-none text-pbodysmall placeholder-sgron200 md:text-pnormal text-mpnormal"
                   type="text"
@@ -40,9 +41,9 @@ import Button from "./Button.astro";
         </div>
 
 
-        <div class="flex flex-wrap justify-between text-pgrøn mx-m md:mx-0 md:text-pnormal text-mpnormal">
-            <p>Mobilnummer</p>
-            <div class="md:w-2/3 w-72 rounded-md mx-ms my-s md:mb-m border-2 border-sgron100">
+        <div class="flex flex-wrap justify-between text-pgron mx-m md:mx-0 md:text-pnormal text-mpnormal">
+            <p class="md:mt-m">Mobilnummer</p>
+            <div class="md:w-2/3 w-72 rounded-md mx-ms my-s md:mb-s border-2 border-sgron100">
               <input
                 class="appearance-none rounded-md block bg-white border-none w-full mr-3 py-1 px-2 leading-tight focus:outline-none text-pbodysmall placeholder-sgron200 md:text-pnormal text-mpnormal"
                 type="text"
@@ -51,9 +52,9 @@ import Button from "./Button.astro";
               />
             </div>
 
-            <div class="flex flex-wrap justify-between text-pgrøn md:text-pnormal text-mpnormal">
-                <p>E-mail</p>
-                <div class="md:w-2/3 w-72 rounded-md mx-ms my-s md:mb-m border-2 border-sgron100">
+            <div class="flex flex-wrap justify-between text-pgron md:text-pnormal text-mpnormal">
+                <p class="md:mt-m">E-mail</p>
+                <div class="md:w-2/3 w-72 rounded-md mx-ms my-s md:mb-s border-2 border-sgron100">
                   <input
                     class="appearance-none rounded-md block bg-white border-none w-full mr-3 py-1 px-2 leading-tight focus:outline-none text-pbodysmall placeholder-sgron200 md:text-pnormal text-mpnormal"
                     type="text"
@@ -62,17 +63,17 @@ import Button from "./Button.astro";
                   />
                 </div>
 
-                <div class="flex flex-col md:flex-row flex-wrap w-full justify-between text-pgrøn">
-                    <p>Post nr. & by</p>
+                <div class="flex flex-col md:flex-row flex-wrap w-full justify-between text-pgron">
+                    <p class="md:mt-m">Post nr. & by</p>
                     <div class="flex w-full md:space-x-2 gap-s md:w-2/3 mr-ms">
-                    <div class="md:w-1/2 rounded-md my-s md:mb-m border-2 border-sgron100">
+                    <div class="md:w-1/2 rounded-md my-s md:mb-s border-2 border-sgron100">
                       <input
                         class="appearance-none rounded-md block bg-white border-none w-full py-1 leading-tight focus:outline-none text-pbodysmall placeholder-sgron200 md:text-pnormal text-mpnormal"
                         type="text"
                         placeholder="Post nr."
                         aria-label="City"
                       /></div>
-                      <div class="md:w-1/2 rounded-md my-s md:mb-m border-2 border-sgron100">
+                      <div class="md:w-1/2 rounded-md my-s md:mb-s border-2 border-sgron100">
                         <input
                           class="appearance-none rounded-md block bg-white border-none w-full py-1 leading-tight focus:outline-none text-pbodysmall placeholder-sgron200 md:text-pnormal text-mpnormal"
                           type="text"
@@ -81,10 +82,10 @@ import Button from "./Button.astro";
                         /></div>
                     </div>
                 </div>
-                    <div class="flex flex-wrap justify-between text-pgrøn">
-                            <p>Afhentningsdato</p></div>
+                    <div class="flex flex-wrap justify-between text-pgron">
+                            <p class="md:mt-m">Afhentningsdato</p></div>
                           
-                            <div class="md:w-2/3 w-full rounded-md mx-ms my-s md:mb-m border-2 border-sgron100">
+                            <div class="md:w-2/3 w-full rounded-md mx-ms my-s md:mb-s border-2 border-sgron100">
                               <input
                                 type="date"
                                 class="appearance-none rounded-md block bg-white border-none w-full py-1 px-2 leading-tight focus:outline-none placeholder-sgron200 md:text-pnormal text-mpnormal"
@@ -94,7 +95,7 @@ import Button from "./Button.astro";
                             </div>
                           </div></div>
  
-                            <div class="flex flex-wrap md:justify-between justify-center text-pgrøn mx-m md:mx-0 md:text-pnormal text-mpnormal ">
+                            <div class="flex flex-wrap md:justify-between justify-center text-pgron mx-m md:mx-0 md:text-pnormal text-mpnormal">
                               <div class="grid md:grid-rows-2 grid-cols-2 items-start md:items-center pt-s md:pt-0">
                                 <p class="md:content-center content-end row-start-1 col-span-2">Til/fra kort (+10,- kr)</p>
 
@@ -124,7 +125,7 @@ import Button from "./Button.astro";
 </div>
     </div>
 
-                                <div class="md:mt-m md:w-2/3 w-full rounded-md mx-ms mb-s md:mb-m border-2 border-sgron100">
+                                <div class="md:mt-m md:w-2/3 w-full rounded-md mx-ms mb-s md:mb-s border-2 border-sgron100">
                                   <textarea
                                     class="appearance-none rounded-md block bg-white border-none w-full mr-3 px-2 leading-tight focus:outline-none text-pbodysmall placeholder-sgron200 md:text-pnormal text-mpnormal"
                                     placeholder="Tekst til kortet (max 200 tegn)"
@@ -133,7 +134,7 @@ import Button from "./Button.astro";
                                   />
                                 </div></div>
 
-                                 <div class="md:mt-m mt-s rounded-md border-sgron100 p-2 text-mpnormal text-pgrøn">
+                                 <div class="md:mt-m mt-s rounded-md border-sgron100 p-2 text-mpnormal text-pgron">
                                   <label class="flex justify-center items-center space-x-2">
                                     <input
                                         type="checkbox"
@@ -162,4 +163,4 @@ import Button from "./Button.astro";
     }
   </style>
 
-  
+
