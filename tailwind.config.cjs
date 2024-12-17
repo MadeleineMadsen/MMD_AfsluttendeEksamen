@@ -133,6 +133,7 @@ module.exports = {
         specialh2: "3rem", //Bruges til headlineSpecial - h2
         specialh3: "2rem", //Bruges til headlineSpecial - h3
         specialh4: "1.5rem", //Bruges til headlineSpecial - h4
+        specialforside: "3.5rem", //Bruges til forside
 
         normalh1: "4rem", //Bruges til headline - h1
         normalh2: "3rem", //Bruges til headline - h2
@@ -184,6 +185,7 @@ module.exports = {
         lg: "44px", //Large gap
         xl: "60px", //X-large gap
         xxl: "99px", //XX-large gap
+        bigxl: "540px", //Forsidevideo gap
 
         //Mobil
       },
